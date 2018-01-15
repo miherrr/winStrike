@@ -288,7 +288,7 @@
 		C03A2C431F2F31FB006E9B45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C03A2C451F2F31FB006E9B45 /* InfoPlist.strings */; };
 		C04B61DC1F20E9000042AC92 /* ObjcExceptionBridging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04B61DA1F20E8FF0042AC92 /* ObjcExceptionBridging.framework */; };
 		C04B61DD1F20E9000042AC92 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04B61DB1F20E8FF0042AC92 /* XCGLogger.framework */; };
-		C04B61E71F20EF050042AC92 /* cinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B61E61F20EF050042AC92 /* cinemaTests.swift */; };
+		C04B61E71F20EF050042AC92 /* winstrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B61E61F20EF050042AC92 /* winstrikeTests.swift */; };
 		C07B88ED1F37361C0064E420 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07B88EC1F37361C0064E420 /* KeychainAccess.framework */; };
 		C0826DB31F4324B60002DD65 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0826DB21F4324B60002DD65 /* Kingfisher.framework */; };
 		C0A4AD6B1F2621DB0035EF69 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A4AD631F2621DB0035EF69 /* RxMoya.framework */; };
@@ -440,7 +440,7 @@
 		041786CB1FA8AC090059C065 /* FullListFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullListFilms.swift; sourceTree = "<group>"; };
 		043A733B1F80CD4700E1DF43 /* Slide1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide1View.swift; sourceTree = "<group>"; };
 		043A733D1F80CD7500E1DF43 /* Slide2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide2View.swift; sourceTree = "<group>"; };
-		045928091FA6107E00DE137E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = cinema/Classes/Modules/Kinobase/View/SearchView.swift; sourceTree = SOURCE_ROOT; };
+		045928091FA6107E00DE137E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = winstrike/Classes/Modules/Kinobase/View/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		0459280B1FA6445300DE137E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		045928111FA7B45000DE137E /* FilmCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollections.swift; sourceTree = "<group>"; };
 		0464ACE21F56F5A000D8D49A /* FirstLaunchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchManager.swift; sourceTree = "<group>"; };
@@ -720,8 +720,8 @@
 		C03AD6AF4AAD97687B277B2B /* EditingProfileModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditingProfileModuleInputOutput.swift; sourceTree = "<group>"; };
 		C04B61DA1F20E8FF0042AC92 /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjcExceptionBridging.framework; path = Carthage/Build/iOS/ObjcExceptionBridging.framework; sourceTree = "<group>"; };
 		C04B61DB1F20E8FF0042AC92 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
-		C04B61E41F20EF050042AC92 /* cinemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cinemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C04B61E61F20EF050042AC92 /* cinemaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinemaTests.swift; sourceTree = "<group>"; };
+		C04B61E41F20EF050042AC92 /* winstrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winstrikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B61E61F20EF050042AC92 /* winstrikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winstrikeTests.swift; sourceTree = "<group>"; };
 		C04B61E81F20EF050042AC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C077C5781F3C937200CBEC74 /* download-binary-dependencies.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "download-binary-dependencies.sh"; sourceTree = "<group>"; };
 		C07B88EC1F37361C0064E420 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
@@ -733,7 +733,7 @@
 		C0A4AD671F2621DB0035EF69 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		C0A4AD681F2621DB0035EF69 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		C0A4AD691F2621DB0035EF69 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		C0B9D4611F1F8207009A77DD /* CInema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CInema.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B9D4611F1F8207009A77DD /* winstrike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winstrike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B9D4761F1FB8F6009A77DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0EF8CA31F41913800AA4236 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C0EF8CA51F41913F00AA4236 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -2182,13 +2182,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C04B61E51F20EF050042AC92 /* cinemaTests */ = {
+		C04B61E51F20EF050042AC92 /* winstrikeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C04B61E61F20EF050042AC92 /* cinemaTests.swift */,
+				C04B61E61F20EF050042AC92 /* winstrikeTests.swift */,
 				C04B61E81F20EF050042AC92 /* Info.plist */,
 			);
-			path = cinemaTests;
+			path = winstrikeTests;
 			sourceTree = "<group>";
 		};
 		C077C5771F3C937200CBEC74 /* scripts */ = {
@@ -2202,8 +2202,8 @@
 		C0B9D4581F1F8207009A77DD = {
 			isa = PBXGroup;
 			children = (
-				C0B9D4631F1F8207009A77DD /* cinema */,
-				C04B61E51F20EF050042AC92 /* cinemaTests */,
+				C0B9D4631F1F8207009A77DD /* winstrike */,
+				C04B61E51F20EF050042AC92 /* winstrikeTests */,
 				C0B9D4621F1F8207009A77DD /* Products */,
 				C04B61DE1F20E9050042AC92 /* Frameworks */,
 				C077C5771F3C937200CBEC74 /* scripts */,
@@ -2213,19 +2213,19 @@
 		C0B9D4621F1F8207009A77DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0B9D4611F1F8207009A77DD /* CInema.app */,
-				C04B61E41F20EF050042AC92 /* cinemaTests.xctest */,
+				C0B9D4611F1F8207009A77DD /* winstrike.app */,
+				C04B61E41F20EF050042AC92 /* winstrikeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0B9D4631F1F8207009A77DD /* cinema */ = {
+		C0B9D4631F1F8207009A77DD /* winstrike */ = {
 			isa = PBXGroup;
 			children = (
 				9BB4E2B4891D577360868F48 /* Classes */,
 				9BB4EF0AA7B67D2CEC1286F2 /* Resources */,
 			);
-			path = cinema;
+			path = winstrike;
 			sourceTree = "<group>";
 		};
 		C54C0C2FE60EF46846464B57 /* Presenter */ = {
@@ -2688,9 +2688,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C04B61E31F20EF050042AC92 /* cinemaTests */ = {
+		C04B61E31F20EF050042AC92 /* winstrikeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C04B61EB1F20EF050042AC92 /* Build configuration list for PBXNativeTarget "cinemaTests" */;
+			buildConfigurationList = C04B61EB1F20EF050042AC92 /* Build configuration list for PBXNativeTarget "winstrikeTests" */;
 			buildPhases = (
 				C04B61E01F20EF050042AC92 /* Sources */,
 				C04B61E11F20EF050042AC92 /* Frameworks */,
@@ -2701,14 +2701,14 @@
 			dependencies = (
 				C04B61EA1F20EF050042AC92 /* PBXTargetDependency */,
 			);
-			name = cinemaTests;
+			name = winstrikeTests;
 			productName = foodleTests;
-			productReference = C04B61E41F20EF050042AC92 /* cinemaTests.xctest */;
+			productReference = C04B61E41F20EF050042AC92 /* winstrikeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C0B9D4601F1F8207009A77DD /* cinema */ = {
+		C0B9D4601F1F8207009A77DD /* winstrike */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0B9D4731F1F8207009A77DD /* Build configuration list for PBXNativeTarget "cinema" */;
+			buildConfigurationList = C0B9D4731F1F8207009A77DD /* Build configuration list for PBXNativeTarget "winstrike" */;
 			buildPhases = (
 				C08D45AF1F287A3F00731F88 /* SwiftGen */,
 				C04B61F31F2111460042AC92 /* SwiftLint */,
@@ -2722,9 +2722,9 @@
 			);
 			dependencies = (
 			);
-			name = cinema;
+			name = winstrike;
 			productName = cinema;
-			productReference = C0B9D4611F1F8207009A77DD /* CInema.app */;
+			productReference = C0B9D4611F1F8207009A77DD /* winstrike.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2749,7 +2749,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0B9D45C1F1F8207009A77DD /* Build configuration list for PBXProject "cinema" */;
+			buildConfigurationList = C0B9D45C1F1F8207009A77DD /* Build configuration list for PBXProject "winstrike" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2764,8 +2764,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0B9D4601F1F8207009A77DD /* cinema */,
-				C04B61E31F20EF050042AC92 /* cinemaTests */,
+				C0B9D4601F1F8207009A77DD /* winstrike */,
+				C04B61E31F20EF050042AC92 /* winstrikeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2886,7 +2886,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n    if which swiftgen >/dev/null; then\n        swiftgen xcassets -t swift3 ./cinema/Resources/Assets.xcassets --output \"cinema/Classes/Business/Constants/Images.swift\"\n        swiftgen strings -t structured-swift3 ./cinema/Resources/ru.lproj/Localizable.strings --output \"cinema/Classes/Business/Constants/Strings.swift\"\n    else\n        echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\n    fi\nelse\n    echo \"Skip SwiftGen script\"\nfi";
+			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n    if which swiftgen >/dev/null; then\n        swiftgen xcassets -t swift3 ./winstrike/Resources/Assets.xcassets --output \"winstrike/Classes/Business/Constants/Images.swift\"\n        swiftgen strings -t structured-swift3 ./winstrike/Resources/ru.lproj/Localizable.strings --output \"winstrike/Classes/Business/Constants/Strings.swift\"\n    else\n        echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\n    fi\nelse\n    echo \"Skip SwiftGen script\"\nfi";
 		};
 		CEB86C481F88A5A6003F07FC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2909,7 +2909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				819933231FD18E7E00D1FFE7 /* YoutubeViewCell.swift in Sources */,
-				C04B61E71F20EF050042AC92 /* cinemaTests.swift in Sources */,
+				C04B61E71F20EF050042AC92 /* winstrikeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3290,7 +3290,7 @@
 /* Begin PBXTargetDependency section */
 		C04B61EA1F20EF050042AC92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0B9D4601F1F8207009A77DD /* cinema */;
+			target = C0B9D4601F1F8207009A77DD /* winstrike */;
 			targetProxy = C04B61E91F20EF050042AC92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3356,7 +3356,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D PRERELEASE";
-				PRODUCT_NAME = cinema;
+				PRODUCT_NAME = winstrike;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -3380,11 +3380,11 @@
 					"$(PROJECT_DIR)/Vendor/GoogleMaps",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/cinema/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.cinemad;
-				PRODUCT_NAME = CInema;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
+				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -3433,7 +3433,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
-				PRODUCT_NAME = cinema;
+				PRODUCT_NAME = winstrike;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -3457,11 +3457,11 @@
 					"$(PROJECT_DIR)/Vendor/GoogleMaps",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/cinema/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.cinemad;
-				PRODUCT_NAME = CInema;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
+				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3603,7 +3603,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_NAME = cinema;
+				PRODUCT_NAME = winstrike;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3652,6 +3652,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D INTERNAL";
+				PRODUCT_NAME = winstrike;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -3675,12 +3676,12 @@
 					"$(PROJECT_DIR)/Vendor/GoogleMaps",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/cinema/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.cinemad;
-				PRODUCT_NAME = CInema;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
+				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -3704,11 +3705,11 @@
 					"$(PROJECT_DIR)/Vendor/GoogleMaps",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/cinema/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.cinemad;
-				PRODUCT_NAME = CInema;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
+				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -3719,7 +3720,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C04B61EB1F20EF050042AC92 /* Build configuration list for PBXNativeTarget "cinemaTests" */ = {
+		C04B61EB1F20EF050042AC92 /* Build configuration list for PBXNativeTarget "winstrikeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C04B61EC1F20EF050042AC92 /* Debug */,
@@ -3730,7 +3731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Internal;
 		};
-		C0B9D45C1F1F8207009A77DD /* Build configuration list for PBXProject "cinema" */ = {
+		C0B9D45C1F1F8207009A77DD /* Build configuration list for PBXProject "winstrike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0B9D4711F1F8207009A77DD /* Debug */,
@@ -3741,7 +3742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Internal;
 		};
-		C0B9D4731F1F8207009A77DD /* Build configuration list for PBXNativeTarget "cinema" */ = {
+		C0B9D4731F1F8207009A77DD /* Build configuration list for PBXNativeTarget "winstrike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0B9D4741F1F8207009A77DD /* Debug */,

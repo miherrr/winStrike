@@ -5,22 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0B9D4601F1F8207009A77DD"
-               BuildableName = "foodle.app"
-               BlueprintName = "foodle"
-               ReferencedContainer = "container:foodle.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Internal"
@@ -29,24 +13,14 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C04B61E31F20EF050042AC92"
-               BuildableName = "foodleTests.xctest"
-               BlueprintName = "foodleTests"
-               ReferencedContainer = "container:foodle.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0B9D4601F1F8207009A77DD"
-            BuildableName = "CInema.app"
-            BlueprintName = "cinema"
-            ReferencedContainer = "container:cinema.xcodeproj">
+            BuildableName = "winstrike.app"
+            BlueprintName = "winstrike"
+            ReferencedContainer = "container:winstrike.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -69,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0B9D4601F1F8207009A77DD"
-            BuildableName = "CInema.app"
-            BlueprintName = "cinema"
-            ReferencedContainer = "container:cinema.xcodeproj">
+            BuildableName = "winstrike.app"
+            BlueprintName = "winstrike"
+            ReferencedContainer = "container:winstrike.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -83,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0B9D4601F1F8207009A77DD"
-            BuildableName = "foodle.app"
-            BlueprintName = "foodle"
-            ReferencedContainer = "container:foodle.xcodeproj">
+            BuildableName = "winstrike.app"
+            BlueprintName = "winstrike"
+            ReferencedContainer = "container:winstrike.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

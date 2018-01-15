@@ -1,19 +1,19 @@
 ### Headers settings
-company: Heads and Hands
+company: PRSolution
 
 ### Xcode project settings
 project_name: cinema
-xcodeproj_path: cinema.xcodeproj
+xcodeproj_path: winstrike.xcodeproj
 
 ### Code generation settings section
 # The main project target name
-project_target: cinema
+project_target: winstrike
 
 # The file path for new modules
-project_file_path: cinema/Classes/Modules
+project_file_path: winstrike/Classes/Modules
 
 # The Xcode group path to new modules
-project_group_path: cinema/Classes/Modules
+project_group_path: winstrike/Classes/Modules
 
 ### Dependencies settings section
 cartfile_path: Cartfile

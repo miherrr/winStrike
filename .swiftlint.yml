@@ -2,8 +2,8 @@
 
 excluded:
   - Carthage
-  - cinema/Classes/Business/Constants/Images.swift
-  - cinema/Classes/Business/Constants/Strings.swift
+  - winstrike/Classes/Business/Constants/Images.swift
+  - winstrike/Classes/Business/Constants/Strings.swift
 
 opt_in_rules:
   - attributes
