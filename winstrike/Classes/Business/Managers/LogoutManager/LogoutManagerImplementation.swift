@@ -12,14 +12,10 @@ import Foundation
 
 class LogoutManagerImplementation {
 
-    let regionManager: RegionManager
-    let termsManager: TermsManager
     let authTokenManager: AuthTokenManagerProtocol
 
-    init(regionManager: RegionManager, termsManager: TermsManager, authTokenManager: AuthTokenManagerProtocol) {
+    init(authTokenManager: AuthTokenManagerProtocol) {
 
-        self.regionManager = regionManager
-        self.termsManager = termsManager
         self.authTokenManager = authTokenManager
     }
 }
@@ -30,8 +26,6 @@ extension LogoutManagerImplementation: LogoutManager {
 
     func clearData() {
 
-        regionManager.clear()
-        termsManager.clear()
         authTokenManager.removeApiToken()
     }
 }

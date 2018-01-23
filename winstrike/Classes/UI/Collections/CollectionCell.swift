@@ -50,7 +50,6 @@ class CollectionCell: UITableViewCell {
         titleLabel.leadingAnchor ~= leadingAnchor + 34
         titleLabel.trailingAnchor ~= trailingAnchor - 75
 
-        button.setImage(Asset.Kinobase.settingsUnselect.image, for: .normal)
         contentView.addSubview(button.prepareForAutoLayout())
         button.centerYAnchor ~= centerYAnchor
         button.trailingAnchor ~= trailingAnchor - 40
@@ -74,18 +73,11 @@ class CollectionCell: UITableViewCell {
 
         titleLabel.textColor = !selected ? UIColor.cnmAfafaf : UIColor(white: 87.0 / 255.0, alpha: 1.0)
 
-        if selected {
-            button.setImage(Asset.Kinobase.settings.image, for: .normal)
-        } else {
-            button.setImage(Asset.Kinobase.settingsUnselect.image, for: .normal)
-        }
-
         contentView.backgroundColor = .white
     }
 
     // MARK: Actions
-    func tapSettings() {
-        delegate?.tapButtonSetting(indexPath)
+    @objc func tapSettings() {
     }
 
     static var reuseIdentifier: String {

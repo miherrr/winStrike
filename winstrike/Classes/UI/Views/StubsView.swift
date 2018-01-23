@@ -47,6 +47,6 @@ class StubsView: UIView {
         imageView.centerXAnchor ~= contentView.centerXAnchor
         imageView.bottomAnchor ~= contentView.bottomAnchor
 
-        imageView.image = Asset.Cinema.blankSplash.image
+        //imageView.image = Asset.Cinema.blankSplash.image
     }
 }

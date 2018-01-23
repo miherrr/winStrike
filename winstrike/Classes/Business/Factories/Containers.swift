@@ -37,169 +37,9 @@ enum Containers {
             return alertController
         }
 
-        container.register(tag: SlidesConfigurator.tag) { () -> UIViewController in
-            let configurator = SlidesConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.firstLaunchManager = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: StartConfigurator.tag) { (isError: Bool) -> UIViewController in
-            let configurator = StartConfigurator(isError: isError)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            configurator.authTokenManager = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: MainConfigurator.tag) { () -> UIViewController in
-            let configurator = MainConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: FilmsConfigurator.tag) { (films: [Film]) -> UIViewController in
-            let configurator = FilmsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            configurator.films = films
-            return configurator.configureModule()
-        }
-
-        container.register(tag: FilmConfigurator.tag) { (videoID: String, name: String) -> UIViewController in
-            let configurator = FilmConfigurator(videoID: videoID, name: name)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: ActorsConfigurator.tag) { (id: String, name: String, role: String, persons: [PersonFromFilm]) -> UIViewController in
-            let configurator = ActorsConfigurator(id: id, name: name, role: role, persons: persons)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: KinobaseConfigurator.tag) { () -> UIViewController in
-            let configurator = KinobaseConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: RewardsConfigurator.tag) { () -> UIViewController in
-            let configurator = RewardsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            configurator.locationManager = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: MainConfigurator.tag) { () -> UIViewController in
-            let configurator = MainConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            configurator.locationManager = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: NewCollectionsConfigurator.tag) { (output: NewCollectionsModuleOutput, id: String, name: String, watched: [Film]) -> UIViewController in
-            let configurator = NewCollectionsConfigurator(output: output, id: id, nameCol: name, watched: watched)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: ProfileConfigurator.tag) { (mainView: MainTabView) -> UIViewController in
-            let configurator = ProfileConfigurator(mainView)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: FriendsConfigurator.tag) { () -> UIViewController in
-            let configurator = FriendsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: EditingProfileConfigurator.tag) { (
-            nameUser: String,
-            avatar: String,
-            output: EditingProfileModuleOutput
-        ) -> UIViewController in
-            let configurator = EditingProfileConfigurator((nameUser: nameUser, avatar: avatar, output: output))
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: SettingsConfigurator.tag) { () -> UIViewController in
-            let configurator = SettingsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            configurator.locationManager = try managersContainer.resolve()
-            configurator.authTokenManager = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: NewsConfigurator.tag) { (newsID: String) -> UIViewController in
-            let configurator = NewsConfigurator(newsID: newsID)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: ReviewsConfigurator.tag) { (film: FullFilm) -> UIViewController in
-            let configurator = ReviewsConfigurator(film: film)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: AdminCollectionConfigurator.tag) { (id: String, name: String) -> UIViewController in
-            let configurator = AdminCollectionConfigurator(id: id, name: name)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: ChatsConfigurator.tag) { () -> UIViewController in
-            let configurator = ChatsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: TicketsConfigurator.tag) { () -> UIViewController in
-            let configurator = TicketsConfigurator()
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
         container.register(tag: SplashConfigurator.tag) { () -> UIViewController in
             let configurator = SplashConfigurator()
             configurator.appRouter = try managersContainer.resolve()
-            return configurator.configureModule()
-        }
-
-        container.register(tag: FilterConfigurator.tag) {(output: FilterModuleOutput,
-            genres: [String],
-            years: [Int],
-            filterParameters: FilterParameters,
-            isWatched: Bool
-            ) -> UIViewController in
-            let configurator = FilterConfigurator(
-                output: output,
-                genres: genres,
-                years: years,
-                filterParameters: filterParameters,
-                isWatched: isWatched)
-            configurator.appRouter = try managersContainer.resolve()
-            configurator.provider = try managersContainer.resolve()
             return configurator.configureModule()
         }
 
@@ -210,20 +50,9 @@ enum Containers {
         let container = DependencyContainer()
 
         container.register {
-
-            try LogoutManagerImplementation(regionManager: container.resolve(),
-                                            termsManager: container.resolve(),
-                                            authTokenManager: container.resolve()) as LogoutManager
+            try LogoutManagerImplementation(authTokenManager: container.resolve()) as LogoutManager
         }
 
-        container.register {
-
-            RegionManagerImplementation(userDefaults: UserDefaults.standard) as RegionManager
-        }
-        container.register {
-
-            TermsManagerImplementation(userDefaults: UserDefaults.standard) as TermsManager
-        }
         container.register {
             NotificationCenter.default
         }
@@ -231,14 +60,10 @@ enum Containers {
             try LaunchManager(
                 moduleCreator: container.resolve(),
                 authTokenManager: container.resolve(),
-                regionManager: container.resolve(),
-                termsManager: container.resolve(),
                 firstLaunchManager: container.resolve()
             ) as LaunchManagerProtocol
         }
-        container.register {
-            LocationManager() as LocationManagerProtocol
-        }
+
         container.register { _ -> AppRouterProtocol in
             let router = try AppRouter(
                 application: container.resolve(),

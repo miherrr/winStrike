@@ -90,7 +90,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
         newsLabel.trailingAnchor ~= mainView.trailingAnchor
 
         let shareButton = UIButton()
-        shareButton.setImage(Asset.Cinema.sharing.image, for: .normal)
+        //shareButton.setImage(Asset.Cinema.sharing.image, for: .normal)
         shareButton.addTarget(self, action: #selector(tapSharedButton), for: .touchUpInside)
 
         mainView.addSubview(shareButton.prepareForAutoLayout())
@@ -114,15 +114,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
         separatorView.topAnchor ~= mainView.bottomAnchor + 20
     }
 
-    func setNews(_ news: News) {
-        infoLabel.text = news.createdAt.hourMinutes + ", " + news.createdAt.monthMedium
-        userImage.kf.setImage(with: URL(string: news.creator.avatar))
-        titleLabel.text = news.name
-        newsLabel.text = news.description
-        countLabel.text = String(news.shared)
-    }
-
-    func tapSharedButton() {
+    @objc func tapSharedButton() {
         delegate?.openShareSimple()
     }
 }

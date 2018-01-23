@@ -1,4 +1,4 @@
-# swiftlint 0.22.0
+# swiftlint 0.24.2
 
 excluded:
   - Carthage
@@ -6,7 +6,7 @@ excluded:
   - winstrike/Classes/Business/Constants/Strings.swift
 
 opt_in_rules:
-  - attributes
+#  - attributes
   - closure_end_indentation
   - closure_spacing
   - conditional_returns_on_newline

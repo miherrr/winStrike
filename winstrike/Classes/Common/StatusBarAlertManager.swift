@@ -44,7 +44,6 @@ class StatusBarAlertManager {
 
     func setStatusBarAlert(with message: String, withType type: StatusBarMessageType = .failure, with viewController: UIViewController) {
 
-
         guard !message.isEmpty else {
             clear()
             return
@@ -111,7 +110,7 @@ class StatusBarAlertManager {
         UIView.commitAnimations()
     }
 
-    fileprivate dynamic func windowAnimationDidStop(_ animationID: String?, finished: Bool, context: UnsafeMutableRawPointer) {
+    @objc fileprivate dynamic func windowAnimationDidStop(_ animationID: String?, finished: Bool, context: UnsafeMutableRawPointer) {
         let views = window.subviews
         for view in views where view.alpha == 0 {
             view.removeFromSuperview()

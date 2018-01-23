@@ -14,22 +14,16 @@ class LaunchManager {
 
     let moduleCreator: AppRouterModuleCreator
     let authTokenManager: AuthTokenManagerProtocol
-    let regionManager: RegionManager
-    let termsManager: TermsManager
     var firstLaunchManager: FirstLaunchManagerProtocol
 
     fileprivate let disposeBag = DisposeBag()
 
     init(moduleCreator: AppRouterModuleCreator,
          authTokenManager: AuthTokenManagerProtocol,
-         regionManager: RegionManager,
-         termsManager: TermsManager,
          firstLaunchManager: FirstLaunchManagerProtocol) {
 
         self.moduleCreator = moduleCreator
         self.authTokenManager = authTokenManager
-        self.regionManager = regionManager
-        self.termsManager = termsManager
         self.firstLaunchManager = firstLaunchManager
     }
 }
