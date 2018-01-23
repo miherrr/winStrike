@@ -117,7 +117,6 @@ enum Asset {
     static let unselectStar = ImageAsset(name: "unselectStar")
     static let vader = ImageAsset(name: "vader")
   }
-  static let dislikeSelect = ImageAsset(name: "dislikeSelect")
   enum NavBar {
     static let back = ImageAsset(name: "back")
     static let navBarArrowBack = ImageAsset(name: "nav-bar-arrow-back")
@@ -144,6 +143,20 @@ enum Asset {
       static let forma = ImageAsset(name: "forma")
       static let shape = ImageAsset(name: "shape")
     }
+  }
+  enum Winstrike {
+    static let backChevron = ImageAsset(name: "back-chevron")
+    static let england = ImageAsset(name: "england")
+    static let facebook = ImageAsset(name: "facebook")
+    static let handshake = ImageAsset(name: "handshake")
+    static let instagram = ImageAsset(name: "instagram")
+    static let label = ImageAsset(name: "label")
+    static let like = ImageAsset(name: "like")
+    static let logout = ImageAsset(name: "logout")
+    static let russia = ImageAsset(name: "russia")
+    static let telegram = ImageAsset(name: "telegram")
+    static let twitch = ImageAsset(name: "twitch")
+    static let vk = ImageAsset(name: "vk")
   }
 
   // swiftlint:disable trailing_comma
@@ -205,7 +218,6 @@ enum Asset {
     Cinema.timeOrange,
     Cinema.unselectStar,
     Cinema.vader,
-    dislikeSelect,
     NavBar.back,
     NavBar.navBarArrowBack,
     NavBar.navBarList,
@@ -221,6 +233,18 @@ enum Asset {
     StartViews.Start.background,
     StartViews.Start.forma,
     StartViews.Start.shape,
+    Winstrike.backChevron,
+    Winstrike.england,
+    Winstrike.facebook,
+    Winstrike.handshake,
+    Winstrike.instagram,
+    Winstrike.label,
+    Winstrike.like,
+    Winstrike.logout,
+    Winstrike.russia,
+    Winstrike.telegram,
+    Winstrike.twitch,
+    Winstrike.vk,
   ]
   // swiftlint:enable trailing_comma
   @available(*, deprecated, renamed: "allImages")

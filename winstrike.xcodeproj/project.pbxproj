@@ -37,6 +37,7 @@
 		04A661971F6B05010032A491 /* Slide3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A661961F6B05010032A491 /* Slide3View.swift */; };
 		04A6619C1F6B89BF0032A491 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6619B1F6B89BF0032A491 /* ViewHelpers.swift */; };
 		05E3228A2B75D5D1C02B3442 /* FriendsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855AFF86881DB84DD1C83B5 /* FriendsRouterInput.swift */; };
+		07C78A4481388F1339B64CB8 /* SplashInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8A918970FD74760406682 /* SplashInteractorInputOutput.swift */; };
 		0894E596B519D31B67077915 /* TicketsInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC48EB7E65C749E31CEDFE /* TicketsInteractorInputOutput.swift */; };
 		0B1989EB360B9E889E0AB5C7 /* SlidesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109D658511F070820F774EB /* SlidesInteractor.swift */; };
 		0BF90C8770E0671B9BE4FFF3 /* SlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C511CB71D115485FD2B838 /* SlidesViewController.swift */; };
@@ -59,6 +60,7 @@
 		204352CE0440F816EE8157D6 /* KinobaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15479558D71F0A1A93A5906C /* KinobaseRouterInput.swift */; };
 		216C7CA63522CFECBF9C74EE /* ChatsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39455AB687BCFE516563DAFD /* ChatsConfigurator.swift */; };
 		2182D6EA864E915DD756F086 /* FilmsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77F45561B359E019C73EA7 /* FilmsRouter.swift */; };
+		2216321A440ECB8A1A5A8E2F /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */; };
 		23B2C8A77EA0785120873FC7 /* ProfileInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFA9446849501B220DC1A5 /* ProfileInteractorInputOutput.swift */; };
 		23DBE1E05829B64C78EF1556 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378597AD475A08FF5188BEBB /* SettingsInteractor.swift */; };
 		286A08E13291C4E3CD9023A4 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913E78F7822FFA43B4E7F93 /* FriendsPresenter.swift */; };
@@ -66,10 +68,8 @@
 		2AF71E4DB857906A8637F929 /* ReviewsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA950421AEC2C71A3D2F355E /* ReviewsRouterInput.swift */; };
 		2B4144A3B0473141003F2F09 /* FilterInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BEAA251AE65980076F5E8 /* FilterInteractorInputOutput.swift */; };
 		2D6137E488816C3F4D964D99 /* SettingsViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9BC294B42329C9CB90630D /* SettingsViewInputOutput.swift */; };
-		2DBA1618612E23ED3D19F2C8 /* GothamProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1D832725D8F1D7227530 /* GothamProBold.ttf */; };
 		2DBA1619AFA28CC3A2C7FEE8 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F5248F4155F9593EE1C /* LogManager.swift */; };
 		2DBA1A63EA33E4B04C5CCC2E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1117036D8B7E596B4703 /* Fonts.swift */; };
-		2DBA1F7F9C7D0874FD0E7B65 /* GothamProMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA12673A870340C25A6A80 /* GothamProMedium.ttf */; };
 		2FBA2B5A7829C64B902F48EF /* RewardsModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6A658B8A8C7840B905115 /* RewardsModuleInputOutput.swift */; };
 		303FB3FAC32FDB7D41A8F095 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48210763472CB2951EAC7F4 /* StartRouter.swift */; };
 		31B1B842B68AE12FD252E7DC /* ChatsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4F4F9455C87F0C21D4AEE /* ChatsInteractor.swift */; };
@@ -94,6 +94,7 @@
 		3361E48C1F5434A100ECF276 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E48B1F5434A100ECF276 /* UploadResponse.swift */; };
 		3361E4951F54A4DA00ECF276 /* PhoneNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E4931F54A4DA00ECF276 /* PhoneNumberFormatter.swift */; };
 		3361E4961F54A4DA00ECF276 /* PhoneNumberFormatterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E4941F54A4DA00ECF276 /* PhoneNumberFormatterImplementation.swift */; };
+		33762FD8BD7C6DBDCDB59E88 /* SplashViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DD7ED06575C670A0707ECC /* SplashViewInputOutput.swift */; };
 		3386D47B1F443731009D9A42 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386D47A1F443731009D9A42 /* Cart.swift */; };
 		3386D47D1F4437F7009D9A42 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386D47C1F4437F7009D9A42 /* CartResponse.swift */; };
 		3386D47F1F443C8B009D9A42 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386D47E1F443C8B009D9A42 /* CartProduct.swift */; };
@@ -170,7 +171,6 @@
 		813D863E1FEA83AB0026327B /* MessageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D863D1FEA83AB0026327B /* MessageError.swift */; };
 		8159D0D320065508006CF82B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8159D0D220065508006CF82B /* Bolts.framework */; };
 		8176B3C82004CE85003943DC /* FacebookShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882FEBEE1FB5D57200FF9AC5 /* FacebookShare.framework */; };
-		8176B3D22004FEC3003943DC /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 818911A61FF79F940074400B /* AccountKitStrings.bundle */; };
 		818911A41FF79F940074400B /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8102AA891FE92D8F00416830 /* AccountKit.framework */; };
 		818911A81FF79F940074400B /* AccountKitStrings.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 818911A61FF79F940074400B /* AccountKitStrings.bundle */; };
 		8190A1681FF23FF000479388 /* MeetingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190A1671FF23FF000479388 /* MeetingVC.swift */; };
@@ -182,6 +182,8 @@
 		81B39B6D1FD9492900C75520 /* ExsRewardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B39B6C1FD9492900C75520 /* ExsRewardsCell.swift */; };
 		81C3655F1FE561BF0021CFC6 /* LikedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C3655E1FE561BF0021CFC6 /* LikedView.swift */; };
 		81C4418A1FD040B9004EBB1D /* ReviewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C441891FD040B9004EBB1D /* ReviewsResponse.swift */; };
+		81C5ACF820121D8700E47430 /* lottie.js in Resources */ = {isa = PBXBuildFile; fileRef = 81C5ACF420121D8700E47430 /* lottie.js */; };
+		81C5ACFB20122FFF00E47430 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 81C5ACF320121D8600E47430 /* data.json */; };
 		81D73A031FC6BADD0091EE3D /* RewardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D73A021FC6BADD0091EE3D /* RewardsCell.swift */; };
 		81D73A061FC6C1040091EE3D /* RewardsSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D73A051FC6C1040091EE3D /* RewardsSubViewController.swift */; };
 		81D73A151FC6ECA30091EE3D /* LineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D73A141FC6ECA30091EE3D /* LineLayout.swift */; };
@@ -210,10 +212,10 @@
 		947BE8C889B8786ADE0D4BE6 /* KinobaseModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CBA1C5C99D21E4F6E48FE /* KinobaseModuleInputOutput.swift */; };
 		94D678E8A8A1733D10ECACFD /* RewardsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6504AD792A77DBB8C721F92 /* RewardsConfigurator.swift */; };
 		9539AF09C9AA3F374003893E /* FriendsInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5A57EF46CD36B3FEE4F19 /* FriendsInteractorInputOutput.swift */; };
+		99241F5B793E63806B03F3B3 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA63AACF27B11878F3875 /* SplashRouter.swift */; };
 		9A5E7C2999B695C275922D90 /* FilmRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD395F278C10C69DD7776E28 /* FilmRouterInput.swift */; };
 		9AEBDDEDF3DC22745F42D19A /* NewCollectionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE3F887D6C9AFFF646108C /* NewCollectionsPresenter.swift */; };
 		9BB4E0163742B6C1DC140FBF /* TextInputFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4E0CC998ED83A32A59AFA /* TextInputFilter.swift */; };
-		9BB4E10D03F5AFC9D8691902 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BB4EB0FDA36A97D1F8F9CEF /* restaurants.json */; };
 		9BB4E16B5EFDB6CBC8454850 /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4EDC1E07B4DFD3F426AC1 /* Response+ObjectMapper.swift */; };
 		9BB4E26D89A31E79BAFE6B36 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4E1154A4817FA8FA36935 /* Images.swift */; };
 		9BB4E2D2E17EA5E6ED5DB0BF /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4E0DA5EDD4BB01D3CE4A3 /* Formatters.swift */; };
@@ -254,10 +256,12 @@
 		A0E7CDFA381E75BF1E32E066 /* SettingsModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D68AFD89491D5E79E917D3 /* SettingsModuleInputOutput.swift */; };
 		A2313682C3743BCE3E43D8C3 /* FriendsModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FBB7F919B1F58E0109C31F /* FriendsModuleInputOutput.swift */; };
 		A2CFB534CD2FF487A333F3C5 /* SlidesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C999CAAC761857F337C1B /* SlidesConfigurator.swift */; };
+		A38174CEB232EBFB5FD4B31B /* SplashModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F4D5FD04DE2D8682E496BB /* SplashModuleInputOutput.swift */; };
 		A6D22FDB807C3007AA3FAEA4 /* AdminCollectionModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBD66265FD2CCE074A294ED /* AdminCollectionModuleInputOutput.swift */; };
 		A792EEEB368434C2F4167479 /* ProfileViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8F58544C52EC37EAE497D /* ProfileViewInputOutput.swift */; };
 		A81958F6FC30D87AB80CEE2F /* ChatsModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B6893836B6FABF9DE1BA2 /* ChatsModuleInputOutput.swift */; };
 		A89293931D447E75B5778D5B /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007F5DDB3F44F83294E9003 /* FilterPresenter.swift */; };
+		A94909D30D1D65F87626EFDD /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C5A0FFD0EA78C8B7C1746 /* SplashInteractor.swift */; };
 		AC20850608C915E9DB463AF1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D3E4B2494BA8802F9ADA /* StartViewController.swift */; };
 		B0060A7D3A6D38A7344CDC73 /* ReviewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A660CF2D2510DF0D41717BB7 /* ReviewsConfigurator.swift */; };
 		B127CC9ACDD5D56B8C681194 /* FilmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45954FD35B27C3D8006336D6 /* FilmInteractor.swift */; };
@@ -396,8 +400,11 @@
 		DF6C2631E2466235200D4007 /* MainModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEDAA8348371BF916AC8890 /* MainModuleInputOutput.swift */; };
 		DFD88006EEFE8C975E728A2D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD2834DF58CB08BE4A696D /* FriendsViewController.swift */; };
 		E0D2E87DE6B1D14F6574BAC9 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353B52C857EB585D85049A0 /* SettingsRouter.swift */; };
+		E17F85E542736C0D28993858 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E710B0E529AC5ABDB11F3773 /* SplashViewController.swift */; };
 		E39F014A5C62B07EFB33B488 /* ActorsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42AB2DC519392C0CF11844 /* ActorsInteractor.swift */; };
+		E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B349894AFFDAAAB01F2EAA /* SplashRouterInput.swift */; };
 		E902ABECB95340F7583D0A2D /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683EA44683DE97D90296EA7D /* MainInteractor.swift */; };
+		E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292FEEE27C07BAC9D12B75 /* SplashPresenter.swift */; };
 		E940DC25236FEE2A676606DC /* NewCollectionsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C776660B909D3D8492AD2 /* NewCollectionsRouterInput.swift */; };
 		EA22A21736E89ABB71322D5D /* ReviewsModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E7A3BA28785BBCB4E3676 /* ReviewsModuleInputOutput.swift */; };
 		EA9606D9E500B8B3BB908C6B /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661848301E2AC8729375E5B /* NewsPresenter.swift */; };
@@ -460,6 +467,7 @@
 		074CC58DB859D5E1B4FD3EE7 /* EditingProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditingProfileRouterInput.swift; sourceTree = "<group>"; };
 		07A303D3815FDC35382E8E31 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
 		0A94B5CD3DA7B989EBB5A6F3 /* SettingsInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsInteractorInputOutput.swift; sourceTree = "<group>"; };
+		0B4C5A0FFD0EA78C8B7C1746 /* SplashInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		0DEF5A4E5745D4ED34C8F96F /* ChatsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatsRouter.swift; sourceTree = "<group>"; };
 		0FFFD811851BC7E5FC79FDB1 /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		1353B52C857EB585D85049A0 /* SettingsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
@@ -523,6 +531,7 @@
 		338AD1A81F5554DE00717F3A /* LogoutManagerImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutManagerImplementation.swift; sourceTree = "<group>"; };
 		33C656501F4C261000594E47 /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		34A5A57EF46CD36B3FEE4F19 /* FriendsInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendsInteractorInputOutput.swift; sourceTree = "<group>"; };
+		34F4D5FD04DE2D8682E496BB /* SplashModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashModuleInputOutput.swift; sourceTree = "<group>"; };
 		3541667E08CF9FC79F43EE5B /* FilterConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilterConfigurator.swift; sourceTree = "<group>"; };
 		36342B46096D41E6E773F1BE /* FriendsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendsConfigurator.swift; sourceTree = "<group>"; };
 		36F0D3E4B2494BA8802F9ADA /* StartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -543,6 +552,7 @@
 		4AB14E621BC56396644F3ED1 /* NewsInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsInteractorInputOutput.swift; sourceTree = "<group>"; };
 		4FC2AEFFDC1D58A3674A53E8 /* NewsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		578E4385F204C12EE074F1DC /* TicketsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TicketsConfigurator.swift; sourceTree = "<group>"; };
+		57B349894AFFDAAAB01F2EAA /* SplashRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashRouterInput.swift; sourceTree = "<group>"; };
 		58BA790DCD2AAD078E77E7F4 /* FriendsViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendsViewInputOutput.swift; sourceTree = "<group>"; };
 		59F2B95B015B514C2E1CDB41 /* StartModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleInputOutput.swift; sourceTree = "<group>"; };
 		5A2B7BAA193FEB6D01D998C5 /* AdminCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdminCollectionViewController.swift; sourceTree = "<group>"; };
@@ -551,6 +561,7 @@
 		60D4DF9317B095FA4BB10BB7 /* KinobaseRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KinobaseRouter.swift; sourceTree = "<group>"; };
 		613657E6B298149C0B683A2F /* NewCollectionsInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewCollectionsInteractorInputOutput.swift; sourceTree = "<group>"; };
 		62A3D8E35464E3B1F1D90FFD /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		668453C6B93E7BDAE03ACBCC /* ReviewsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		668C095DEB37EC0D31CD45B2 /* FilmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 		683EA44683DE97D90296EA7D /* MainInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -601,6 +612,8 @@
 		81B39B6C1FD9492900C75520 /* ExsRewardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExsRewardsCell.swift; sourceTree = "<group>"; };
 		81C3655E1FE561BF0021CFC6 /* LikedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedView.swift; sourceTree = "<group>"; };
 		81C441891FD040B9004EBB1D /* ReviewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsResponse.swift; sourceTree = "<group>"; };
+		81C5ACF320121D8600E47430 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = data.json; path = winstrike/Classes/Business/Network/Stubs/data.json; sourceTree = "<group>"; };
+		81C5ACF420121D8700E47430 /* lottie.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = lottie.js; path = winstrike/Classes/Business/Network/Stubs/lottie.js; sourceTree = "<group>"; };
 		81D73A021FC6BADD0091EE3D /* RewardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsCell.swift; sourceTree = "<group>"; };
 		81D73A051FC6C1040091EE3D /* RewardsSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsSubViewController.swift; sourceTree = "<group>"; };
 		81D73A101FC6DD490091EE3D /* CollectionNode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionNode.framework; path = Carthage/Build/iOS/CollectionNode.framework; sourceTree = "<group>"; };
@@ -699,6 +712,7 @@
 		B8D5D36224CAF39140EC4032 /* AdminCollectionViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdminCollectionViewInputOutput.swift; sourceTree = "<group>"; };
 		BB83D65D1D00913BC03F800B /* AdminCollectionInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdminCollectionInteractor.swift; sourceTree = "<group>"; };
 		BC80844519489BB8200DF5BA /* ReviewsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReviewsPresenter.swift; sourceTree = "<group>"; };
+		BCDCA63AACF27B11878F3875 /* SplashRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		BD5014E8ED4E53AA4058D624 /* NewCollectionsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewCollectionsConfigurator.swift; sourceTree = "<group>"; };
 		BDE7CC5EBF828005E095494A /* KinobaseInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KinobaseInteractor.swift; sourceTree = "<group>"; };
 		C0005F041F338B7400410A74 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -742,9 +756,11 @@
 		C19A0CFC350BF45A0FD46B72 /* SlidesPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SlidesPresenter.swift; sourceTree = "<group>"; };
 		C48210763472CB2951EAC7F4 /* StartRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		C58760E9AED9097DF6B63D2A /* MainRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
+		C6292FEEE27C07BAC9D12B75 /* SplashPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		C937B443E893AD890B9CE7AA /* StartRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartRouterInput.swift; sourceTree = "<group>"; };
 		C9A349187E5E55A972A621C5 /* TicketsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TicketsRouterInput.swift; sourceTree = "<group>"; };
 		CA312F2F0C6CC56BC06EF1D4 /* MainViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInputOutput.swift; sourceTree = "<group>"; };
+		CBC8A918970FD74760406682 /* SplashInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashInteractorInputOutput.swift; sourceTree = "<group>"; };
 		CD395F278C10C69DD7776E28 /* FilmRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilmRouterInput.swift; sourceTree = "<group>"; };
 		CDD487C8DD2BC9F77C10FCA5 /* KinobaseConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KinobaseConfigurator.swift; sourceTree = "<group>"; };
 		CE09FEA91F954E2F00D49351 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
@@ -834,6 +850,7 @@
 		E1D0E8A1E8E4B9FEDDB93370 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E5BFB39DE09AEC23D703E7C0 /* RewardsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RewardsRouterInput.swift; sourceTree = "<group>"; };
 		E61052EF4F0973CD2DD31AF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E710B0E529AC5ABDB11F3773 /* SplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E913E78F7822FFA43B4E7F93 /* FriendsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
 		E9C511CB71D115485FD2B838 /* SlidesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SlidesViewController.swift; sourceTree = "<group>"; };
 		EA2353BD6690DD8ECD32BAF1 /* FilterRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilterRouterInput.swift; sourceTree = "<group>"; };
@@ -841,6 +858,7 @@
 		EE77E002A161C9DC1572ADEB /* StartInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		EFE636519652480C3F21036C /* StartPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		F007F5DDB3F44F83294E9003 /* FilterPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		F1DD7ED06575C670A0707ECC /* SplashViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashViewInputOutput.swift; sourceTree = "<group>"; };
 		F1F8CEAA09510A0C8DABA731 /* ActorsInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActorsInteractorInputOutput.swift; sourceTree = "<group>"; };
 		F63EFCFC37F05D12A292F6B9 /* NewsModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsModuleInputOutput.swift; sourceTree = "<group>"; };
 		F6504AD792A77DBB8C721F92 /* RewardsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RewardsConfigurator.swift; sourceTree = "<group>"; };
@@ -1162,6 +1180,19 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		2505E8ADE088264EE72B02CA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F38E65D313C15D6C69BAB8AE /* Configurator */,
+				F7A02064C3433D9D7CAF94EA /* Interactor */,
+				91A53BD91E8B9D9B1E0535C0 /* Presenter */,
+				FA6453DF61E3F5B46BB800F5 /* Router */,
+				286B88FD0716DE7302982360 /* View */,
+			);
+			name = Splash;
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		254FD61EC20B471A29A6681A /* NewCollections */ = {
 			isa = PBXGroup;
 			children = (
@@ -1198,6 +1229,16 @@
 				C937B443E893AD890B9CE7AA /* StartRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		286B88FD0716DE7302982360 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E710B0E529AC5ABDB11F3773 /* SplashViewController.swift */,
+				F1DD7ED06575C670A0707ECC /* SplashViewInputOutput.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D0B17DEBCC6994E51990085 /* Router */ = {
@@ -1647,6 +1688,16 @@
 			path = Start;
 			sourceTree = "<group>";
 		};
+		91A53BD91E8B9D9B1E0535C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34F4D5FD04DE2D8682E496BB /* SplashModuleInputOutput.swift */,
+				C6292FEEE27C07BAC9D12B75 /* SplashPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		946B2EBB5667B705377D89B6 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1716,6 +1767,7 @@
 				49CDE2B9D801F2B2D7CDECA1 /* AdminCollection */,
 				2ED92946F4475DCA82224FB9 /* Chats */,
 				026AEBC4A93DF08B7D9A33C0 /* Tickets */,
+				2505E8ADE088264EE72B02CA /* Splash */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2202,6 +2254,8 @@
 		C0B9D4581F1F8207009A77DD = {
 			isa = PBXGroup;
 			children = (
+				81C5ACF320121D8600E47430 /* data.json */,
+				81C5ACF420121D8700E47430 /* lottie.js */,
 				C0B9D4631F1F8207009A77DD /* winstrike */,
 				C04B61E51F20EF050042AC92 /* winstrikeTests */,
 				C0B9D4621F1F8207009A77DD /* Products */,
@@ -2620,6 +2674,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F38E65D313C15D6C69BAB8AE /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		F3EDB20A39465876559C6B3B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2657,6 +2720,16 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		F7A02064C3433D9D7CAF94EA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0B4C5A0FFD0EA78C8B7C1746 /* SplashInteractor.swift */,
+				CBC8A918970FD74760406682 /* SplashInteractorInputOutput.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		F888C35378EEE50722CA116F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -2674,6 +2747,16 @@
 				ECEC18F92F0E939C5C9C350B /* RewardsViewInputOutput.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FA6453DF61E3F5B46BB800F5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BCDCA63AACF27B11878F3875 /* SplashRouter.swift */,
+				57B349894AFFDAAAB01F2EAA /* SplashRouterInput.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		FEC128388EE56D8D8214B043 /* View */ = {
@@ -2782,14 +2865,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8176B3D22004FEC3003943DC /* AccountKitStrings.bundle in Resources */,
+				81C5ACFB20122FFF00E47430 /* data.json in Resources */,
+				81C5ACF820121D8700E47430 /* lottie.js in Resources */,
 				C03A2C431F2F31FB006E9B45 /* InfoPlist.strings in Resources */,
 				C0047BB81F20C33D0073544B /* Localizable.strings in Resources */,
 				C0B9D4771F1FB8F6009A77DD /* Assets.xcassets in Resources */,
 				33C656511F4C261000594E47 /* Localizable.stringsdict in Resources */,
-				2DBA1618612E23ED3D19F2C8 /* GothamProBold.ttf in Resources */,
-				2DBA1F7F9C7D0874FD0E7B65 /* GothamProMedium.ttf in Resources */,
-				9BB4E10D03F5AFC9D8691902 /* restaurants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2827,6 +2908,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FacebookCore.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FBSDKCoreKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -2855,6 +2937,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FacebookCore.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBSDKCoreKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VKSdkFramework.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3282,6 +3365,15 @@
 				3BC76231770F1715B96CC40D /* TicketsRouterInput.swift in Sources */,
 				75D7AA21CBA9D9B714AAE74B /* TicketsViewController.swift in Sources */,
 				CE7F49CC85A7FC31154C8D9A /* TicketsViewInputOutput.swift in Sources */,
+				2216321A440ECB8A1A5A8E2F /* SplashConfigurator.swift in Sources */,
+				A94909D30D1D65F87626EFDD /* SplashInteractor.swift in Sources */,
+				07C78A4481388F1339B64CB8 /* SplashInteractorInputOutput.swift in Sources */,
+				A38174CEB232EBFB5FD4B31B /* SplashModuleInputOutput.swift in Sources */,
+				E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */,
+				99241F5B793E63806B03F3B3 /* SplashRouter.swift in Sources */,
+				E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */,
+				E17F85E542736C0D28993858 /* SplashViewController.swift in Sources */,
+				33762FD8BD7C6DBDCDB59E88 /* SplashViewInputOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

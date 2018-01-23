@@ -8,6 +8,7 @@ import RxMoya
 import RxSwift
 import VKSdkFramework
 import AVFoundation
+import Lottie
 
 struct NewsFilter {
     let title: String
@@ -111,59 +112,68 @@ class MainViewController: ParentViewController {
     }
 
     func addView() {
-        mainTabView.isHidden = false
-        tableView.backgroundColor = .white
-        tableView.delegate = self
-        tableView.dataSource = self
+//        mainTabView.isHidden = false
+//        tableView.backgroundColor = .white
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//
+//        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+//
+//        view.addSubview(mainTabView.prepareForAutoLayout())
+//        let tabViewHeight: CGFloat = UIWindow(frame: UIScreen.main.bounds).bounds.height < 812 ? 70 : 100
+//        mainTabView.widthAnchor ~= view.widthAnchor
+//        mainTabView.heightAnchor ~= tabViewHeight
+//        mainTabView.leadingAnchor ~= view.leadingAnchor
+//        mainTabView.bottomAnchor ~= view.bottomAnchor
+//
+//        view.addSubview(contentView.prepareForAutoLayout())
+//        contentView.topAnchor ~= view.topAnchor
+//        contentView.leadingAnchor ~= view.leadingAnchor
+//        contentView.trailingAnchor ~= view.trailingAnchor
+//        contentView.bottomAnchor ~= mainTabView.topAnchor
+//
+//        navController = UINavigationController(rootViewController: self.childController)
+//
+//        navController.willMove(toParentViewController: self)
+//        navController.view.frame = contentView.bounds
+//        childController.view.backgroundColor = .red
+//        contentView.addSubview(navController.view)
+//        addChildViewController(navController)
+//        navController.didMove(toParentViewController: self)
+//        navController.navigationBar.isHidden = true
+//        let decorator = WhiteNavigationBarDecorator()
+//        decorator.configure(navController.navigationBar)
+//
+//        output?.setRootVC(navController)
+//
+//        navController.delegate = self
+//
+//        childController.view.addSubview(tableView.prepareForAutoLayout())
+//        tableView.pinEdgesToSuperviewEdges()
+//        tableView.showsVerticalScrollIndicator = false
+//        tableView.separatorStyle = .none
+//
+//        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+//        tableView.addSubview(refreshControl)
+//
+//        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+//
+//        mainTabView.delegate = self
+//
+//        tableViewRegister()
+//
+//        newsHeader.tag = 5
+//        newsHeader.isOpen = isNewsFilterOpen
+//        newsHeader.delegate = self
 
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-
-        view.addSubview(mainTabView.prepareForAutoLayout())
-        let tabViewHeight: CGFloat = UIWindow(frame: UIScreen.main.bounds).bounds.height < 812 ? 70 : 100
-        mainTabView.widthAnchor ~= view.widthAnchor
-        mainTabView.heightAnchor ~= tabViewHeight
-        mainTabView.leadingAnchor ~= view.leadingAnchor
-        mainTabView.bottomAnchor ~= view.bottomAnchor
-
-        view.addSubview(contentView.prepareForAutoLayout())
-        contentView.topAnchor ~= view.topAnchor
-        contentView.leadingAnchor ~= view.leadingAnchor
-        contentView.trailingAnchor ~= view.trailingAnchor
-        contentView.bottomAnchor ~= mainTabView.topAnchor
-
-        navController = UINavigationController(rootViewController: self.childController)
-
-        navController.willMove(toParentViewController: self)
-        navController.view.frame = contentView.bounds
-        childController.view.backgroundColor = .red
-        contentView.addSubview(navController.view)
-        addChildViewController(navController)
-        navController.didMove(toParentViewController: self)
-        navController.navigationBar.isHidden = true
-        let decorator = WhiteNavigationBarDecorator()
-        decorator.configure(navController.navigationBar)
-
-        output?.setRootVC(navController)
-
-        navController.delegate = self
-
-        childController.view.addSubview(tableView.prepareForAutoLayout())
-        tableView.pinEdgesToSuperviewEdges()
-        tableView.showsVerticalScrollIndicator = false
-        tableView.separatorStyle = .none
-
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        tableView.addSubview(refreshControl)
-
-        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-
-        mainTabView.delegate = self
-
-        tableViewRegister()
-
-        newsHeader.tag = 5
-        newsHeader.isOpen = isNewsFilterOpen
-        newsHeader.delegate = self
+        let animationView = LOTAnimationView(name: "data")
+        animationView.contentMode = .scaleAspectFill
+        animationView.loopAnimation = true
+        self.view.addSubview(animationView.prepareForAutoLayout())
+        animationView.pinEdgesToSuperviewEdges()
+        animationView.play{ (finished) in
+            print()
+        }
 
     }
 
@@ -440,8 +450,8 @@ extension MainViewController: MainViewInput {
 
         activityVC.isHidden = true
         activityVC.stopAnimating()
-        tableView.reloadData()
-        refreshControl.endRefreshing()
+//        tableView.reloadData()
+//        refreshControl.endRefreshing()
 
     }
 
@@ -449,7 +459,7 @@ extension MainViewController: MainViewInput {
         self.mainData = mainData
         activityVC.isHidden = true
         activityVC.stopAnimating()
-        tableView.reloadData()
+//        tableView.reloadData()
     }
 
 }
@@ -509,7 +519,7 @@ extension MainViewController: HeaderViewOpennedDelegate {
         isChanges = true
         yHeight = tableView.contentOffset.y
         UIView.setAnimationsEnabled(false)
-        tableView.reloadData()
+//        tableView.reloadData()
         UIView.setAnimationsEnabled(true)
     }
 }

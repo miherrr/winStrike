@@ -38,6 +38,7 @@ enum AppRouterDestination {
     case chats
     case tickets
     case adminCollection(id: String, name: String)
+    case splash
 
     var isPresent: Bool {
         switch self {
@@ -104,6 +105,8 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: ReviewsConfigurator.tag, arguments: film)
             case let .adminCollection(id, name):
                 return try factory.resolve(tag: AdminCollectionConfigurator.tag, arguments: id, name)
+            case let .splash:
+                return try factory.resolve(tag: SplashConfigurator.tag)
             }
         } catch {
             fatalError("can't resolve module from factory")

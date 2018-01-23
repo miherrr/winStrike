@@ -180,6 +180,12 @@ enum Containers {
             return configurator.configureModule()
         }
 
+        container.register(tag: SplashConfigurator.tag) { () -> UIViewController in
+            let configurator = SplashConfigurator()
+            configurator.appRouter = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
         container.register(tag: FilterConfigurator.tag) {(output: FilterModuleOutput,
             genres: [String],
             years: [Int],

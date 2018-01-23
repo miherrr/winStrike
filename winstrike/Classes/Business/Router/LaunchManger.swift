@@ -38,39 +38,14 @@ extension LaunchManager: LaunchManagerProtocol {
     func instantiateRootController(in window: UIWindow) -> Observable<FlowControllerProtocol> {
         return Observable<FlowControllerProtocol>.create { [unowned self] observer in
 
-            let invokeSlidesModule = { [unowned self] (window: UIWindow, observer: AnyObserver<FlowControllerProtocol>) in
-                let module = self.moduleCreator.createModule(for: .slides)
+            let invokeSplashModule = { [unowned self] (window: UIWindow, observer: AnyObserver<FlowControllerProtocol>) in
+                let module = self.moduleCreator.createModule(for: .splash)
                 let flowController = self.moduleCreator.createNavigationFlowController(viewController: module)
                 observer.onNext(flowController)
                 self.animateRootControllerChange(in: window, viewController: flowController.rootViewController)
             }
 
-            let invokeAuthModule = { [unowned self] (window: UIWindow, observer: AnyObserver<FlowControllerProtocol>) in
-                let module = self.moduleCreator.createModule(for: .start(isError: false))
-                let flowController = self.moduleCreator.createNavigationFlowController(viewController: module)
-                observer.onNext(flowController)
-                self.animateRootControllerChange(in: window, viewController: flowController.rootViewController)
-            }
-
-            let invokeStartModule = { [unowned self] (window: UIWindow, observer: AnyObserver<FlowControllerProtocol>) in
-                let module = self.moduleCreator.createModule(for: .main)
-                let flowController = self.moduleCreator.createNavigationFlowController(viewController: module)
-                observer.onNext(flowController)
-                self.animateRootControllerChange(in: window, viewController: flowController.rootViewController)
-            }
-
-            if !self.firstLaunchManager.isNotFirstLaunch {
-
-                invokeSlidesModule(window, observer)
-
-            } else if self.authTokenManager.apiToken == nil {
-
-                invokeAuthModule(window, observer)
-
-            } else {
-
-                invokeStartModule(window, observer)
-            }
+            invokeSplashModule(window, observer)
 
             return Disposables.create()
         }
