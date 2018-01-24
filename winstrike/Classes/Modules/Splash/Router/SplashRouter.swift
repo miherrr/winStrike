@@ -13,5 +13,7 @@ class SplashRouter {
 // MARK: - SplashRouterInput
 
 extension SplashRouter: SplashRouterInput {
-
+    func openStart() {
+        appRouter.startView()
+    }
 }

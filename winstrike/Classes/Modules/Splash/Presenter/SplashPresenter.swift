@@ -16,6 +16,9 @@ class SplashPresenter {
 // MARK: - SplashViewOutput
 
 extension SplashPresenter: SplashViewOutput {
+    func finishAnimation() {
+        router.openStart()
+    }
 
     func viewIsReady() {
         log.verbose("Splash is ready")

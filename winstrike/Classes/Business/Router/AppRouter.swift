@@ -15,6 +15,7 @@ struct AlertControllerData {
 enum AppRouterDestination {
     case systemAlert(data: AlertControllerData)
     case splash
+    case start
 
     var isPresent: Bool {
         switch self {
@@ -38,6 +39,8 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: Containers.ViewControllerType.systemAlert, arguments: data)
             case .splash:
                 return try factory.resolve(tag: SplashConfigurator.tag)
+            case .start:
+                return try factory.resolve(tag: StartConfigurator.tag)
             }
         } catch {
             fatalError("can't resolve module from factory")
@@ -57,6 +60,8 @@ protocol AppRouterProtocol {
     func openSideMenu()
 
     func backToMain()
+
+    func startView()
 
     func setRootViewController(viewControler: UINavigationController)
 }
@@ -149,6 +154,17 @@ class AppRouter: AppRouterProtocol {
         flowController.performBackTransition(animated: true)
             .subscribe()
             .addDisposableTo(disposeBag)
+    }
+
+    func startView() {
+        let mainViewController = moduleCreator.createModule(for: .start)
+
+        let flowController = moduleCreator.createNavigationFlowController(viewController: mainViewController)
+
+        if let appDelegate = application.delegate as? AppDelegate {
+            appDelegate.rootFlowController = flowController
+            appDelegate.window?.rootViewController = flowController.rootViewController
+        }
     }
 
     func dismissModule() {
