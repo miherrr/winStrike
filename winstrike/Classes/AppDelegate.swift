@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var sizeOfScreen: SizeScreen = .normal
+
     var rootFlowController: FlowControllerProtocol?
     var firstLaunchManager: LaunchManagerProtocol?
     fileprivate let disposeBag = DisposeBag()
@@ -35,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window.makeKeyAndVisible()
         self.window = window
+
+        if window.frame.width == 320 {
+            sizeOfScreen = .iphone5s
+        } else if window.frame.height == 812 {
+            sizeOfScreen = .iphoneX
+        }
 
         UINavigationBar.appearance().clipsToBounds = true
         if let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as? UIView {

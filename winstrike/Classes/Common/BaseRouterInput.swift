@@ -17,13 +17,13 @@ protocol BaseRouterInput {
 extension BaseRouterInput {
 
     func performTransitionToNetworkAlert(message: String?, actions: [UIAlertAction] = []) {
-        performTransitionToSystemAlert(title: L10n.alertTitleNetworkError, message: message, actions: actions)
+        //performTransitionToSystemAlert(title: L10n.alertTitleNetworkError, message: message, actions: actions)
     }
 
     func performTransitionToSystemAlert(title: String?, message: String?, actions: [UIAlertAction]) {
         var newActions = actions
         if actions.isEmpty {
-            newActions.append(UIAlertAction(title: L10n.alertButtonCancel, style: .cancel, handler: nil))
+           // newActions.append(UIAlertAction(title: L10n.alertButtonCancel, style: .cancel, handler: nil))
         }
         appRouter.simpleTransition(to: .systemAlert(data: AlertControllerData(
             title: title,

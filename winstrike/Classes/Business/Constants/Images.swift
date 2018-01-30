@@ -48,6 +48,9 @@ struct ColorAsset {
 enum Asset {
   enum Winstrike {
     static let backChevron = ImageAsset(name: "back-chevron")
+    static let buttonDown = ImageAsset(name: "buttonDown")
+    static let buttonUp = ImageAsset(name: "buttonUp")
+    static let check = ImageAsset(name: "check")
     static let england = ImageAsset(name: "england")
     static let facebook = ImageAsset(name: "facebook")
     static let handshake = ImageAsset(name: "handshake")
@@ -55,6 +58,8 @@ enum Asset {
     static let label = ImageAsset(name: "label")
     static let like = ImageAsset(name: "like")
     static let logout = ImageAsset(name: "logout")
+    static let maps = ImageAsset(name: "maps")
+    static let rectangle = ImageAsset(name: "rectangle")
     static let russia = ImageAsset(name: "russia")
     static let telegram = ImageAsset(name: "telegram")
     static let twitch = ImageAsset(name: "twitch")
@@ -66,6 +71,9 @@ enum Asset {
   ]
   static let allImages: [ImageAsset] = [
     Winstrike.backChevron,
+    Winstrike.buttonDown,
+    Winstrike.buttonUp,
+    Winstrike.check,
     Winstrike.england,
     Winstrike.facebook,
     Winstrike.handshake,
@@ -73,6 +81,8 @@ enum Asset {
     Winstrike.label,
     Winstrike.like,
     Winstrike.logout,
+    Winstrike.maps,
+    Winstrike.rectangle,
     Winstrike.russia,
     Winstrike.telegram,
     Winstrike.twitch,

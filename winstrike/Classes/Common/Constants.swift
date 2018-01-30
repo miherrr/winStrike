@@ -11,3 +11,9 @@ import Foundation
 struct Constants {
     static let changeProfileAvatar = "changeProfileAvatar"
 }
+
+enum SizeScreen {
+    case iphone5s
+    case normal
+    case iphoneX
+}

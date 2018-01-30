@@ -12,7 +12,7 @@ class HeaderCollectionsView: UITableViewHeaderFooterView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.cnmFutura(size: 19)
-        label.textColor = UIColor.cnmGreyColor1
+     //   label.textColor = UIColor.cnmGreyColor1
         label.text = "Ваша коллекция"
         return label
     }()
@@ -20,7 +20,7 @@ class HeaderCollectionsView: UITableViewHeaderFooterView {
     private let textField: UITextField = {
         let textF = UITextField()
         textF.font = UIFont.cnmFutura(size: 17)
-        textF.textColor = UIColor.cnmGreyColor1
+       // textF.textColor = UIColor.cnmGreyColor1
         textF.placeholder = "Введите название коллекции"
         return textF
     }()

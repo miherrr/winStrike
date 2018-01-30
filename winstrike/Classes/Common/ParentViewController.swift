@@ -8,7 +8,7 @@ class ParentViewController: UIViewController {
 
     let titleViewLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 44))
-        label.textColor = UIColor.cnmGreyDark
+        //label.textColor = UIColor.cnmGreyDark
         label.font = UIFont.cnmFutura(size: 16)
         label.textAlignment = .center
         return label
@@ -27,7 +27,7 @@ class ParentViewController: UIViewController {
         activityVC.centerXAnchor ~= view.centerXAnchor
         activityVC.centerYAnchor ~= view.centerYAnchor
         activityVC.activityIndicatorViewStyle = .whiteLarge
-        activityVC.color = UIColor.cnmGreyDark
+        //activityVC.color = UIColor.cnmGreyDark
 
         activityVC.isHidden = true
 

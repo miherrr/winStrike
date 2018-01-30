@@ -19,7 +19,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.cnmFutura(size: 19)
-        label.textColor = UIColor.cnmBlueLight
+      //  label.textColor = UIColor.cnmBlueLight
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -28,14 +28,14 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
     private let newsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.cnmFuturaLight(size: 14)
-        label.textColor = UIColor.cnm3a3a3a
+     //   label.textColor = UIColor.cnm3a3a3a
         label.numberOfLines = 0
         return label
     }()
 
     private let infoLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.cnmFuturaLight(size: 10)
+       // label.font = UIFont.cnmFuturaLight(size: 10)
         label.textColor = UIColor(white: 117.0 / 255.0, alpha: 1.0)
         label.numberOfLines = 1
         return label
@@ -44,7 +44,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
     private let countLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.cnmFuturaLight(size: 12)
-        label.textColor = UIColor.cnm3a3a3a
+       // label.textColor = UIColor.cnm3a3a3a
         label.numberOfLines = 1
         return label
     }()
@@ -53,7 +53,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
         let imageView = UIImageView()
         imageView.heightAnchor ~= 23
         imageView.widthAnchor ~= 23
-        imageView.backgroundColor = UIColor.cnm3a3a3a
+       // imageView.backgroundColor = UIColor.cnm3a3a3a
         imageView.layer.cornerRadius = 23 / 2
         return imageView
     }()
@@ -105,7 +105,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
         countLabel.leadingAnchor ~= shareButton.trailingAnchor + 6
 
         let separatorView = UIView()
-        separatorView.backgroundColor = .cnmDadada
+      //  separatorView.backgroundColor = .cnmDadada
         contentView.addSubview(separatorView.prepareForAutoLayout())
         separatorView.bottomAnchor ~= contentView.bottomAnchor
         separatorView.trailingAnchor ~= contentView.trailingAnchor - 24

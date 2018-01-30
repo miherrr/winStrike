@@ -62,12 +62,12 @@ extension String {
 
 extension UIButton {
     func inviteButton() -> UIButton {
-        self.setTitle(L10n.filmInviteFilm, for: .normal)
-        self.setTitleColor(UIColor.cnmMainOrange, for: .normal)
+      //  self.setTitle(L10n.filmInviteFilm, for: .normal)
+      //  self.setTitleColor(UIColor.cnmMainOrange, for: .normal)
         self.titleLabel?.font = UIFont.cnmFutura(size: 16)
         self.backgroundColor = UIColor.white
         self.layer.cornerRadius = 5.0
-        self.layer.borderColor = UIColor.cnmMainOrange.cgColor
+        //self.layer.borderColor = UIColor.cnmMainOrange.cgColor
         self.layer.borderWidth = 1.0
         self.heightAnchor ~= 53
         self.widthAnchor ~= 182

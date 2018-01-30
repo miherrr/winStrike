@@ -19,7 +19,7 @@ class CollectionCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.cnmFutura(size: 19)
-        label.textColor = UIColor.cnmAfafaf
+        //label.textColor = UIColor.cnmAfafaf
         label.lineBreakMode = .byTruncatingTail
         return label
     }()
@@ -56,7 +56,7 @@ class CollectionCell: UITableViewCell {
         button.addTarget(self, action: #selector(tapSettings), for: .touchUpInside)
 
         let separatorView = UIView()
-        separatorView.backgroundColor = .cnmDadada
+       // separatorView.backgroundColor = .cnmDadada
         contentView.addSubview(separatorView.prepareForAutoLayout())
         separatorView.bottomAnchor ~= bottomAnchor
         separatorView.trailingAnchor ~= trailingAnchor - 24
@@ -71,7 +71,7 @@ class CollectionCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        titleLabel.textColor = !selected ? UIColor.cnmAfafaf : UIColor(white: 87.0 / 255.0, alpha: 1.0)
+       // titleLabel.textColor = !selected ? UIColor.cnmAfafaf : UIColor(white: 87.0 / 255.0, alpha: 1.0)
 
         contentView.backgroundColor = .white
     }
