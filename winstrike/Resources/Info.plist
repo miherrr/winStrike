@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>UIAppFonts</key>
+    <array>
+        <string>Stem-Bold.otf</string>
+        <string>Stem-Light.otf</string>
+        <string>Stem-Medium.otf</string>
+        <string>Stem-Regular.otf</string>
+    </array>
 	<key>AccountKitClientToken</key>
 	<string>5489ec4fdd6b224ecc6cd6220dbc3418</string>
 	<key>CFBundleDevelopmentRegion</key>

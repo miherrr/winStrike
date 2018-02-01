@@ -18,7 +18,7 @@ class CollectionCell: UITableViewCell {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.cnmFutura(size: 19)
+  //     label.font = UIFont.cnmFutura(size: 19)
         //label.textColor = UIColor.cnmAfafaf
         label.lineBreakMode = .byTruncatingTail
         return label

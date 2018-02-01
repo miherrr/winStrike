@@ -18,7 +18,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.cnmFutura(size: 19)
+       // label.font = UIFont.cnmFutura(size: 19)
       //  label.textColor = UIColor.cnmBlueLight
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -27,7 +27,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
 
     private let newsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.cnmFuturaLight(size: 14)
+       // label.font = UIFont.cnmFuturaLight(size: 14)
      //   label.textColor = UIColor.cnm3a3a3a
         label.numberOfLines = 0
         return label
@@ -43,7 +43,7 @@ class SimpleNewsHeader: UITableViewHeaderFooterView {
 
     private let countLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.cnmFuturaLight(size: 12)
+       // label.font = UIFont.cnmFuturaLight(size: 12)
        // label.textColor = UIColor.cnm3a3a3a
         label.numberOfLines = 1
         return label

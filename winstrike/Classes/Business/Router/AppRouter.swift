@@ -16,6 +16,7 @@ enum AppRouterDestination {
     case systemAlert(data: AlertControllerData)
     case splash
     case start
+    case registration
 
     var isPresent: Bool {
         switch self {
@@ -41,6 +42,8 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: SplashConfigurator.tag)
             case .start:
                 return try factory.resolve(tag: StartConfigurator.tag)
+            case .registration:
+                return try factory.resolve(tag: RegistrationConfigurator.tag)
             }
         } catch {
             fatalError("can't resolve module from factory")
@@ -61,7 +64,7 @@ protocol AppRouterProtocol {
 
     func backToMain()
 
-    func startView()
+    func startModule(from destination: AppRouterDestination)
 
     func setRootViewController(viewControler: UINavigationController)
 }
@@ -156,8 +159,8 @@ class AppRouter: AppRouterProtocol {
             .addDisposableTo(disposeBag)
     }
 
-    func startView() {
-        let mainViewController = moduleCreator.createModule(for: .start)
+    func startModule(from destination: AppRouterDestination) {
+        let mainViewController = moduleCreator.createModule(for: destination)
 
         let flowController = moduleCreator.createNavigationFlowController(viewController: mainViewController)
 

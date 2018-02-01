@@ -13,5 +13,7 @@ class StartRouter {
 // MARK: - StartRouterInput
 
 extension StartRouter: StartRouterInput {
-
+    func openRegistration() {
+        appRouter.startModule(from: .registration)
+    }
 }

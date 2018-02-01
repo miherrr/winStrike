@@ -128,7 +128,7 @@ class StatusBarAlertManager {
     private func createMessageLabel (text: String, backgroundColor: UIColor) -> UILabel {
         let label = UILabel(frame: window.bounds)
         label.textAlignment = .center
-        label.font = UIFont.cnmFutura(size: 14)
+        //label.font = UIFont.cnmFutura(size: 14)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.7
         label.numberOfLines = 0

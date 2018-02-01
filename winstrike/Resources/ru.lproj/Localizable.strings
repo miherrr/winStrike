@@ -13,3 +13,13 @@
 "start-title-choose-english" = "English";
 "start-title-choose-city" = "Выберете город";
 "start-next-button-title" = "Далее";
+
+//Registration
+
+"registration-login-title" = "Номер телефона или эл.адрес";
+"registration-password-title" = "Пароль";
+"registration-login-button" = "Вход";
+"registration-forget-button" = "Забыли данные для входа?";
+"registration-login-social-title" = "Войти через";
+"registration-dont-have-title" = "Ещё нет аккаунта?";
+"registration-registration-button" = "Зарегистрируйтесь";

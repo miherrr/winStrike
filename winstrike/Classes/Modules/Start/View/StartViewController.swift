@@ -94,11 +94,16 @@ class StartViewController: ParentViewController {
         buttonView.layoutSubviews()
         buttonView.layoutIfNeeded()
         button.configureGradientButton(title: L10n.startNextButtonTitle)
+        button.addTarget(self, action: #selector(nextButtonHandlerTap), for: .touchUpInside)
 
         let logoImage = UIImageView(image: Asset.Winstrike.label.image)
         view.addSubview(logoImage.prepareForAutoLayout())
         logoImage.centerXAnchor ~= view.centerXAnchor
         logoImage.bottomAnchor ~= stackView.topAnchor - 96
+    }
+
+    @objc func nextButtonHandlerTap() {
+        output.nextButtonTap()
     }
 }
 

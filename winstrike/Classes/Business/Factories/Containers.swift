@@ -49,6 +49,13 @@ enum Containers {
             return configurator.configureModule()
         }
 
+        container.register(tag: RegistrationConfigurator.tag) { () -> UIViewController in
+            let configurator = RegistrationConfigurator()
+            configurator.appRouter = try managersContainer.resolve()
+            configurator.provider = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
         return container
     }()
 

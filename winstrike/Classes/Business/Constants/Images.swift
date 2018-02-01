@@ -61,6 +61,7 @@ enum Asset {
     static let maps = ImageAsset(name: "maps")
     static let rectangle = ImageAsset(name: "rectangle")
     static let russia = ImageAsset(name: "russia")
+    static let steam = ImageAsset(name: "steam")
     static let telegram = ImageAsset(name: "telegram")
     static let twitch = ImageAsset(name: "twitch")
     static let vk = ImageAsset(name: "vk")
@@ -84,6 +85,7 @@ enum Asset {
     Winstrike.maps,
     Winstrike.rectangle,
     Winstrike.russia,
+    Winstrike.steam,
     Winstrike.telegram,
     Winstrike.twitch,
     Winstrike.vk,

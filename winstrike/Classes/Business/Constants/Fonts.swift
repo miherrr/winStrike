@@ -7,52 +7,38 @@ import UIKit
 
 extension UIFont {
 
-    class func fdlSystemRegular(size: CGFloat) -> UIFont {
+    class func wnsSystemRegular(size: CGFloat) -> UIFont {
         return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.regular)
     }
 
-    class func fdlSystemMedium(size: CGFloat) -> UIFont {
+    class func wnsSystemMedium(size: CGFloat) -> UIFont {
         return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.medium)
     }
 
-    class func fdlGothamProMedium(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "GothamPro-Medium", size: size) else {
-            fatalError("GothamPro-Medium font not found")
+    class func wnsStemMedium(size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Stem-Medium", size: size) else {
+            fatalError("Stem-Medium font not found")
         }
         return font
     }
 
-    class func fdlGothamProBold(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "GothamPro-Bold", size: size) else {
-            fatalError("GothamPro-Bold font not found")
+    class func wnsStemRegular(size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Stem-Regular", size: size) else {
+            fatalError("Stem-Regular font not found")
         }
         return font
     }
 
-    class func cnmFuturaMedium(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Futura-Medium", size: size) else {
-            fatalError("Futura-Medium font not found")
+    class func wnsStemLight(size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Stem-Light", size: size) else {
+            fatalError("Stem-Light font not found")
         }
         return font
     }
 
-    class func cnmFuturaBold(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Futura-Bold", size: size) else {
-            fatalError("Futura-Bold font not found")
-        }
-        return font
-    }
-
-    class func cnmFutura(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Futura", size: size) else {
-            fatalError("Futura font not found")
-        }
-        return font
-    }
-
-    class func cnmFuturaLight(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Futura", size: size) else {
-            fatalError("Futura-Light font not found")
+    class func wnsStemBold(size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Stem-Bold", size: size) else {
+            fatalError("Stem-Bold font not found")
         }
         return font
     }

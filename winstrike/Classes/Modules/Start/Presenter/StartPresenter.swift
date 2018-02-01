@@ -16,6 +16,9 @@ class StartPresenter {
 // MARK: - StartViewOutput
 
 extension StartPresenter: StartViewOutput {
+    func nextButtonTap() {
+        router.openRegistration()
+    }
 
     func viewIsReady() {
         log.verbose("Start is ready")

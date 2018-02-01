@@ -13,4 +13,5 @@ protocol StartViewInput: class {
 protocol StartViewOutput {
 
     func viewIsReady()
+    func nextButtonTap()
 }
