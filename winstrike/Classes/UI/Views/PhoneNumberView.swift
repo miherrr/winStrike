@@ -94,11 +94,4 @@ class PhoneNumberView: UIView {
         changeButton.isSelected = !changeButton.isSelected
         delegate?.selectItem(changeButton.isSelected, tag: self.tag)
     }
-
-    // MARK: - Public functions
-
-    func setSelected(_ isSelect: Bool) {
-        changeButton.isSelected = isSelect
-    }
 }
-
