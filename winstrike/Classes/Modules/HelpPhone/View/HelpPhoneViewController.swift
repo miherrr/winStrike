@@ -42,8 +42,6 @@ class HelpPhoneViewController: ParentViewController {
         view.addSubview(realPhone.prepareForAutoLayout())
         realPhone.leadingAnchor ~= view.leadingAnchor + 40
         realPhone.topAnchor ~= view.topAnchor + 24
-
-        
     }
 
     // MARK: - Actions
