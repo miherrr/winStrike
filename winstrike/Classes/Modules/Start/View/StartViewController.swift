@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import Lottie
 
 class StartViewController: ParentViewController {
 
@@ -102,6 +103,14 @@ class StartViewController: ParentViewController {
         view.addSubview(logoImage.prepareForAutoLayout())
         logoImage.centerXAnchor ~= view.centerXAnchor
         logoImage.bottomAnchor ~= stackView.topAnchor - 96
+
+        let animationView = LOTAnimationView(name: "data2")
+        animationView.contentMode = .scaleAspectFill
+        animationView.loopAnimation = true
+        view.addSubview(animationView.prepareForAutoLayout())
+        animationView.pinEdgesToSuperviewEdges()
+        animationView.play()
+        view.sendSubview(toBack: animationView)
     }
 
     @objc func nextButtonHandlerTap() {
