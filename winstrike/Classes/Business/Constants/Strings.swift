@@ -7,6 +7,40 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 enum L10n {
+  /// Доступ к вашему аккаунту
+  static let helperAccessAccount = L10n.tr("Localizable", "helper-access-account")
+  /// Справочный центер
+  static let helperHelpCenter = L10n.tr("Localizable", "helper-help-center")
+  /// Справочный центер Win Strike
+  static let helperHelpCenterWinStrike = L10n.tr("Localizable", "helper-help-center-winStrike")
+  /// Отправить эл.письмо
+  static let helperSendMail = L10n.tr("Localizable", "helper-send-mail")
+  /// Отправить SMS
+  static let helperSendSms = L10n.tr("Localizable", "helper-send-sms")
+  /// Помощь при входе
+  static let helperTitleText = L10n.tr("Localizable", "helper-title-text")
+  /// Далее
+  static let helpPhoneButtonNext = L10n.tr("Localizable", "helpPhone-button-next")
+  /// Отправить код
+  static let helpPhoneButtonSendCode = L10n.tr("Localizable", "helpPhone-button-send-code")
+  /// Отправить код
+  static let helpPhoneEnterAccount = L10n.tr("Localizable", "helpPhone-enter-account")
+  /// Введите код подтверждения
+  static let helpPhoneEnterCode = L10n.tr("Localizable", "helpPhone-enter-code")
+  /// Код подтверждения
+  static let helpPhoneEnterCodePlaceholser = L10n.tr("Localizable", "helpPhone-enter-code-placeholser")
+  /// Уже есть аккаунт?
+  static let helpPhoneHaveAccount = L10n.tr("Localizable", "helpPhone-have-account")
+  /// *Сюда будет выслан код подтверждения
+  static let helpPhonePhoneHelp = L10n.tr("Localizable", "helpPhone-phone-help")
+  /// RU +7
+  static let helpPhonePhonePlaceholder = L10n.tr("Localizable", "helpPhone-phone-placeholder")
+  /// Доступ к вашему аккаунту
+  static let helpPhoneRealPhone = L10n.tr("Localizable", "helpPhone-real-phone")
+  /// Отправить код
+  static let helpPhoneSendCodeRepeat = L10n.tr("Localizable", "helpPhone-send-code-repeat")
+  /// Отправить SMS 
+  static let helpPhoneTitleText = L10n.tr("Localizable", "helpPhone-title-text")
   /// Ещё нет аккаунта?
   static let registrationDontHaveTitle = L10n.tr("Localizable", "registration-dont-have-title")
   /// Забыли данные для входа?

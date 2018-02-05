@@ -13,4 +13,10 @@ protocol HelperViewInput: class {
 protocol HelperViewOutput {
 
     func viewIsReady()
+
+    func backTap()
+
+    func helpPhoneTap()
+
+    func helpMailTap()
 }

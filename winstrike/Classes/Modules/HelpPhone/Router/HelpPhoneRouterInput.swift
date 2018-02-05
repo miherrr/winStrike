@@ -6,5 +6,5 @@
 import Foundation
 
 protocol HelpPhoneRouterInput: BaseRouterInput {
-
+    func back()
 }

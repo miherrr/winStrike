@@ -22,6 +22,23 @@ class HelpEmailViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+
+        titleViewLabel.text = L10n.helperTitleText
+
+        let backButton = UIButton()
+        backButton.setImage(Asset.Winstrike.backChevron.image, for: .normal)
+        backButton.addTarget(self, action: #selector(backHandlerTap), for: .touchUpInside)
+        backButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: -9, bottom: 0, right: 0)
+        var frame = backButton.frame
+        frame.size = CGSize(width: 30, height: 100)
+        backButton.frame = frame
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+
+    // MARK: - Actions
+
+    @objc func backHandlerTap() {
+        output.backTap()
     }
 }
 

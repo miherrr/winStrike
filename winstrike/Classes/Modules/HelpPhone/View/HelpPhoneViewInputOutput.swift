@@ -13,4 +13,6 @@ protocol HelpPhoneViewInput: class {
 protocol HelpPhoneViewOutput {
 
     func viewIsReady()
+
+    func backTap()
 }

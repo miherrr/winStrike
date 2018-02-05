@@ -13,5 +13,7 @@ class HelpEmailRouter {
 // MARK: - HelpEmailRouterInput
 
 extension HelpEmailRouter: HelpEmailRouterInput {
-
+    func back() {
+        appRouter.backTransition()
+    }
 }

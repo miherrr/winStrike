@@ -48,7 +48,9 @@
 		813D863C1FEA78CF0026327B /* StatusBarAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D863B1FEA78CF0026327B /* StatusBarAlertManager.swift */; };
 		813D863E1FEA83AB0026327B /* MessageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D863D1FEA83AB0026327B /* MessageError.swift */; };
 		8154C740201B253100E34C96 /* ChooseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154C73F201B253100E34C96 /* ChooseListView.swift */; };
-		819A36F620206BE30048144B /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A36F520206BE30048144B /* ButtonExtension.swift */; };
+		819A36F620206BE30048144B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A36F520206BE30048144B /* Extensions.swift */; };
+		81A8675E20246DD900CBE287 /* data2.json in Resources */ = {isa = PBXBuildFile; fileRef = 81A8675D20246DD800CBE287 /* data2.json */; };
+		81A867602024AF6B00CBE287 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */; };
 		81BC71F1201F4A9700944FDE /* ChooseListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC71F0201F4A9700944FDE /* ChooseListTableView.swift */; };
 		81BC71F3201F544800944FDE /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC71F2201F544800944FDE /* CityCell.swift */; };
 		81C5ACF820121D8700E47430 /* lottie.js in Resources */ = {isa = PBXBuildFile; fileRef = 81C5ACF420121D8700E47430 /* lottie.js */; };
@@ -206,7 +208,9 @@
 		813D863D1FEA83AB0026327B /* MessageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageError.swift; sourceTree = "<group>"; };
 		8154C73F201B253100E34C96 /* ChooseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseListView.swift; sourceTree = "<group>"; };
 		8159D0D220065508006CF82B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		819A36F520206BE30048144B /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		819A36F520206BE30048144B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81A8675D20246DD800CBE287 /* data2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data2.json; sourceTree = "<group>"; };
+		81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		81BC71F0201F4A9700944FDE /* ChooseListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseListTableView.swift; sourceTree = "<group>"; };
 		81BC71F2201F544800944FDE /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		81C5ACF320121D8600E47430 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -384,7 +388,6 @@
 				5D19132A1DFDD14E6C67320C /* HelperViewController.swift */,
 				4DF73F14935DB76DA43B51F5 /* HelperViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -394,7 +397,6 @@
 				09F2F14669D1D72C8D351C56 /* HelpPhoneViewController.swift */,
 				F121277E9F83A0A1091D4BB1 /* HelpPhoneViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -425,7 +427,6 @@
 				6F3846B194E17F76094EECBD /* HelpPhoneInteractor.swift */,
 				4F711E4038D9E415054FD33B /* HelpPhoneInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -447,7 +448,6 @@
 				B29F2D306355531182EE021D /* HelpEmailModuleInputOutput.swift */,
 				B3C677CECE28512C0719D10B /* HelpEmailPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -496,7 +496,6 @@
 				9BF53A08A44E01C97AB6C690 /* Router */,
 				6DBEC76C7813F13B0181AD8F /* View */,
 			);
-			name = HelpEmail;
 			path = HelpEmail;
 			sourceTree = "<group>";
 		};
@@ -506,7 +505,6 @@
 				AE9140B20CF9B2E819E84409 /* HelpEmailInteractor.swift */,
 				FBEEEF441472276FE0A507B5 /* HelpEmailInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -525,7 +523,6 @@
 				89285934A916812F8BD670F6 /* HelperRouter.swift */,
 				D7BC3F534CF986DBDAE7188E /* HelperRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -535,7 +532,6 @@
 				F858F54DD975A1BFBD3580E8 /* HelperModuleInputOutput.swift */,
 				269EAF5A94187F555928F6F4 /* HelperPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -545,7 +541,6 @@
 				805D11D84E9AA398324707B5 /* HelpEmailViewController.swift */,
 				D10A3DA794BF1B8D6B2F0220 /* HelpEmailViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -563,7 +558,6 @@
 			children = (
 				48F94D07F6E0B9C1870C12B2 /* HelpEmailConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -610,6 +604,7 @@
 		8157F166201771A3006C14A8 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				81A8675D20246DD800CBE287 /* data2.json */,
 				81C5ACF320121D8600E47430 /* data.json */,
 				81C5ACF420121D8700E47430 /* lottie.js */,
 			);
@@ -619,7 +614,7 @@
 		819A36F420206B9D0048144B /* UIViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				819A36F520206BE30048144B /* ButtonExtension.swift */,
+				819A36F520206BE30048144B /* Extensions.swift */,
 			);
 			path = UIViewExtensions;
 			sourceTree = "<group>";
@@ -629,7 +624,6 @@
 			children = (
 				60528293CDF2EC11EE37E3A3 /* HelpPhoneConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -648,7 +642,6 @@
 				943E65A85322B5482586ABDE /* HelperInteractor.swift */,
 				F2198B82C9FA807799B878F3 /* HelperInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -661,7 +654,6 @@
 				DC7F3480B9051BB0199FE8EF /* Router */,
 				0A45DB32C823D51E3FC12E53 /* View */,
 			);
-			name = HelpPhone;
 			path = HelpPhone;
 			sourceTree = "<group>";
 		};
@@ -826,6 +818,7 @@
 		9BB4EE01EF6F6E0126F4FAA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */,
 				8116E439201F0E08008F9E47 /* StartViews */,
 				81E32AE32022FDBF004527AE /* SocialStackView.swift */,
 			);
@@ -874,7 +867,6 @@
 				82088751CB298FAD23B1B4B9 /* HelpEmailRouter.swift */,
 				CDD831832C5465964628306D /* HelpEmailRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -892,7 +884,6 @@
 				F7642F3212692807D5853CBA /* HelpPhoneModuleInputOutput.swift */,
 				2F00D41DA9AD6CD629B40976 /* HelpPhonePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1031,7 +1022,6 @@
 				D96911D5381C32F975B83821 /* HelpPhoneRouter.swift */,
 				368AECAC258B44D1FC242EC2 /* HelpPhoneRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1052,7 +1042,6 @@
 				56595B2F827ED02A1E0CBD0E /* Router */,
 				054E0E3592C4E7C67C5E91B9 /* View */,
 			);
-			name = Helper;
 			path = Helper;
 			sourceTree = "<group>";
 		};
@@ -1061,7 +1050,6 @@
 			children = (
 				55CF3D8AD9B8A7E9B61EA7B3 /* HelperConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -1195,6 +1183,7 @@
 				810FD8ED20220B2000B98A72 /* Stem-Light.otf in Resources */,
 				810FD8EC20220B2000B98A72 /* Stem-Medium.otf in Resources */,
 				C0047BB81F20C33D0073544B /* Localizable.strings in Resources */,
+				81A8675E20246DD900CBE287 /* data2.json in Resources */,
 				C0B9D4771F1FB8F6009A77DD /* Assets.xcassets in Resources */,
 				810FD8EE20220B2000B98A72 /* Stem-Bold.otf in Resources */,
 				33C656511F4C261000594E47 /* Localizable.stringsdict in Resources */,
@@ -1325,7 +1314,7 @@
 				9BB4ED8DD3A72D2DEB67C582 /* AuthTokenManager.swift in Sources */,
 				81E32AE62022FDE7004527AE /* Enums.swift in Sources */,
 				9BB4E73D0AE184ED48DEEC8C /* AuthCheckCodeResponse.swift in Sources */,
-				819A36F620206BE30048144B /* ButtonExtension.swift in Sources */,
+				819A36F620206BE30048144B /* Extensions.swift in Sources */,
 				9BB4EAAAD41D80585CE86398 /* AuthTokenMoyaPlugin.swift in Sources */,
 				9BB4EFA0D786DBFA4111AF36 /* BaseRouterInput.swift in Sources */,
 				9BB4E4E0A1AFE4FEA73E43C5 /* Restaurant.swift in Sources */,
@@ -1357,6 +1346,7 @@
 				7E1D7A61F6B326FC969C13E9 /* StartRouter.swift in Sources */,
 				4E34069F839FCF99FC2C099D /* StartRouterInput.swift in Sources */,
 				81E32AE42022FDBF004527AE /* SocialStackView.swift in Sources */,
+				81A867602024AF6B00CBE287 /* PhoneNumberView.swift in Sources */,
 				52C0B607573322BDF0401006 /* StartViewController.swift in Sources */,
 				85565F8EA6DED95A45B24076 /* StartViewInputOutput.swift in Sources */,
 				9C2A258702124FD879A37485 /* RegistrationConfigurator.swift in Sources */,

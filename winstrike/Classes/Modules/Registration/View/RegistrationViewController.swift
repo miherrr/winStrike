@@ -39,6 +39,11 @@ class RegistrationViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeStatusBar(isWhite: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
@@ -149,7 +154,7 @@ class RegistrationViewController: ParentViewController {
     }
 
     @objc func forgetButtonHandleTap() {
-        print("forgetButtonHandleTap")
+        output?.tapHelpButton()
     }
 
     @objc func registrationHandleTap() {

@@ -13,5 +13,7 @@ class RegistrationRouter {
 // MARK: - RegistrationRouterInput
 
 extension RegistrationRouter: RegistrationRouterInput {
-
+    func openHelper() {
+        appRouter.startModule(from: .helper)
+    }
 }

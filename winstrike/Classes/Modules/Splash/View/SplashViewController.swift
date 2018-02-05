@@ -26,6 +26,7 @@ class SplashViewController: ParentViewController {
 
         let animationView = LOTAnimationView(name: "data")
         animationView.contentMode = .scaleAspectFill
+       // animationView.loopAnimation = true
         self.view.addSubview(animationView.prepareForAutoLayout())
         animationView.pinEdgesToSuperviewEdges()
         animationView.play { _ in

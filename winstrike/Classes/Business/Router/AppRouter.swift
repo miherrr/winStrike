@@ -17,6 +17,9 @@ enum AppRouterDestination {
     case splash
     case start
     case registration
+    case helper
+    case helpPhone
+    case helpEmail
 
     var isPresent: Bool {
         switch self {
@@ -44,6 +47,12 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: StartConfigurator.tag)
             case .registration:
                 return try factory.resolve(tag: RegistrationConfigurator.tag)
+            case .helper:
+                return try factory.resolve(tag: HelperConfigurator.tag)
+            case .helpPhone:
+                return try factory.resolve(tag: HelpPhoneConfigurator.tag)
+            case .helpEmail:
+                return try factory.resolve(tag: HelpEmailConfigurator.tag)
             }
         } catch {
             fatalError("can't resolve module from factory")

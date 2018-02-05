@@ -20,6 +20,10 @@ extension HelpEmailPresenter: HelpEmailViewOutput {
     func viewIsReady() {
         log.verbose("HelpEmail is ready")
     }
+
+    func backTap() {
+        router.back()
+    }
 }
 
 // MARK: - HelpEmailInteractorOutput

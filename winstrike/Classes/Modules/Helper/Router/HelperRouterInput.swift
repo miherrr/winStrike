@@ -6,5 +6,8 @@
 import Foundation
 
 protocol HelperRouterInput: BaseRouterInput {
-
+    func back()
+    func openHelpPhone()
+    func openHelpMail()
+//    func openHelpCenter()
 }

@@ -56,6 +56,27 @@ enum Containers {
             return configurator.configureModule()
         }
 
+        container.register(tag: HelperConfigurator.tag) { () -> UIViewController in
+            let configurator = HelperConfigurator()
+            configurator.appRouter = try managersContainer.resolve()
+            configurator.provider = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
+        container.register(tag: HelpPhoneConfigurator.tag) { () -> UIViewController in
+            let configurator = HelpPhoneConfigurator()
+            configurator.appRouter = try managersContainer.resolve()
+            configurator.provider = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
+        container.register(tag: HelpEmailConfigurator.tag) { () -> UIViewController in
+            let configurator = HelpEmailConfigurator()
+            configurator.appRouter = try managersContainer.resolve()
+            configurator.provider = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
         return container
     }()
 

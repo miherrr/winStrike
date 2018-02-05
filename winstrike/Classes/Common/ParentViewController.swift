@@ -8,8 +8,8 @@ class ParentViewController: UIViewController {
 
     let titleViewLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 44))
-        //label.textColor = UIColor.cnmGreyDark
-        //label.font = UIFont.cnmFutura(size: 16)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 17)
         label.textAlignment = .center
         return label
     }()
@@ -21,7 +21,9 @@ class ParentViewController: UIViewController {
 
         view.backgroundColor = .white
         navigationItem.titleView = titleViewLabel
-        navigationController?.navigationBar.backgroundColor = .white
+        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.statusBarView?.backgroundColor = .black
+        UIApplication.shared.statusBarView?.isHidden = true
 
         view.addSubview(activityVC.prepareForAutoLayout())
         activityVC.centerXAnchor ~= view.centerXAnchor
@@ -50,7 +52,7 @@ class ParentViewController: UIViewController {
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
 
     func showAlert(message: String) {
@@ -73,5 +75,21 @@ class ParentViewController: UIViewController {
 
         alert.addAction(cancelAction)
         present(alert, animated: true)
+    }
+
+    func changeStatusBar(isWhite: Bool) {
+        UIApplication.shared.statusBarView?.backgroundColor = isWhite ? .white : .black
+        UIApplication.shared.statusBarStyle = isWhite ? .default : .lightContent
+        UIApplication.shared.statusBarView?.isHidden = false
+        UINavigationBar.appearance().backgroundColor = isWhite ? .white : .black
+        navigationController?.navigationBar.isTranslucent = isWhite
+        navigationController?.navigationBar.isHidden = isWhite
+        //UINavigationBar.appearance().barStyle = .black
+    }
+}
+
+private extension UIApplication {
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
     }
 }

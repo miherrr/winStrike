@@ -16,6 +16,17 @@ class HelperPresenter {
 // MARK: - HelperViewOutput
 
 extension HelperPresenter: HelperViewOutput {
+    func backTap() {
+        router.back()
+    }
+
+    func helpPhoneTap() {
+        router.openHelpPhone()
+    }
+
+    func helpMailTap() {
+        router.openHelpMail()
+    }
 
     func viewIsReady() {
         log.verbose("Helper is ready")

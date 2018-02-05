@@ -13,5 +13,7 @@ class HelpPhoneRouter {
 // MARK: - HelpPhoneRouterInput
 
 extension HelpPhoneRouter: HelpPhoneRouterInput {
-
+    func back() {
+        appRouter.backTransition()
+    }
 }

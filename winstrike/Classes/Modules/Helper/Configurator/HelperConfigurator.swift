@@ -4,12 +4,15 @@
 //
 
 import UIKit
+import RxMoya
 
 class HelperConfigurator {
 
     static let tag: String = "HelperTag"
 
     var appRouter: AppRouterProtocol!
+
+    var provider: RxMoyaProvider<FoodleTarget>!
 
     func configureModule() -> UIViewController {
         let router = HelperRouter()

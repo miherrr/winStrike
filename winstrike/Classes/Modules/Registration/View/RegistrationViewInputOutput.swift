@@ -13,4 +13,6 @@ protocol RegistrationViewInput: class {
 protocol RegistrationViewOutput {
 
     func viewIsReady()
+
+    func tapHelpButton()
 }

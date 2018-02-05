@@ -33,3 +33,11 @@ extension UIButton {
         self.setTitleColor(UIColor.white, for: .normal)
     }
 }
+
+extension UILabel {
+    func configureLabel(font: UIFont, textColor: UIColor, text: String) {
+        self.font = font
+        self.textColor = textColor
+        self.text = text
+    }
+}

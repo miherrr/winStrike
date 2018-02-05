@@ -48,6 +48,8 @@ class StartViewController: ParentViewController {
         super.viewDidLoad()
         output.viewIsReady()
 
+        changeStatusBar(isWhite: true)
+
         addSubView()
     }
 

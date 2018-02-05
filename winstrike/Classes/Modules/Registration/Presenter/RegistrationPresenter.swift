@@ -16,6 +16,9 @@ class RegistrationPresenter {
 // MARK: - RegistrationViewOutput
 
 extension RegistrationPresenter: RegistrationViewOutput {
+    func tapHelpButton() {
+        router.openHelper()
+    }
 
     func viewIsReady() {
         log.verbose("Registration is ready")

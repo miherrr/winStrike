@@ -22,6 +22,10 @@ extension UIColor {
         return UIColor(white: 22.0 / 255.0, alpha: 1.0)
     }
 
+    class var wnsHelperColor: UIColor {
+        return UIColor(white: 31.0 / 255.0, alpha: 1.0)
+    }
+
     class var wnsRightGradientColor: UIColor {
         return UIColor(red: 114.0 / 255.0, green: 40.0 / 255.0, blue: 150.0 / 255.0, alpha: 1.0)
     }

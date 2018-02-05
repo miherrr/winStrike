@@ -13,5 +13,13 @@ class HelperRouter {
 // MARK: - HelperRouterInput
 
 extension HelperRouter: HelperRouterInput {
-
+    func back() {
+        appRouter.startModule(from: .registration)
+    }
+    func openHelpPhone() {
+        appRouter.transition(to: .helpPhone)
+    }
+    func openHelpMail() {
+        appRouter.transition(to: .helpEmail)
+    }
 }

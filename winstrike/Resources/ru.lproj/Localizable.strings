@@ -23,3 +23,24 @@
 "registration-login-social-title" = "Войти через";
 "registration-dont-have-title" = "Ещё нет аккаунта?";
 "registration-registration-button" = "Зарегистрируйтесь";
+
+//Helper
+"helper-title-text" = "Помощь при входе";
+"helper-access-account" = "Доступ к вашему аккаунту";
+"helper-send-sms" = "Отправить SMS";
+"helper-send-mail" = "Отправить эл.письмо";
+"helper-help-center" = "Справочный центер";
+"helper-help-center-winStrike" = "Справочный центер Win Strike";
+
+//HelpPhone
+"helpPhone-title-text" = "Отправить SMS ";
+"helpPhone-real-phone" = "Доступ к вашему аккаунту";
+"helpPhone-phone-placeholder" = "RU +7";
+"helpPhone-phone-help" = "*Сюда будет выслан код подтверждения";
+"helpPhone-button-send-code" = "Отправить код";
+"helpPhone-send-code-repeat" = "Отправить код";
+"helpPhone-enter-code" = "Введите код подтверждения";
+"helpPhone-enter-code-placeholser" = "Код подтверждения";
+"helpPhone-button-next" = "Далее";
+"helpPhone-have-account" = "Уже есть аккаунт?";
+"helpPhone-enter-account" = "Отправить код";

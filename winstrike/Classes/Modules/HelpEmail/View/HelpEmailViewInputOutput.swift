@@ -13,4 +13,6 @@ protocol HelpEmailViewInput: class {
 protocol HelpEmailViewOutput {
 
     func viewIsReady()
+
+    func backTap()
 }

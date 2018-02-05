@@ -16,6 +16,9 @@ class HelpPhonePresenter {
 // MARK: - HelpPhoneViewOutput
 
 extension HelpPhonePresenter: HelpPhoneViewOutput {
+    func backTap() {
+        router.back()
+    }
 
     func viewIsReady() {
         log.verbose("HelpPhone is ready")

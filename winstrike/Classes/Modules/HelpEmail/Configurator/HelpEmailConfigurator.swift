@@ -4,12 +4,15 @@
 //
 
 import UIKit
+import RxMoya
 
 class HelpEmailConfigurator {
 
     static let tag: String = "HelpEmailTag"
 
     var appRouter: AppRouterProtocol!
+
+    var provider: RxMoyaProvider<FoodleTarget>!
 
     func configureModule() -> UIViewController {
         let router = HelpEmailRouter()
