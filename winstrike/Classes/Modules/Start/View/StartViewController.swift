@@ -130,6 +130,7 @@ extension StartViewController: StartViewInput {
 extension StartViewController: ChooseViewDelegate {
 
     func changeStatus(_ isOpen: Bool, tag: Int) {
+        buttonView.isHidden = isOpen
         if tag == 0 {
             chooseListView.isHidden = !isOpen
             chooseListTableView.isHidden = true
