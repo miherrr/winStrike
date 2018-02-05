@@ -28,7 +28,7 @@ class StartViewController: ParentViewController {
                      "Пятигорск",
                      "Кинежма",
                      "Хабаровск",
-                     "Тяньгушево"]
+                     "Теньгушево"]
 
     fileprivate var chooseListTableView = ChooseListTableView()
 
