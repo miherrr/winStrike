@@ -14,6 +14,7 @@ class SplashRouter {
 
 extension SplashRouter: SplashRouterInput {
     func openStart() {
+        //appRouter.startModule(from: .helpPhone)
         appRouter.startModule(from: .start)
     }
 }

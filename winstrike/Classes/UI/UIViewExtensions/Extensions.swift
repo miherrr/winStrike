@@ -20,7 +20,7 @@ extension UIButton {
         gradient.startPoint = CGPoint(x: 0.0, y: 0.05)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.05)
         gradient.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-        gradient.cornerRadius = 16
+        gradient.cornerRadius = 24
 
         self.layer.cornerRadius = 16
         self.layer.borderWidth = 0

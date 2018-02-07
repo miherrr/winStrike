@@ -7,79 +7,67 @@
 //
 
 import UIKit
+import InputMask
 
 class PhoneNumberView: UIView {
+    weak var maskedDelegate: MaskedTextFieldDelegate?
+    /**
+        здесь храним только цифры номера (без +7)
+    */
+    private var phoneNumber = String()
 
-    fileprivate let russiaLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.wnsStemRegular(size: 15)
-        label.tintColor = UIColor.wnsTextFieldPlderColor
-        label.text = L10n.helpPhonePhonePlaceholder
-        return label
-    }()
+    fileprivate let phoneInputView = UITextField()
 
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
     }
 
-    init(item: ChooseListItem, tag: Int, isSelected: Bool = true) {
+    init() {
         super.init(frame: .zero)
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        self.tag = tag
         backgroundColor = UIColor.white
-
-        var imageIsNotNil = false
-
-        var insetRight: CGFloat = 25
-
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.sizeOfScreen == .iphone5s {
-            insetRight = 10
-        }
 
         let mainView = UIView()
         addSubview(mainView.prepareForAutoLayout())
         mainView.pinEdgesToSuperviewEdges()
-        mainView.heightAnchor ~= 48
         mainView.backgroundColor = UIColor.wnsLightGrey
         mainView.layer.cornerRadius = 28
 
-//        mainView.addSubview(russiaLabel.prepareForAutoLayout())
-//        russiaLabel.centerYAnchor ~= mainView.centerYAnchor
-//        russiaLabel.
+        let countryCodeLabel = UILabel()
+        countryCodeLabel.configureLabel(font: UIFont.wnsStemRegular(size: 15), textColor: UIColor.wnsGrey, text: L10n.helpPhonePhonePlaceholder)
+        mainView.addSubview(countryCodeLabel.prepareForAutoLayout())
+        countryCodeLabel.centerYAnchor ~= mainView.centerYAnchor
+        countryCodeLabel.leadingAnchor ~= mainView.leadingAnchor + 23
+        countryCodeLabel.widthAnchor ~= 48
 
-//        mainView.addSubview(imageView.prepareForAutoLayout())
-//        imageView.centerYAnchor ~= mainView.centerYAnchor
-//        imageView.leadingAnchor ~= mainView.leadingAnchor + 14
-//        imageView.heightAnchor ~= 36
+        let splitter = UIView()
+        mainView.addSubview(splitter.prepareForAutoLayout())
+        splitter.centerYAnchor ~= mainView.centerYAnchor
+        splitter.leadingAnchor ~= countryCodeLabel.trailingAnchor + 15
+        splitter.widthAnchor ~= 2
+        splitter.heightAnchor ~= 20
+        splitter.layer.cornerRadius = 2
+        splitter.backgroundColor = UIColor.wnsGrey
 
-//        if let image = item.image {
-//            imageView.widthAnchor ~= 36
-//            imageView.image = image
-//            imageView.contentMode = .center
-//            imageIsNotNil = true
-//        }
-//
-//        mainView.addSubview(titleLabel.prepareForAutoLayout())
-//        titleLabel.centerYAnchor ~= mainView.centerYAnchor
-//        if imageIsNotNil {
-//            titleLabel.leadingAnchor ~= imageView.trailingAnchor + 22
-//        } else {
-//            titleLabel.leadingAnchor ~= imageView.trailingAnchor + 11
-//        }
-//        titleLabel.text = item.title
-    }
+        mainView.addSubview(phoneInputView.prepareForAutoLayout())
+        phoneInputView.centerYAnchor ~= mainView.centerYAnchor
+        phoneInputView.leadingAnchor ~= splitter.leadingAnchor + 16
+        phoneInputView.trailingAnchor ~= mainView.trailingAnchor
+        phoneInputView.heightAnchor ~= mainView.heightAnchor
+        phoneInputView.backgroundColor = .clear
+        phoneInputView.tintColor = UIColor.wnsHelperColor
+        phoneInputView.font = UIFont.wnsStemRegular(size: 15)
+        phoneInputView.keyboardType = .phonePad
 
-    // MARK: - Actions
-
-    @objc func viewHandlerTap() {
-//        changeButton.isSelected = !changeButton.isSelected
-//        delegate?.selectItem(changeButton.isSelected, tag: self.tag)
-    }
-
-    // MARK: - Public functions
-
-    func setSelected(_ isSelect: Bool) {
-//        changeButton.isSelected = isSelect
+        maskedDelegate = MaskedTextFieldDelegate(format: "([000]) [000]-[00]-[00]")
+        maskedDelegate?.listener = self
+        phoneInputView.delegate = maskedDelegate
     }
 }
 
+extension PhoneNumberView: MaskedTextFieldDelegateListener {
+    func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
+        print(value)
+    }
+}

@@ -79,7 +79,7 @@ class StartViewController: ParentViewController {
         let button = UIButton()
         button.heightAnchor ~= 48
         buttonView.addSubview(button.prepareForAutoLayout())
-        buttonView.isHidden = true
+        buttonView.isHidden = false
         button.pinEdgesToSuperviewEdges(top: 20, left: 42, right: 42, bottom: 0)
 
         let stackView = createStackView(.vertical, .fill, .fill, 12, with: [
