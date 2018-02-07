@@ -19,11 +19,25 @@ enum L10n {
   static let helperSendSms = L10n.tr("Localizable", "helper-send-sms")
   /// Помощь при входе
   static let helperTitleText = L10n.tr("Localizable", "helper-title-text")
+  /// Отправить
+  static let helpMailButtonSend = L10n.tr("Localizable", "helpMail-button-send")
+  /// Введите эл.адрес
+  static let helpMailEmailPlaceholder = L10n.tr("Localizable", "helpMail-email-placeholder")
+  /// Войдите
+  static let helpMailEnterAccount = L10n.tr("Localizable", "helpMail-enter-account")
+  /// Введите свой e-mail
+  static let helpMailEnterEmail = L10n.tr("Localizable", "helpMail-enter-email")
+  /// Уже есть аккаунт?
+  static let helpMailHaveAccount = L10n.tr("Localizable", "helpMail-have-account")
+  /// *На данный адрес будет выслана ссылка для смены пароля
+  static let helpMailHelpText = L10n.tr("Localizable", "helpMail-help-text")
+  /// Отправить e-mail
+  static let helpMailTitleText = L10n.tr("Localizable", "helpMail-title-text")
   /// Далее
   static let helpPhoneButtonNext = L10n.tr("Localizable", "helpPhone-button-next")
   /// Отправить код
   static let helpPhoneButtonSendCode = L10n.tr("Localizable", "helpPhone-button-send-code")
-  /// Отправить код
+  /// Войдите
   static let helpPhoneEnterAccount = L10n.tr("Localizable", "helpPhone-enter-account")
   /// Введите код подтверждения
   static let helpPhoneEnterCode = L10n.tr("Localizable", "helpPhone-enter-code")

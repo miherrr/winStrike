@@ -66,12 +66,12 @@ class RegistrationViewController: ParentViewController {
         logoImageView.centerXAnchor ~= mainView.centerXAnchor
         logoImageView.topAnchor ~= mainView.topAnchor
 
-        loginTF.configureView(placeholder: L10n.registrationLoginTitle, delegate: self)
+        loginTF.configureTFView(placeholder: L10n.registrationLoginTitle, delegate: self)
         mainView.addSubview(loginTF.prepareForAutoLayout())
         loginTF.centerXAnchor ~= mainView.centerXAnchor
         loginTF.topAnchor ~= logoImageView.bottomAnchor + 48
 
-        passwordTF.configureView(placeholder: L10n.registrationPasswordTitle, isSecurity: true, delegate: self)
+        passwordTF.configureTFView(placeholder: L10n.registrationPasswordTitle, isSecurity: true, delegate: self)
         mainView.addSubview(passwordTF.prepareForAutoLayout())
         passwordTF.centerXAnchor ~= mainView.centerXAnchor
         passwordTF.topAnchor ~= loginTF.bottomAnchor + 24
@@ -120,28 +120,13 @@ class RegistrationViewController: ParentViewController {
         bottomView.centerXAnchor ~= view.centerXAnchor
         bottomView.heightAnchor ~= 36
 
-        let title: String = L10n.registrationDontHaveTitle + " " + L10n.registrationRegistrationButton
-
-        let mutableString = NSMutableAttributedString(string: title, attributes: [NSAttributedStringKey.font: UIFont.wnsStemRegular(size: 15)])
-
-        mutableString.addAttribute(
-            NSAttributedStringKey.foregroundColor,
-            value: UIColor.wnsGrey,
-            range: NSRange(location: 0, length: L10n.registrationDontHaveTitle.count)
-        )
-        mutableString.addAttribute(
-            NSAttributedStringKey.foregroundColor,
-            value: UIColor.wnsPink,
-            range: NSRange(location: L10n.registrationDontHaveTitle.count, length: L10n.registrationRegistrationButton.count + 1)
-        )
-
         let label = UILabel()
 
         bottomView.addSubview(label.prepareForAutoLayout())
         label.centerYAnchor ~= bottomView.centerYAnchor
         label.trailingAnchor ~= bottomView.trailingAnchor
         label.leadingAnchor ~= bottomView.leadingAnchor
-        label.attributedText = mutableString
+        label.configureAttributedString(firstString: L10n.registrationDontHaveTitle, secondString: L10n.registrationRegistrationButton)
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(registrationHandleTap))
         bottomView.addGestureRecognizer(tap)
@@ -186,37 +171,5 @@ extension RegistrationViewController: SocialStackViewDelegate {
 
     func tapSocial(_ social: Social) {
         print("assa ", social.rawValue)
-    }
-}
-
-// MARK: - UITextFieldExtension
-
-private extension UITextField {
-
-    func configure(placeholder: String) {
-        self.font = UIFont.systemFont(ofSize: 15)
-        self.attributedPlaceholder = NSAttributedString(
-            string: placeholder,
-            attributes: [NSAttributedStringKey.foregroundColor: UIColor.wnsTextFieldPlderColor]
-        )
-        self.textColor = UIColor.wnsTextFieldColor
-    }
-}
-
-// MARK: - UIViewExtension
-
-private extension UIView {
-    func configureView(placeholder: String, isSecurity: Bool = false, delegate: UITextFieldDelegate) {
-        self.heightAnchor ~= 48
-        self.widthAnchor ~= 288
-        self.backgroundColor = UIColor.wnsLightGrey
-        self.layer.cornerRadius = 16.0
-        let textField = UITextField()
-        self.addSubview(textField.prepareForAutoLayout())
-        textField.pinEdgesToSuperviewEdges(top: 0, left: 24, right: 24, bottom: 0)
-        textField.configure(placeholder: placeholder)
-        textField.isSecureTextEntry = isSecurity
-        textField.tag = self.tag
-        textField.delegate = delegate
     }
 }
