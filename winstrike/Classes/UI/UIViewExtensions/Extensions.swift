@@ -20,9 +20,9 @@ extension UIButton {
         gradient.startPoint = CGPoint(x: 0.0, y: 0.05)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.05)
         gradient.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-        gradient.cornerRadius = 16
+        gradient.cornerRadius = 24
 
-        self.layer.cornerRadius = 16
+        self.layer.cornerRadius = 24
         self.layer.borderWidth = 0
         self.layer.borderColor = UIColor.clear.cgColor
         self.titleLabel?.font = UIFont.systemFont(ofSize: 15)
@@ -41,7 +41,7 @@ extension UILabel {
         self.text = text
     }
 
-    func configureAttributedString(firstString: String, secondString: String) {
+    func configureAttributedString(firstString: String, secondString: String, secondColor: UIColor = UIColor.wnsPink) {
         let title: String = firstString + " " + secondString
 
         let mutableString = NSMutableAttributedString(string: title, attributes: [NSAttributedStringKey.font: UIFont.wnsStemRegular(size: 15)])
@@ -53,9 +53,17 @@ extension UILabel {
         )
         mutableString.addAttribute(
             NSAttributedStringKey.foregroundColor,
-            value: UIColor.wnsPink,
-            range: NSRange(location: firstString.count, length:  secondString.count + 1)
+            value: secondColor,
+            range: NSRange(location: firstString.count + 1, length: secondString.count)
         )
+
+        if secondColor == UIColor.wnsPink {
+            mutableString.addAttribute(
+                NSAttributedStringKey.underlineStyle,
+                value: NSUnderlineStyle.styleSingle.rawValue,
+                range: NSRange(location: firstString.count + 1, length: secondString.count)
+            )
+        }
 
         self.attributedText = mutableString
     }

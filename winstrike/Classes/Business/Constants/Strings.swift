@@ -7,6 +7,20 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 enum L10n {
+  /// Применить
+  static let changePasswordButtonApply = L10n.tr("Localizable", "changePassword-button-apply")
+  /// Войдите
+  static let changePasswordEnterAccount = L10n.tr("Localizable", "changePassword-enter-account")
+  /// Введите пароль, для авторизации по номеру
+  static let changePasswordEnterPhone = L10n.tr("Localizable", "changePassword-enter-phone")
+  /// Уже есть аккаунт?
+  static let changePasswordHaveAccount = L10n.tr("Localizable", "changePassword-have-account")
+  /// Новый пароль
+  static let changePasswordPhonePlaceholder = L10n.tr("Localizable", "changePassword-phone-placeholder")
+  /// Введите новый пароль
+  static let changePasswordPhoneTitle = L10n.tr("Localizable", "changePassword-phone-title")
+  /// Смена пароля
+  static let changePasswordTitleText = L10n.tr("Localizable", "changePassword-title-text")
   /// Доступ к вашему аккаунту
   static let helperAccessAccount = L10n.tr("Localizable", "helper-access-account")
   /// Справочный центер
@@ -55,6 +69,10 @@ enum L10n {
   static let helpPhoneSendCodeRepeat = L10n.tr("Localizable", "helpPhone-send-code-repeat")
   /// Отправить SMS 
   static let helpPhoneTitleText = L10n.tr("Localizable", "helpPhone-title-text")
+  /// Войдите
+  static let parentEnterAccount = L10n.tr("Localizable", "parent-enter-account")
+  /// Уже есть аккаунт?
+  static let parentHaveAccount = L10n.tr("Localizable", "parent-have-account")
   /// Ещё нет аккаунта?
   static let registrationDontHaveTitle = L10n.tr("Localizable", "registration-dont-have-title")
   /// Забыли данные для входа?

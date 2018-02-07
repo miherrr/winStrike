@@ -86,6 +86,26 @@ class ParentViewController: UIViewController {
         navigationController?.navigationBar.isHidden = isWhite
         //UINavigationBar.appearance().barStyle = .black
     }
+
+    func addBottomView(target: Any?, action: Selector?, firstString: String, secondString: String) {
+
+        let bottomView = UIView()
+        view.addSubview(bottomView.prepareForAutoLayout())
+        bottomView.bottomAnchor ~= view.bottomAnchor - 8
+        bottomView.centerXAnchor ~= view.centerXAnchor
+        bottomView.heightAnchor ~= 36
+
+        let label = UILabel()
+
+        bottomView.addSubview(label.prepareForAutoLayout())
+        label.centerYAnchor ~= bottomView.centerYAnchor
+        label.trailingAnchor ~= bottomView.trailingAnchor
+        label.leadingAnchor ~= bottomView.leadingAnchor
+        label.configureAttributedString(firstString: firstString, secondString: secondString)
+
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        bottomView.addGestureRecognizer(tap)
+    }
 }
 
 private extension UIApplication {

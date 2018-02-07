@@ -16,6 +16,14 @@ class RegistrationPresenter {
 // MARK: - RegistrationViewOutput
 
 extension RegistrationPresenter: RegistrationViewOutput {
+    func tapLoginButton() {
+        print("assa")
+    }
+
+    func tapRegButton() {
+        router.openRegUser()
+    }
+
     func tapHelpButton() {
         router.openHelper()
     }

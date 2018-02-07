@@ -15,4 +15,8 @@ protocol RegistrationViewOutput {
     func viewIsReady()
 
     func tapHelpButton()
+
+    func tapLoginButton()
+
+    func tapRegButton()
 }

@@ -42,7 +42,10 @@ class HelpEmailViewController: ParentViewController {
         backButton.frame = frame
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         addSubview()
-        addBottomView()
+        addBottomView(target: self,
+                      action: #selector(loginButtonHandleTap),
+                      firstString: L10n.parentHaveAccount,
+                      secondString: L10n.parentEnterAccount)
     }
 
     private func addSubview() {
@@ -75,30 +78,14 @@ class HelpEmailViewController: ParentViewController {
         sendButton.configureGradientButton(title: L10n.helpMailButtonSend)
     }
 
-    private func addBottomView() {
-
-        let bottomView = UIView()
-        view.addSubview(bottomView.prepareForAutoLayout())
-        bottomView.bottomAnchor ~= view.bottomAnchor - 8
-        bottomView.centerXAnchor ~= view.centerXAnchor
-        bottomView.heightAnchor ~= 36
-
-        let label = UILabel()
-
-        bottomView.addSubview(label.prepareForAutoLayout())
-        label.centerYAnchor ~= bottomView.centerYAnchor
-        label.trailingAnchor ~= bottomView.trailingAnchor
-        label.leadingAnchor ~= bottomView.leadingAnchor
-        label.configureAttributedString(firstString: L10n.helpMailHaveAccount, secondString: L10n.helpMailEnterAccount)
-
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(registrationHandleTap))
-//        bottomView.addGestureRecognizer(tap)
-    }
-
     // MARK: - Actions
 
     @objc func backHandlerTap() {
         output.backTap()
+    }
+
+    @objc func loginButtonHandleTap() {
+        //        output?.tapLoginButton()
     }
 }
 

@@ -6,6 +6,11 @@
   Copyright © 2017 Heads and Hands. All rights reserved.
 */
 
+//Parent
+
+"parent-have-account" = "Уже есть аккаунт?";
+"parent-enter-account" = "Войдите";
+
 // Start
 
 "start-title-choose-language" = "Выберете язык";
@@ -53,3 +58,12 @@
 "helpMail-button-send" = "Отправить";
 "helpMail-have-account" = "Уже есть аккаунт?";
 "helpMail-enter-account" = "Войдите";
+
+//ChangePassword
+"changePassword-title-text" = "Смена пароля";
+"changePassword-enter-phone" = "Введите пароль, для авторизации по номеру";
+"changePassword-phone-title" = "Введите новый пароль";
+"changePassword-phone-placeholder" = "Новый пароль";
+"changePassword-button-apply" = "Применить";
+"changePassword-have-account" = "Уже есть аккаунт?";
+"changePassword-enter-account" = "Войдите";

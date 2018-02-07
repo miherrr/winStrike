@@ -51,7 +51,10 @@ class RegistrationViewController: ParentViewController {
         addMainView()
         addButtons()
         addSocialView()
-        addBottomView()
+        addBottomView(target: self,
+                      action: #selector(registrationHandleTap),
+                      firstString: L10n.registrationDontHaveTitle,
+                      secondString: L10n.registrationRegistrationButton)
     }
 
     private func addMainView() {
@@ -112,30 +115,10 @@ class RegistrationViewController: ParentViewController {
         socialStackView.delegate = self
     }
 
-    private func addBottomView() {
-
-        let bottomView = UIView()
-        view.addSubview(bottomView.prepareForAutoLayout())
-        bottomView.bottomAnchor ~= view.bottomAnchor - 8
-        bottomView.centerXAnchor ~= view.centerXAnchor
-        bottomView.heightAnchor ~= 36
-
-        let label = UILabel()
-
-        bottomView.addSubview(label.prepareForAutoLayout())
-        label.centerYAnchor ~= bottomView.centerYAnchor
-        label.trailingAnchor ~= bottomView.trailingAnchor
-        label.leadingAnchor ~= bottomView.leadingAnchor
-        label.configureAttributedString(firstString: L10n.registrationDontHaveTitle, secondString: L10n.registrationRegistrationButton)
-
-        let tap = UITapGestureRecognizer(target: self, action: #selector(registrationHandleTap))
-        bottomView.addGestureRecognizer(tap)
-    }
-
     // MARK: - Actions
 
     @objc func loginButtonHandleTap() {
-        print("loginButtonHandleTap")
+        output?.tapLoginButton()
     }
 
     @objc func forgetButtonHandleTap() {
@@ -143,7 +126,7 @@ class RegistrationViewController: ParentViewController {
     }
 
     @objc func registrationHandleTap() {
-        print("registrationHandleTap")
+        output?.tapRegButton()
     }
 }
 
