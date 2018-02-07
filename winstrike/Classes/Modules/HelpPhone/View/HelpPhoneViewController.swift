@@ -9,6 +9,10 @@ class HelpPhoneViewController: ParentViewController {
 
     var output: HelpPhoneViewOutput!
 
+    let realPhone = UILabel()
+
+    fileprivate let phoneNumberView = PhoneNumberView()
+
     // MARK: - Life cycle
 
     required init(coder aDecoder: NSCoder) {
@@ -37,13 +41,15 @@ class HelpPhoneViewController: ParentViewController {
     }
 
     func addSubview() {
-        let realPhone = UILabel()
         realPhone.configureLabel(font: UIFont.wnsStemMedium(size: 15), textColor: UIColor.wnsHelperColor, text: L10n.helpPhoneRealPhone)
         view.addSubview(realPhone.prepareForAutoLayout())
         realPhone.leadingAnchor ~= view.leadingAnchor + 40
         realPhone.topAnchor ~= view.topAnchor + 24
 
-        
+        view.addSubview(phoneNumberView.prepareForAutoLayout())
+        phoneNumberView.topAnchor ~= realPhone.bottomAnchor + 16
+        phoneNumberView.leadingAnchor ~= view.leadingAnchor + 40
+        phoneNumberView.trailingAnchor ~= view.trailingAnchor - 40
     }
 
     // MARK: - Actions

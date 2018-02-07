@@ -43,4 +43,13 @@
 "helpPhone-enter-code-placeholser" = "Код подтверждения";
 "helpPhone-button-next" = "Далее";
 "helpPhone-have-account" = "Уже есть аккаунт?";
-"helpPhone-enter-account" = "Отправить код";
+"helpPhone-enter-account" = "Войдите";
+
+//HelpMail
+"helpMail-title-text" = "Отправить e-mail";
+"helpMail-enter-email" = "Введите свой e-mail";
+"helpMail-email-placeholder" = "Введите эл.адрес";
+"helpMail-help-text" = "*На данный адрес будет выслана ссылка для смены пароля";
+"helpMail-button-send" = "Отправить";
+"helpMail-have-account" = "Уже есть аккаунт?";
+"helpMail-enter-account" = "Войдите";

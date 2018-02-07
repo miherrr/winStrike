@@ -7,45 +7,57 @@
 //
 
 import UIKit
+import InputMask
 
 class PhoneNumberView: UIView {
 
     fileprivate let russiaLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.wnsStemRegular(size: 15)
-        label.tintColor = UIColor.wnsTextFieldPlderColor
-        label.text = L10n.helpPhonePhonePlaceholder
+        label.configureLabel(font: UIFont.wnsStemRegular(size: 15), textColor: UIColor.wnsTextFieldPlderColor, text: L10n.helpPhonePhonePlaceholder)
         return label
     }()
+
+    fileprivate let separatorView = UIView()
+
+    fileprivate let phoneField: UITextField = {
+        let textFiled = UITextField()
+        textFiled.configure(placeholder: "(***) ***-**-**")
+        return textFiled
+    }()
+
+    var maskedDelegate: MaskedTextFieldDelegate?
 
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
     }
 
-    init(item: ChooseListItem, tag: Int, isSelected: Bool = true) {
+    init() {
         super.init(frame: .zero)
 
         self.tag = tag
         backgroundColor = UIColor.white
-
-        var imageIsNotNil = false
-
-        var insetRight: CGFloat = 25
-
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.sizeOfScreen == .iphone5s {
-            insetRight = 10
-        }
 
         let mainView = UIView()
         addSubview(mainView.prepareForAutoLayout())
         mainView.pinEdgesToSuperviewEdges()
         mainView.heightAnchor ~= 48
         mainView.backgroundColor = UIColor.wnsLightGrey
-        mainView.layer.cornerRadius = 28
+        mainView.layer.cornerRadius = 24
 
-//        mainView.addSubview(russiaLabel.prepareForAutoLayout())
-//        russiaLabel.centerYAnchor ~= mainView.centerYAnchor
-//        russiaLabel.
+        mainView.addSubview(russiaLabel.prepareForAutoLayout())
+        russiaLabel.centerYAnchor ~= mainView.centerYAnchor
+        russiaLabel.leadingAnchor ~= mainView.leadingAnchor + 23
+
+        separatorView.backgroundColor = russiaLabel.textColor
+        mainView.addSubview(separatorView.prepareForAutoLayout())
+        separatorView.leadingAnchor ~= russiaLabel.trailingAnchor + 15
+        separatorView.centerYAnchor ~= mainView.centerYAnchor
+        separatorView.heightAnchor ~= 22
+        separatorView.widthAnchor ~= 2
+
+        mainView.addSubview(phoneField.prepareForAutoLayout())
+        phoneField.leadingAnchor ~= separatorView.trailingAnchor + 15
+        phoneField.centerYAnchor ~= mainView.centerYAnchor
 
 //        mainView.addSubview(imageView.prepareForAutoLayout())
 //        imageView.centerYAnchor ~= mainView.centerYAnchor
