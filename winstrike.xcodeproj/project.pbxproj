@@ -20,6 +20,7 @@
 		1E907162E8FF77D1F161E097 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19132A1DFDD14E6C67320C /* HelperViewController.swift */; };
 		20D0A47D5D6D9CA8D68F1549 /* HelpEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9140B20CF9B2E819E84409 /* HelpEmailInteractor.swift */; };
 		2216321A440ECB8A1A5A8E2F /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */; };
+		24F5747C36552589FB68A7B2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13345A841B005ED83F1231E /* ChangePasswordViewController.swift */; };
 		2DBA1619AFA28CC3A2C7FEE8 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F5248F4155F9593EE1C /* LogManager.swift */; };
 		2DBA1A63EA33E4B04C5CCC2E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1117036D8B7E596B4703 /* Fonts.swift */; };
 		3361E4951F54A4DA00ECF276 /* PhoneNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361E4931F54A4DA00ECF276 /* PhoneNumberFormatter.swift */; };
@@ -30,11 +31,14 @@
 		33C656511F4C261000594E47 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 33C656501F4C261000594E47 /* Localizable.stringsdict */; };
 		4971DA6042965E514401D003 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A868A29E445D25CA2BE3850D /* RegistrationViewController.swift */; };
 		4E34069F839FCF99FC2C099D /* StartRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE29428097C92B100F819E6 /* StartRouterInput.swift */; };
+		51A30C1BE4D711019D877BD3 /* ChangePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49919CA26D15237C939C4AFA /* ChangePasswordRouter.swift */; };
 		52C0B607573322BDF0401006 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335DFF1EFB6ED99518AA7653 /* StartViewController.swift */; };
 		59DB90B0E93F2A753677C1E9 /* HelpEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C677CECE28512C0719D10B /* HelpEmailPresenter.swift */; };
 		5F92963794ACD73C5F87EC67 /* HelpPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00D41DA9AD6CD629B40976 /* HelpPhonePresenter.swift */; };
 		691FB92EFDB738377887319D /* RegistrationInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */; };
+		6B9D79853284349D8C6463B8 /* ChangePasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208182D4CCC5CD528D6308CD /* ChangePasswordInteractor.swift */; };
 		6C7F29B0879C16603DDBC98F /* StartModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B43000A2CA9F993BF822BE0 /* StartModuleInputOutput.swift */; };
+		6E58947FBCC493884034B219 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441DD7C3BACA794AF176880A /* ChangePasswordPresenter.swift */; };
 		722153BE0F32B6AA92A131AB /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C3E02B2B52AABC873049B /* StartPresenter.swift */; };
 		73AEA260D6DC4A8500CE1D21 /* HelperRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC3F534CF986DBDAE7188E /* HelperRouterInput.swift */; };
 		7E1D7A61F6B326FC969C13E9 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D546D86E0E7D27D018AC5 /* StartRouter.swift */; };
@@ -101,12 +105,14 @@
 		A61DFEFC0462E34147D630B9 /* HelpPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96911D5381C32F975B83821 /* HelpPhoneRouter.swift */; };
 		A94909D30D1D65F87626EFDD /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C5A0FFD0EA78C8B7C1746 /* SplashInteractor.swift */; };
 		ACEA87A78F13F3F37F493DC0 /* HelpPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3846B194E17F76094EECBD /* HelpPhoneInteractor.swift */; };
+		B10D64E8A71831F4F1B66F21 /* ChangePasswordModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69103C6A5BEE1FBCF29943 /* ChangePasswordModuleInputOutput.swift */; };
 		B2F3EA7CB4725E784781AE39 /* HelpEmailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F94D07F6E0B9C1870C12B2 /* HelpEmailConfigurator.swift */; };
 		B39F6E44656CE1C340F47445 /* HelpEmailModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F2D306355531182EE021D /* HelpEmailModuleInputOutput.swift */; };
 		B56B0B25DF9AEA1F8338FF02 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB7BB63F53A685DD7F7936 /* RegistrationPresenter.swift */; };
 		B653884F9F1F00E25C88B37B /* RegistrationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669682B306140DE8EEF5A94 /* RegistrationRouterInput.swift */; };
 		B7AA647D629BCBF95E3D0690 /* HelpPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2F14669D1D72C8D351C56 /* HelpPhoneViewController.swift */; };
 		BA001C680596D4ECD3425CE8 /* HelperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89285934A916812F8BD670F6 /* HelperRouter.swift */; };
+		BB2FD25242C7A2429B905CF1 /* ChangePasswordViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577A2875FB88181A65E0BC4 /* ChangePasswordViewInputOutput.swift */; };
 		C0005F051F338B7400410A74 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0005F041F338B7400410A74 /* ObjectMapper.framework */; };
 		C0047BB81F20C33D0073544B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0047BBA1F20C33D0073544B /* Localizable.strings */; };
 		C03A2C261F2F0B6D006E9B45 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03A2C251F2F0B6D006E9B45 /* Accelerate.framework */; };
@@ -137,16 +143,19 @@
 		C0A4AD711F2621DB0035EF69 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A4AD691F2621DB0035EF69 /* RxSwift.framework */; };
 		C0B9D4771F1FB8F6009A77DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B9D4761F1FB8F6009A77DD /* Assets.xcassets */; };
 		C8267A1712D6769100AA6C12 /* HelperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EAF5A94187F555928F6F4 /* HelperPresenter.swift */; };
+		CA42E002FB4E670799908779 /* ChangePasswordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A69D82AC6DEA74ECE5B95A /* ChangePasswordConfigurator.swift */; };
 		CE234B461FBEF31700EC4BAA /* SimpleNewsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE234B451FBEF31700EC4BAA /* SimpleNewsHeader.swift */; };
 		CED4EA041FAAF8D500E7F58B /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA031FAAF8D500E7F58B /* CollectionCell.swift */; };
 		CEF831C41FA9B297002CBAD3 /* HeaderCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF831C31FA9B297002CBAD3 /* HeaderCollectionsView.swift */; };
 		CF562C6200115E3FC5DA9F10 /* StartInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B564C6BD649B32501AC686C /* StartInteractorInputOutput.swift */; };
 		D2A5D60B724F53F04AA2C14B /* HelpPhoneModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7642F3212692807D5853CBA /* HelpPhoneModuleInputOutput.swift */; };
 		D41E5AA61B4243F474B70495 /* StartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE23E66BA250294ADDB9989 /* StartConfigurator.swift */; };
+		DDB97345DF135AF96F62818D /* ChangePasswordRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BB2F71B83633B5BA23C00 /* ChangePasswordRouterInput.swift */; };
 		E17F85E542736C0D28993858 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E710B0E529AC5ABDB11F3773 /* SplashViewController.swift */; };
 		E320C950B3B8B62925682B70 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F97098822D5EF624298F6 /* RegistrationInteractor.swift */; };
 		E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B349894AFFDAAAB01F2EAA /* SplashRouterInput.swift */; };
 		E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6292FEEE27C07BAC9D12B75 /* SplashPresenter.swift */; };
+		EAED45BA82258AC490789294 /* ChangePasswordInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10C9F3D62A92322009DDA05 /* ChangePasswordInteractorInputOutput.swift */; };
 		ECEA44A027C20316F3BD7AE9 /* HelperConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF3D8AD9B8A7E9B61EA7B3 /* HelperConfigurator.swift */; };
 		EF1CE108ABA3166D7E3AACDE /* RegistrationViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F99460AA6723620AC2640 /* RegistrationViewInputOutput.swift */; };
 		FA9B00CF1F251C7A002A57A8 /* Dip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B00CE1F251C7A002A57A8 /* Dip.framework */; };
@@ -163,12 +172,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A69D82AC6DEA74ECE5B95A /* ChangePasswordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordConfigurator.swift; sourceTree = "<group>"; };
 		0410D88A1F600695001F14A7 /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		0464ACE21F56F5A000D8D49A /* FirstLaunchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchManager.swift; sourceTree = "<group>"; };
 		04A6619B1F6B89BF0032A491 /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 		09F2F14669D1D72C8D351C56 /* HelpPhoneViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneViewController.swift; sourceTree = "<group>"; };
 		0B4C5A0FFD0EA78C8B7C1746 /* SplashInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		0B564C6BD649B32501AC686C /* StartInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartInteractorInputOutput.swift; sourceTree = "<group>"; };
+		1F69103C6A5BEE1FBCF29943 /* ChangePasswordModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordModuleInputOutput.swift; sourceTree = "<group>"; };
+		208182D4CCC5CD528D6308CD /* ChangePasswordInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordInteractor.swift; sourceTree = "<group>"; };
 		261C3E02B2B52AABC873049B /* StartPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		269EAF5A94187F555928F6F4 /* HelperPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperPresenter.swift; sourceTree = "<group>"; };
 		2DBA1117036D8B7E596B4703 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -184,10 +196,13 @@
 		34F4D5FD04DE2D8682E496BB /* SplashModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashModuleInputOutput.swift; sourceTree = "<group>"; };
 		368AECAC258B44D1FC242EC2 /* HelpPhoneRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneRouterInput.swift; sourceTree = "<group>"; };
 		3EC4A17B63766DE5D174AB78 /* RegistrationModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationModuleInputOutput.swift; sourceTree = "<group>"; };
+		441DD7C3BACA794AF176880A /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		4669682B306140DE8EEF5A94 /* RegistrationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationRouterInput.swift; sourceTree = "<group>"; };
 		48F94D07F6E0B9C1870C12B2 /* HelpEmailConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpEmailConfigurator.swift; sourceTree = "<group>"; };
+		49919CA26D15237C939C4AFA /* ChangePasswordRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordRouter.swift; sourceTree = "<group>"; };
 		4DF73F14935DB76DA43B51F5 /* HelperViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperViewInputOutput.swift; sourceTree = "<group>"; };
 		4F711E4038D9E415054FD33B /* HelpPhoneInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneInteractorInputOutput.swift; sourceTree = "<group>"; };
+		5577A2875FB88181A65E0BC4 /* ChangePasswordViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewInputOutput.swift; sourceTree = "<group>"; };
 		55CF3D8AD9B8A7E9B61EA7B3 /* HelperConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperConfigurator.swift; sourceTree = "<group>"; };
 		57B349894AFFDAAAB01F2EAA /* SplashRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashRouterInput.swift; sourceTree = "<group>"; };
 		5AE23E66BA250294ADDB9989 /* StartConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartConfigurator.swift; sourceTree = "<group>"; };
@@ -251,6 +266,7 @@
 		9BB4EED6E2659E4C696CCF34 /* AuthTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTokenManager.swift; sourceTree = "<group>"; };
 		9BB4EF41AB288F4BE5D309A1 /* NavigationBarDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarDecorator.swift; sourceTree = "<group>"; };
 		9BB4EF5E75C54D43ADD9AA1C /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		A13345A841B005ED83F1231E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A868A29E445D25CA2BE3850D /* RegistrationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		AACB7BB63F53A685DD7F7936 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		AE9140B20CF9B2E819E84409 /* HelpEmailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpEmailInteractor.swift; sourceTree = "<group>"; };
@@ -305,6 +321,7 @@
 		D7BC3F534CF986DBDAE7188E /* HelperRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperRouterInput.swift; sourceTree = "<group>"; };
 		D96911D5381C32F975B83821 /* HelpPhoneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneRouter.swift; sourceTree = "<group>"; };
 		DFF3C95E7DD79058D26D4A25 /* StartInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
+		E10C9F3D62A92322009DDA05 /* ChangePasswordInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordInteractorInputOutput.swift; sourceTree = "<group>"; };
 		E710B0E529AC5ABDB11F3773 /* SplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EFBADD61D0BDCB6E7DD7AFFC /* StartViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartViewInputOutput.swift; sourceTree = "<group>"; };
 		F121277E9F83A0A1091D4BB1 /* HelpPhoneViewInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneViewInputOutput.swift; sourceTree = "<group>"; };
@@ -314,6 +331,7 @@
 		F7642F3212692807D5853CBA /* HelpPhoneModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneModuleInputOutput.swift; sourceTree = "<group>"; };
 		F858F54DD975A1BFBD3580E8 /* HelperModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperModuleInputOutput.swift; sourceTree = "<group>"; };
 		FA9B00CE1F251C7A002A57A8 /* Dip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dip.framework; path = Carthage/Build/iOS/Dip.framework; sourceTree = "<group>"; };
+		FB5BB2F71B83633B5BA23C00 /* ChangePasswordRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChangePasswordRouterInput.swift; sourceTree = "<group>"; };
 		FBEEEF441472276FE0A507B5 /* HelpEmailInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpEmailInteractorInputOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -391,6 +409,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		07B4D8B6752031E584AF1A16 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1F69103C6A5BEE1FBCF29943 /* ChangePasswordModuleInputOutput.swift */,
+				441DD7C3BACA794AF176880A /* ChangePasswordPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		0A45DB32C823D51E3FC12E53 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +456,25 @@
 				4F711E4038D9E415054FD33B /* HelpPhoneInteractorInputOutput.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1FA745CCEDB76194616A2526 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A13345A841B005ED83F1231E /* ChangePasswordViewController.swift */,
+				5577A2875FB88181A65E0BC4 /* ChangePasswordViewInputOutput.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		21B43994A97CAA6CC820C229 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				01A69D82AC6DEA74ECE5B95A /* ChangePasswordConfigurator.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		2505E8ADE088264EE72B02CA /* Splash */ = {
@@ -636,6 +683,19 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		9515E0906EBB4FB9D19C6097 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				21B43994A97CAA6CC820C229 /* Configurator */,
+				CCB115EFBCA421187750C9B1 /* Interactor */,
+				07B4D8B6752031E584AF1A16 /* Presenter */,
+				B851D51211F101F211C94E2A /* Router */,
+				1FA745CCEDB76194616A2526 /* View */,
+			);
+			name = ChangePassword;
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
 		959D62C0894F6BA68DC3C99F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +726,7 @@
 				E179E2F73F5A96CD001EDA7E /* Helper */,
 				9B92A63C2515F2C0E938209A /* HelpPhone */,
 				4135FCC2629194FEFE94F0D6 /* HelpEmail */,
+				9515E0906EBB4FB9D19C6097 /* ChangePassword */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -908,6 +969,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		B851D51211F101F211C94E2A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				49919CA26D15237C939C4AFA /* ChangePasswordRouter.swift */,
+				FB5BB2F71B83633B5BA23C00 /* ChangePasswordRouterInput.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B9B3079743F26FAA0769B573 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,6 +1060,16 @@
 				9BB4EF0AA7B67D2CEC1286F2 /* Resources */,
 			);
 			path = winstrike;
+			sourceTree = "<group>";
+		};
+		CCB115EFBCA421187750C9B1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				208182D4CCC5CD528D6308CD /* ChangePasswordInteractor.swift */,
+				E10C9F3D62A92322009DDA05 /* ChangePasswordInteractorInputOutput.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		CE234B441FBEF2D500EC4BAA /* TableViewHeaders */ = {
@@ -1385,6 +1466,15 @@
 				8D7D1BE9E50F8D00AAB5EB71 /* HelpEmailRouterInput.swift in Sources */,
 				171C3D0CEBE1565FF6CCAED0 /* HelpEmailViewController.swift in Sources */,
 				81E476EC7C69AF4DF3B60510 /* HelpEmailViewInputOutput.swift in Sources */,
+				CA42E002FB4E670799908779 /* ChangePasswordConfigurator.swift in Sources */,
+				6B9D79853284349D8C6463B8 /* ChangePasswordInteractor.swift in Sources */,
+				EAED45BA82258AC490789294 /* ChangePasswordInteractorInputOutput.swift in Sources */,
+				B10D64E8A71831F4F1B66F21 /* ChangePasswordModuleInputOutput.swift in Sources */,
+				6E58947FBCC493884034B219 /* ChangePasswordPresenter.swift in Sources */,
+				51A30C1BE4D711019D877BD3 /* ChangePasswordRouter.swift in Sources */,
+				DDB97345DF135AF96F62818D /* ChangePasswordRouterInput.swift in Sources */,
+				24F5747C36552589FB68A7B2 /* ChangePasswordViewController.swift in Sources */,
+				BB2FD25242C7A2429B905CF1 /* ChangePasswordViewInputOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

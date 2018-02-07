@@ -7,4 +7,5 @@ import Foundation
 
 protocol RegistrationRouterInput: BaseRouterInput {
     func openHelper()
+    func openRegUser()
 }

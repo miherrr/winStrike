@@ -77,6 +77,13 @@ enum Containers {
             return configurator.configureModule()
         }
 
+        container.register(tag: ChangePasswordConfigurator.tag) { (phoneNumber: String) -> UIViewController in
+            let configurator = ChangePasswordConfigurator(phoneNumber: phoneNumber)
+            configurator.appRouter = try managersContainer.resolve()
+            configurator.provider = try managersContainer.resolve()
+            return configurator.configureModule()
+        }
+
         return container
     }()
 
