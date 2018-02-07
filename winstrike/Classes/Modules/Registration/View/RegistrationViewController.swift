@@ -135,7 +135,7 @@ class RegistrationViewController: ParentViewController {
     // MARK: - Actions
 
     @objc func loginButtonHandleTap() {
-        print("loginButtonHandleTap")
+        output?.tapLoginButton()
     }
 
     @objc func forgetButtonHandleTap() {
@@ -143,7 +143,7 @@ class RegistrationViewController: ParentViewController {
     }
 
     @objc func registrationHandleTap() {
-        print("registrationHandleTap")
+        output?.tapRegButton()
     }
 }
 
