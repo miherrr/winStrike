@@ -56,7 +56,10 @@ class ChangePasswordViewController: ParentViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
 
         addSubview()
-        addBottomView()
+        addBottomView(target: self,
+                      action: #selector(loginButtonHandleTap),
+                      firstString: L10n.parentHaveAccount,
+                      secondString: L10n.parentEnterAccount)
     }
 
     private func addSubview() {
@@ -89,24 +92,10 @@ class ChangePasswordViewController: ParentViewController {
         applyButton.configureGradientButton(title: L10n.changePasswordButtonApply)
     }
 
-    private func addBottomView() {
+    // MARK: - Actions
 
-        let bottomView = UIView()
-        view.addSubview(bottomView.prepareForAutoLayout())
-        bottomView.bottomAnchor ~= view.bottomAnchor - 8
-        bottomView.centerXAnchor ~= view.centerXAnchor
-        bottomView.heightAnchor ~= 36
-
-        let label = UILabel()
-
-        bottomView.addSubview(label.prepareForAutoLayout())
-        label.centerYAnchor ~= bottomView.centerYAnchor
-        label.trailingAnchor ~= bottomView.trailingAnchor
-        label.leadingAnchor ~= bottomView.leadingAnchor
-        label.configureAttributedString(firstString: L10n.changePasswordHaveAccount, secondString: L10n.changePasswordEnterAccount)
-
-        //        let tap = UITapGestureRecognizer(target: self, action: #selector(registrationHandleTap))
-        //        bottomView.addGestureRecognizer(tap)
+    @objc func loginButtonHandleTap() {
+//        output?.tapLoginButton()
     }
 }
 

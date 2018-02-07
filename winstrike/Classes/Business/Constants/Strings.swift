@@ -69,6 +69,10 @@ enum L10n {
   static let helpPhoneSendCodeRepeat = L10n.tr("Localizable", "helpPhone-send-code-repeat")
   /// Отправить SMS 
   static let helpPhoneTitleText = L10n.tr("Localizable", "helpPhone-title-text")
+  /// Войдите
+  static let parentEnterAccount = L10n.tr("Localizable", "parent-enter-account")
+  /// Уже есть аккаунт?
+  static let parentHaveAccount = L10n.tr("Localizable", "parent-have-account")
   /// Ещё нет аккаунта?
   static let registrationDontHaveTitle = L10n.tr("Localizable", "registration-dont-have-title")
   /// Забыли данные для входа?

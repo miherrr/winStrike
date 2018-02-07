@@ -6,6 +6,11 @@
   Copyright © 2017 Heads and Hands. All rights reserved.
 */
 
+//Parent
+
+"parent-have-account" = "Уже есть аккаунт?";
+"parent-enter-account" = "Войдите";
+
 // Start
 
 "start-title-choose-language" = "Выберете язык";
