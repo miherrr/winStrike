@@ -16,6 +16,9 @@ class ChangePasswordPresenter {
 // MARK: - ChangePasswordViewOutput
 
 extension ChangePasswordPresenter: ChangePasswordViewOutput {
+    func backTap() {
+        router.back()
+    }
 
     func viewIsReady() {
         log.verbose("ChangePassword is ready")

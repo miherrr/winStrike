@@ -11,9 +11,9 @@ class RegistrationViewController: ParentViewController {
 
     fileprivate let mainView = UIView()
 
-    fileprivate let loginTF = UIView()
+    fileprivate let loginTF = UIRoundedTextField()
 
-    fileprivate let passwordTF = UIView()
+    fileprivate let passwordTF = UIRoundedTextField()
 
     fileprivate let loginButton = UIButton()
 
@@ -69,12 +69,14 @@ class RegistrationViewController: ParentViewController {
         logoImageView.centerXAnchor ~= mainView.centerXAnchor
         logoImageView.topAnchor ~= mainView.topAnchor
 
-        loginTF.configureTFView(placeholder: L10n.registrationLoginTitle, delegate: self)
+        loginTF.configure(placeholder: L10n.registrationLoginTitle)
+        loginTF.delegate = self
         mainView.addSubview(loginTF.prepareForAutoLayout())
         loginTF.centerXAnchor ~= mainView.centerXAnchor
         loginTF.topAnchor ~= logoImageView.bottomAnchor + 48
 
-        passwordTF.configureTFView(placeholder: L10n.registrationPasswordTitle, isSecurity: true, delegate: self)
+        passwordTF.configure(placeholder: L10n.registrationPasswordTitle, isSecurity: true)
+        passwordTF.delegate = self
         mainView.addSubview(passwordTF.prepareForAutoLayout())
         passwordTF.centerXAnchor ~= mainView.centerXAnchor
         passwordTF.topAnchor ~= loginTF.bottomAnchor + 24

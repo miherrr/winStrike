@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 extension UIButton {
     func configureGradientButton(title: String) {
@@ -71,30 +72,12 @@ extension UILabel {
 
 extension UITextField {
 
-    func configure(placeholder: String) {
+    func configurePlaceholder(placeholder: String) {
         self.font = UIFont.systemFont(ofSize: 15)
         self.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedStringKey.foregroundColor: UIColor.wnsTextFieldPlderColor]
         )
         self.textColor = UIColor.wnsTextFieldColor
-    }
-}
-
-extension UIView {
-    func configureTFView(placeholder: String, isSecurity: Bool = false, delegate: UITextFieldDelegate, cornerRadius: CGFloat = 16) {
-        self.heightAnchor ~= 48
-        if cornerRadius == 16 {
-            self.widthAnchor ~= 288
-        }
-        self.backgroundColor = UIColor.wnsLightGrey
-        self.layer.cornerRadius = cornerRadius
-        let textField = UITextField()
-        self.addSubview(textField.prepareForAutoLayout())
-        textField.pinEdgesToSuperviewEdges(top: 0, left: 24, right: 24, bottom: 0)
-        textField.configure(placeholder: placeholder)
-        textField.isSecureTextEntry = isSecurity
-        textField.tag = self.tag
-        textField.delegate = delegate
     }
 }

@@ -43,6 +43,7 @@
 		59DB90B0E93F2A753677C1E9 /* HelpEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C677CECE28512C0719D10B /* HelpEmailPresenter.swift */; };
 		5F92963794ACD73C5F87EC67 /* HelpPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00D41DA9AD6CD629B40976 /* HelpPhonePresenter.swift */; };
 		6359F9917F760CEFE0986A3D /* RegUserModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B760640EAAD0C5AAD66AF10 /* RegUserModuleInputOutput.swift */; };
+		6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E1202C5040008306AC /* UIRoundedTextField.swift */; };
 		6823E2CDCFF274D5A2011313 /* RegUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91717C9631C121A4D1ECAA /* RegUserViewController.swift */; };
 		691C901FC164D5950DEE2A59 /* ConfirmPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8056F0ADB9D01FE5817CA /* ConfirmPasswordRouter.swift */; };
 		691FB92EFDB738377887319D /* RegistrationInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */; };
@@ -244,6 +245,7 @@
 		60528293CDF2EC11EE37E3A3 /* HelpPhoneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneConfigurator.swift; sourceTree = "<group>"; };
 		6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		64BA36E25A5CDE87BD3D23FC /* EnterUserInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterUserInfoRouterInput.swift; sourceTree = "<group>"; };
+		6529D0E1202C5040008306AC /* UIRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedTextField.swift; sourceTree = "<group>"; };
 		66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorInputOutput.swift; sourceTree = "<group>"; };
 		6B22618AC1399C4F604FE2C8 /* ConfirmPasswordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordConfigurator.swift; sourceTree = "<group>"; };
 		6B43000A2CA9F993BF822BE0 /* StartModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleInputOutput.swift; sourceTree = "<group>"; };
@@ -442,7 +444,6 @@
 				F0761672E57B348645A390C7 /* Router */,
 				AD8506793A8C9D0DC3357ABA /* View */,
 			);
-			name = ConfirmPassword;
 			path = ConfirmPassword;
 			sourceTree = "<group>";
 		};
@@ -459,7 +460,6 @@
 			children = (
 				7422032826ECADE2E62E5214 /* RegUserConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -491,7 +491,6 @@
 				1F69103C6A5BEE1FBCF29943 /* ChangePasswordModuleInputOutput.swift */,
 				441DD7C3BACA794AF176880A /* ChangePasswordPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -531,7 +530,6 @@
 				92A9B12BDB131F64BAC4C7C0 /* EnterUserInfoViewController.swift */,
 				D3CDDDF7D6370A79823F6A1A /* EnterUserInfoViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -550,7 +548,6 @@
 				A13345A841B005ED83F1231E /* ChangePasswordViewController.swift */,
 				5577A2875FB88181A65E0BC4 /* ChangePasswordViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -559,7 +556,6 @@
 			children = (
 				01A69D82AC6DEA74ECE5B95A /* ChangePasswordConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -569,7 +565,6 @@
 				F6F737BC81294C7FAB9FE3D2 /* EnterUserInfoInteractor.swift */,
 				D2408D08C2280D2178B244B2 /* EnterUserInfoInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -636,7 +631,6 @@
 				EE91717C9631C121A4D1ECAA /* RegUserViewController.swift */,
 				4CD50DFEF8B39207A4DB21C9 /* RegUserViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -646,7 +640,6 @@
 				8E5FAD9EB62418BC671F55EC /* EnterUserInfoModuleInputOutput.swift */,
 				AC3D404EE820DECFBB3AA876 /* EnterUserInfoPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -668,7 +661,6 @@
 				B64F1E35F0F24E25BA688066 /* RegUserRouter.swift */,
 				344E93E5635B9A5FDA0078F9 /* RegUserRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -714,7 +706,6 @@
 				0FA60E63E83FB6EB3AFFEA3A /* RegUserInteractor.swift */,
 				50221C29E3EDEAB3630B1432 /* RegUserInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -724,7 +715,6 @@
 				4B760640EAAD0C5AAD66AF10 /* RegUserModuleInputOutput.swift */,
 				9D9D45C525EAFEA5E2B3716F /* RegUserPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -769,7 +759,6 @@
 				5C8BC9E3BAD37C5A12705F5F /* ConfirmPasswordModuleInputOutput.swift */,
 				DC77D69EE39D2D3C5E8A1604 /* ConfirmPasswordPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -848,7 +837,6 @@
 				B851D51211F101F211C94E2A /* Router */,
 				1FA745CCEDB76194616A2526 /* View */,
 			);
-			name = ChangePassword;
 			path = ChangePassword;
 			sourceTree = "<group>";
 		};
@@ -1041,6 +1029,7 @@
 				81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */,
 				8116E439201F0E08008F9E47 /* StartViews */,
 				81E32AE32022FDBF004527AE /* SocialStackView.swift */,
+				6529D0E1202C5040008306AC /* UIRoundedTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1125,7 +1114,6 @@
 				DB930C01DAB796E3F268511A /* ConfirmPasswordViewController.swift */,
 				9ABB737A4318202C6078AACC /* ConfirmPasswordViewInputOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1144,7 +1132,6 @@
 				49919CA26D15237C939C4AFA /* ChangePasswordRouter.swift */,
 				FB5BB2F71B83633B5BA23C00 /* ChangePasswordRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1237,7 +1224,6 @@
 				208182D4CCC5CD528D6308CD /* ChangePasswordInteractor.swift */,
 				E10C9F3D62A92322009DDA05 /* ChangePasswordInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1272,7 +1258,6 @@
 				CA6BA29D04F372D52F5545D1 /* EnterUserInfoRouter.swift */,
 				64BA36E25A5CDE87BD3D23FC /* EnterUserInfoRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1314,7 +1299,6 @@
 				D301653147F81E7E3643BA59 /* Router */,
 				183EE3726E4F91733C1A06B5 /* View */,
 			);
-			name = EnterUserInfo;
 			path = EnterUserInfo;
 			sourceTree = "<group>";
 		};
@@ -1332,7 +1316,6 @@
 				A5E8056F0ADB9D01FE5817CA /* ConfirmPasswordRouter.swift */,
 				FD9655638B1C7CDF405336A1 /* ConfirmPasswordRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1350,7 +1333,6 @@
 				2E861D4B955586F5ECACB8DE /* ConfirmPasswordInteractor.swift */,
 				BE8020FB3AEDC01D21780E1D /* ConfirmPasswordInteractorInputOutput.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1359,7 +1341,6 @@
 			children = (
 				6B22618AC1399C4F604FE2C8 /* ConfirmPasswordConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -1372,7 +1353,6 @@
 				46C604019AF888D5CFA8A41D /* Router */,
 				3F7EBE3E1AC5D16BFC72DEEF /* View */,
 			);
-			name = RegUser;
 			path = RegUser;
 			sourceTree = "<group>";
 		};
@@ -1399,7 +1379,6 @@
 			children = (
 				A326CD8AF0E585D746AC52B5 /* EnterUserInfoConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -1657,6 +1636,7 @@
 				07C78A4481388F1339B64CB8 /* SplashInteractorInputOutput.swift in Sources */,
 				A38174CEB232EBFB5FD4B31B /* SplashModuleInputOutput.swift in Sources */,
 				E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */,
+				6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */,
 				99241F5B793E63806B03F3B3 /* SplashRouter.swift in Sources */,
 				E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */,
 				8116E438201F0D51008F9E47 /* ChooseSubview.swift in Sources */,
