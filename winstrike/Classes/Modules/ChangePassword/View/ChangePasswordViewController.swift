@@ -15,7 +15,7 @@ class ChangePasswordViewController: ParentViewController {
 
     private let phoneLabel = UILabel()
 
-    private let phoneTF = UIView()
+    private let phoneTF = UIRoundedTextField()
 
     private let applyButton = UIButton()
 
@@ -48,7 +48,7 @@ class ChangePasswordViewController: ParentViewController {
 
         let backButton = UIButton()
         backButton.setImage(Asset.Winstrike.backChevron.image, for: .normal)
-//        backButton.addTarget(self, action: #selector(backHandlerTap), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backHandlerTap), for: .touchUpInside)
         backButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: -9, bottom: 0, right: 0)
         var frame = backButton.frame
         frame.size = CGSize(width: 30, height: 100)
@@ -75,11 +75,12 @@ class ChangePasswordViewController: ParentViewController {
         phoneLabel.topAnchor ~= titleLabel.bottomAnchor + 25
         phoneLabel.leadingAnchor ~= titleLabel.leadingAnchor
 
-        phoneTF.configureTFView(placeholder: L10n.changePasswordPhonePlaceholder, isSecurity: true, delegate: self, cornerRadius: 24)
+        phoneTF.configure(placeholder: L10n.changePasswordPhonePlaceholder, isSecurity: true, cornerRadius: 24)
         view.addSubview(phoneTF.prepareForAutoLayout())
         phoneTF.topAnchor ~= phoneLabel.bottomAnchor + 16
         phoneTF.trailingAnchor ~= view.trailingAnchor - 40
         phoneTF.leadingAnchor ~= view.leadingAnchor + 40
+        phoneTF.delegate = self
 
         view.addSubview(applyButton.prepareForAutoLayout())
         applyButton.centerXAnchor ~= view.centerXAnchor
@@ -96,6 +97,10 @@ class ChangePasswordViewController: ParentViewController {
 
     @objc func loginButtonHandleTap() {
 //        output?.tapLoginButton()
+    }
+
+    @objc func backHandlerTap() {
+        output?.backTap()
     }
 }
 

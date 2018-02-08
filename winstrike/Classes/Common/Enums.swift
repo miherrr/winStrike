@@ -26,3 +26,22 @@ enum Social: Int {
         }
     }
 }
+
+enum BigIcons: Int {
+    case phone
+    case message
+    case lock
+    case list
+    func image() -> UIImage {
+        switch self {
+        case .phone:
+            return Asset.BigIcon.phoneBig.image
+        case .message:
+            return Asset.BigIcon.messageBig.image
+        case .lock:
+            return Asset.BigIcon.lockBig.image
+        case .list:
+            return Asset.BigIcon.listBig.image
+        }
+    }
+}

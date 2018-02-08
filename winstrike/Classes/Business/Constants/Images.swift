@@ -51,6 +51,12 @@ enum Asset {
     static let mail = ImageAsset(name: "mail")
     static let phone = ImageAsset(name: "phone")
   }
+  enum BigIcon {
+    static let listBig = ImageAsset(name: "list_big")
+    static let lockBig = ImageAsset(name: "lock_big")
+    static let messageBig = ImageAsset(name: "message_big")
+    static let phoneBig = ImageAsset(name: "phone_big")
+  }
   enum Winstrike {
     static let backChevron = ImageAsset(name: "back-chevron")
     static let buttonDown = ImageAsset(name: "buttonDown")
@@ -79,6 +85,10 @@ enum Asset {
     Help.book,
     Help.mail,
     Help.phone,
+    BigIcon.listBig,
+    BigIcon.lockBig,
+    BigIcon.messageBig,
+    BigIcon.phoneBig,
     Winstrike.backChevron,
     Winstrike.buttonDown,
     Winstrike.buttonUp,

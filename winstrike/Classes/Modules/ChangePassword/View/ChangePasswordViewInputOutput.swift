@@ -11,6 +11,6 @@ protocol ChangePasswordViewInput: class {
 }
 
 protocol ChangePasswordViewOutput {
-
+    func backTap()
     func viewIsReady()
 }

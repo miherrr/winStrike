@@ -4,10 +4,13 @@
 //
 
 import UIKit
+import RxMoya
 
 class RegUserConfigurator {
 
     static let tag: String = "RegUserTag"
+
+    var provider: RxMoyaProvider<FoodleTarget>!
 
     var appRouter: AppRouterProtocol!
 

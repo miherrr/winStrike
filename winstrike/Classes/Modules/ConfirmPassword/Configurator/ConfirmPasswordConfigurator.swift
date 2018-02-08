@@ -4,10 +4,13 @@
 //
 
 import UIKit
+import RxMoya
 
 class ConfirmPasswordConfigurator {
 
     static let tag: String = "ConfirmPasswordTag"
+
+    var provider: RxMoyaProvider<FoodleTarget>!
 
     var appRouter: AppRouterProtocol!
 
