@@ -4,10 +4,13 @@
 //
 
 import UIKit
+import RxMoya
 
 class EnterUserInfoConfigurator {
 
     static let tag: String = "EnterUserInfoTag"
+
+    var provider: RxMoyaProvider<FoodleTarget>!
 
     var appRouter: AppRouterProtocol!
 
