@@ -51,6 +51,8 @@ enum L10n {
   static let helpPhoneButtonNext = L10n.tr("Localizable", "helpPhone-button-next")
   /// Отправить код
   static let helpPhoneButtonSendCode = L10n.tr("Localizable", "helpPhone-button-send-code")
+  /// Подтвердить
+  static let helpPhoneConfirmCode = L10n.tr("Localizable", "helpPhone-confirm-code")
   /// Войдите
   static let helpPhoneEnterAccount = L10n.tr("Localizable", "helpPhone-enter-account")
   /// Введите код подтверждения
@@ -63,7 +65,11 @@ enum L10n {
   static let helpPhonePhoneHelp = L10n.tr("Localizable", "helpPhone-phone-help")
   /// RU +7
   static let helpPhonePhonePlaceholder = L10n.tr("Localizable", "helpPhone-phone-placeholder")
-  /// Доступ к вашему аккаунту
+  /// *Отправить код повторно через %@ сек
+  static func helpPhonePhoneSendCodeHint(_ p1: String) -> String {
+    return L10n.tr("Localizable", "helpPhone-phone-send-code-hint", p1)
+  }
+  /// Реальный номер телефона
   static let helpPhoneRealPhone = L10n.tr("Localizable", "helpPhone-real-phone")
   /// Отправить код
   static let helpPhoneSendCodeRepeat = L10n.tr("Localizable", "helpPhone-send-code-repeat")

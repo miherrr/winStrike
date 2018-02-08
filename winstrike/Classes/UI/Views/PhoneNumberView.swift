@@ -26,8 +26,6 @@ class PhoneNumberView: UIView {
         return textFiled
     }()
 
-    var maskedDelegate: MaskedTextFieldDelegate?
-
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
     }

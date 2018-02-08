@@ -18,8 +18,6 @@ class HelpPhoneViewController: ParentViewController {
 
     let realPhone = UILabel()
 
-    fileprivate let phoneNumberView = PhoneNumberView()
-
     // MARK: - Life cycle
 
     required init(coder aDecoder: NSCoder) {
