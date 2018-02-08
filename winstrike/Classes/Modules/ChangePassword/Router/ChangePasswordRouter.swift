@@ -13,5 +13,7 @@ class ChangePasswordRouter {
 // MARK: - ChangePasswordRouterInput
 
 extension ChangePasswordRouter: ChangePasswordRouterInput {
-
+    func back() {
+        appRouter.backTransition()
+    }
 }
