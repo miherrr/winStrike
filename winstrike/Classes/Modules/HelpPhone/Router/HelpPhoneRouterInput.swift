@@ -7,4 +7,5 @@ import Foundation
 
 protocol HelpPhoneRouterInput: BaseRouterInput {
     func back()
+    func openChangePassword(phoneNumber: String)
 }

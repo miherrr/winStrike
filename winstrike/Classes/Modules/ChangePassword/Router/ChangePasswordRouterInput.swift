@@ -6,5 +6,5 @@
 import Foundation
 
 protocol ChangePasswordRouterInput: BaseRouterInput {
-
+    func back()
 }

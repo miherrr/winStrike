@@ -41,6 +41,7 @@
 "helpPhone-title-text" = "Отправить SMS ";
 "helpPhone-real-phone" = "Реальный номер телефона";
 "helpPhone-phone-placeholder" = "RU +7";
+"helpPhone-phone-country-code" = "+7";
 "helpPhone-phone-help" = "*Сюда будет выслан код подтверждения";
 "helpPhone-phone-send-code-hint" = "*Отправить код повторно через %@ сек";
 "helpPhone-button-send-code" = "Отправить код";

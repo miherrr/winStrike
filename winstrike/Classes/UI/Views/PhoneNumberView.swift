@@ -10,21 +10,13 @@ import UIKit
 import InputMask
 
 class PhoneNumberView: UIView {
-    weak var maskedDelegate: MaskedTextFieldDelegate?
-    /**
-        здесь храним только цифры номера (без +7)
-    */
-    private var phoneNumber = String()
+    // swiftlint:disable:next weak_delegate
+    private var maskedDelegate: MaskedTextFieldDelegate!
 
     fileprivate let phoneInputView = UITextField()
-
     fileprivate let separatorView = UIView()
 
-    fileprivate let phoneField: UITextField = {
-        let textFiled = UITextField()
-        textFiled.configure(placeholder: "(***) ***-**-**")
-        return textFiled
-    }()
+    private let maskFormat = "([000]) [000]-[00]-[00]"
 
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
@@ -40,7 +32,7 @@ class PhoneNumberView: UIView {
         addSubview(mainView.prepareForAutoLayout())
         mainView.pinEdgesToSuperviewEdges()
         mainView.backgroundColor = UIColor.wnsLightGrey
-        mainView.layer.cornerRadius = 28
+        mainView.layer.cornerRadius = 16
 
         let countryCodeLabel = UILabel()
         countryCodeLabel.configureLabel(font: UIFont.wnsStemRegular(size: 15), textColor: UIColor.wnsGrey, text: L10n.helpPhonePhonePlaceholder)
@@ -68,9 +60,14 @@ class PhoneNumberView: UIView {
         phoneInputView.font = UIFont.wnsStemRegular(size: 15)
         phoneInputView.keyboardType = .phonePad
 
-        maskedDelegate = MaskedTextFieldDelegate(format: "([000]) [000]-[00]-[00]")
+        maskedDelegate = MaskedTextFieldDelegate(format: maskFormat)
         maskedDelegate?.listener = self
         phoneInputView.delegate = maskedDelegate
+    }
+
+    var phoneNumber: String {
+        // swiftlint:disable:next force_unwrapping
+        return "\(L10n.helpPhonePhoneCountryCode) \(phoneInputView.text!)"
     }
 }
 

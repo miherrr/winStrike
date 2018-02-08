@@ -11,7 +11,7 @@ class HelpEmailViewController: ParentViewController {
 
     private let enterMailTitle = UILabel()
 
-    private let enterMail = UIView()
+    private let enterMail = UIRoundedTextField()
 
     private let helpLabel = UILabel()
 
@@ -54,7 +54,8 @@ class HelpEmailViewController: ParentViewController {
         enterMailTitle.leadingAnchor ~= view.leadingAnchor + 40
         enterMailTitle.topAnchor ~= view.topAnchor + 24
 
-        enterMail.configureTFView(placeholder: L10n.helpMailEmailPlaceholder, delegate: self, cornerRadius: 24)
+        enterMail.configure(placeholder: L10n.helpMailEmailPlaceholder, cornerRadius: 24)
+        enterMail.delegate = self
         view.addSubview(enterMail.prepareForAutoLayout())
         enterMail.leadingAnchor ~= view.leadingAnchor + 40
         enterMail.trailingAnchor ~= view.trailingAnchor - 40
