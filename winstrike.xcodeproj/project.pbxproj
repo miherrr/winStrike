@@ -45,6 +45,8 @@
 		58FE8A5D202CA43200EE4551 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FE8A5C202CA43200EE4551 /* ParentViewController.swift */; };
 		58FE8A5F202CAA6600EE4551 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */; };
 		58FE8A61202D8FC800EE4551 /* homeTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FE8A60202D8FC800EE4551 /* homeTableData.swift */; };
+		58FE8A64202DCC9500EE4551 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FE8A62202DCC9400EE4551 /* Crashlytics.framework */; };
+		58FE8A65202DCC9500EE4551 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FE8A63202DCC9500EE4551 /* Fabric.framework */; };
 		59DB90B0E93F2A753677C1E9 /* HelpEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C677CECE28512C0719D10B /* HelpEmailPresenter.swift */; };
 		5D41F3710D2270412AAA060D /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2B5870F3E006BB67FB8DE /* HomeRouterInput.swift */; };
 		5F5D4658BC135A2820B432B3 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F69E8FE6CDFEDD6547E503 /* HomeConfigurator.swift */; };
@@ -258,6 +260,8 @@
 		58FE8A5C202CA43200EE4551 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		58FE8A60202D8FC800EE4551 /* homeTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeTableData.swift; sourceTree = "<group>"; };
+		58FE8A62202DCC9400EE4551 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		58FE8A63202DCC9500EE4551 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		5AE23E66BA250294ADDB9989 /* StartConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartConfigurator.swift; sourceTree = "<group>"; };
 		5C8BC9E3BAD37C5A12705F5F /* ConfirmPasswordModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordModuleInputOutput.swift; sourceTree = "<group>"; };
 		5D19132A1DFDD14E6C67320C /* HelperViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				C07B88ED1F37361C0064E420 /* KeychainAccess.framework in Frameworks */,
 				C0A4AD6C1F2621DB0035EF69 /* Moya.framework in Frameworks */,
 				C0005F051F338B7400410A74 /* ObjectMapper.framework in Frameworks */,
+				58FE8A65202DCC9500EE4551 /* Fabric.framework in Frameworks */,
 				C0A4AD711F2621DB0035EF69 /* RxSwift.framework in Frameworks */,
 				C04B61DD1F20E9000042AC92 /* XCGLogger.framework in Frameworks */,
 				C0A4AD6E1F2621DB0035EF69 /* Alamofire.framework in Frameworks */,
@@ -450,6 +455,7 @@
 				C03A2C2E1F2F0BD3006E9B45 /* CoreText.framework in Frameworks */,
 				C03A2C301F2F0BEE006E9B45 /* GLKit.framework in Frameworks */,
 				C03A2C321F2F0BFE006E9B45 /* ImageIO.framework in Frameworks */,
+				58FE8A64202DCC9500EE4551 /* Crashlytics.framework in Frameworks */,
 				C03A2C341F2F0C1D006E9B45 /* libc++.tbd in Frameworks */,
 				C03A2C361F2F0C3B006E9B45 /* libz.tbd in Frameworks */,
 				C03A2C381F2F0C67006E9B45 /* OpenGLES.framework in Frameworks */,
@@ -1219,6 +1225,8 @@
 		C04B61DE1F20E9050042AC92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58FE8A62202DCC9400EE4551 /* Crashlytics.framework */,
+				58FE8A63202DCC9500EE4551 /* Fabric.framework */,
 				8159D0D220065508006CF82B /* Bolts.framework */,
 				C0826DB21F4324B60002DD65 /* Kingfisher.framework */,
 				C0EF8CA71F41914A00AA4236 /* CoreMedia.framework */,
@@ -1503,6 +1511,7 @@
 				C0B9D45E1F1F8207009A77DD /* Frameworks */,
 				C0B9D45F1F1F8207009A77DD /* Resources */,
 				C04B61DF1F20E9240042AC92 /* Carthage */,
+				58FE8A66202DCCF700EE4551 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1586,6 +1595,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		58FE8A66202DCCF700EE4551 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 29e7cdff9ff71afca0a18ede7fc250af40712a7d d71b7cbcecdb08192715fb6d3332ff6919d9a14825aa39eabda6a5ae74346e44";
+		};
 		C04B61DF1F20E9240042AC92 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

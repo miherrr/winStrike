@@ -59,6 +59,7 @@ enum Asset {
   }
   static let clubOneExample = ImageAsset(name: "clubOneExample")
   enum HomeScreen {
+    static let fileIcon = ImageAsset(name: "fileIcon")
     static let homeMessage = ImageAsset(name: "homeMessage")
     static let moneyHand = ImageAsset(name: "moneyHand")
   }
@@ -97,6 +98,7 @@ enum Asset {
     BigIcon.messageBig,
     BigIcon.phoneBig,
     clubOneExample,
+    HomeScreen.fileIcon,
     HomeScreen.homeMessage,
     HomeScreen.moneyHand,
     Winstrike.backChevron,

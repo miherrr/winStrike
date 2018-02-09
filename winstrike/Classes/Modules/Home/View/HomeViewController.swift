@@ -42,7 +42,7 @@ class HomeViewController: ParentViewController {
 
     private var listButton: UIButton = {
         let b = UIButton()
-        b.setImage(Asset.HomeScreen.moneyHand.image, for: .normal)
+        b.setImage(Asset.HomeScreen.fileIcon.image, for: .normal)
         return b
     }()
 
