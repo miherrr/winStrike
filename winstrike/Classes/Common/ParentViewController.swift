@@ -5,6 +5,7 @@
 import UIKit
 
 class ParentViewController: UIViewController {
+    var keyboardHeight: CGFloat = 0
 
     let titleViewLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 44))
@@ -33,8 +34,8 @@ class ParentViewController: UIViewController {
 
         activityVC.isHidden = true
 
-        //UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
-
+        let tapOutsideGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOutside))
+        view.addGestureRecognizer(tapOutsideGesture)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -106,6 +107,11 @@ class ParentViewController: UIViewController {
 
         let tap = UITapGestureRecognizer(target: target, action: action)
         bottomView.addGestureRecognizer(tap)
+    }
+
+    // MARK: - Actions
+    @objc func tapOutside() {
+        view.endEditing(true)
     }
 }
 

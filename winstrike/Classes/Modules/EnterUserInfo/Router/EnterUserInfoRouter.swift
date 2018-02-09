@@ -13,5 +13,15 @@ class EnterUserInfoRouter {
 // MARK: - EnterUserInfoRouterInput
 
 extension EnterUserInfoRouter: EnterUserInfoRouterInput {
+    func openPrivacy() {
+        print("router open privacy")
+    }
 
+    func openConditions() {
+        print("router open conditions")
+    }
+
+    func openMain() {
+        print("router open main")
+    }
 }

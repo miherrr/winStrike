@@ -70,3 +70,12 @@
 "changePassword-button-apply" = "Применить";
 "changePassword-have-account" = "Уже есть аккаунт?";
 "changePassword-enter-account" = "Войдите";
+
+//EnterUserInfo
+"enterUserInfo-last-step" = "Последний шаг регистрации";
+"enterUserInfo-name-placeholder" = "Имя и фамилия";
+"enterUserInfo-next-btn" = "Поехали!";
+"enterUserInfo-rules1" = "Регистрируясь, вы соглашаетесь с нашими\n";
+"enterUserInfo-rules2" = "Условиями";
+"enterUserInfo-rules3" = "и";
+"enterUserInfo-rules4" = "Политикой конфиденциальности";

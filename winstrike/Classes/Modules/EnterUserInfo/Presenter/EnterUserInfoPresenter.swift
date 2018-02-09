@@ -16,6 +16,17 @@ class EnterUserInfoPresenter {
 // MARK: - EnterUserInfoViewOutput
 
 extension EnterUserInfoPresenter: EnterUserInfoViewOutput {
+    func conditionsButtonTap() {
+        router.openConditions()
+    }
+
+    func privacyButtonTap() {
+        router.openPrivacy()
+    }
+
+    func nextButtonTap() {
+        router.openMain()
+    }
 
     func viewIsReady() {
         log.verbose("EnterUserInfo is ready")
