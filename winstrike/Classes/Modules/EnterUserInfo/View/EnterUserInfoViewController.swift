@@ -36,6 +36,7 @@ class EnterUserInfoViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapOutsideToHideKeyboard()
         output.viewIsReady()
 
         // swiftlint:disable:next force_unwrapping
@@ -85,6 +86,7 @@ class EnterUserInfoViewController: ParentViewController {
         nextButton.heightAnchor ~= 48
         nextButton.layoutIfNeeded()
         nextButton.configureGradientButton(title: L10n.enterUserInfoNextBtn)
+        nextButton.addTarget(self, action: #selector(nextButtonTap), for: .touchUpInside)
     }
 
     func addBottomSubView() {
@@ -95,10 +97,10 @@ class EnterUserInfoViewController: ParentViewController {
             (privacyTap, L10n.enterUserInfoRules4)
         ]
 
-        bottomLabel = UILabelHref(stringsArray: stringsArray, tapTarget: self)
+        let bottomLabel = UILabelHref(stringsArray: stringsArray)
         contentView.addSubview(bottomLabel.prepareForAutoLayout())
 
-        bottomLabel.bottomAnchor ~= contentView.bottomAnchor - 8
+        bottomLabel.bottomAnchor ~= contentView.bottomAnchor - 15
         bottomLabel.centerXAnchor ~= contentView.centerXAnchor
         bottomLabel.widthAnchor ~= contentView.widthAnchor
     }
@@ -113,7 +115,7 @@ class EnterUserInfoViewController: ParentViewController {
         output.privacyButtonTap()
     }
 
-    func nextButtonTap() {
+    @objc func nextButtonTap() {
         output.nextButtonTap()
     }
 }

@@ -9,24 +9,18 @@ import Foundation
 enum L10n {
   /// Применить
   static let changePasswordButtonApply = L10n.tr("Localizable", "changePassword-button-apply")
+  /// Войдите
+  static let changePasswordEnterAccount = L10n.tr("Localizable", "changePassword-enter-account")
   /// Введите пароль, для авторизации по номеру
   static let changePasswordEnterPhone = L10n.tr("Localizable", "changePassword-enter-phone")
+  /// Уже есть аккаунт?
+  static let changePasswordHaveAccount = L10n.tr("Localizable", "changePassword-have-account")
   /// Новый пароль
   static let changePasswordPhonePlaceholder = L10n.tr("Localizable", "changePassword-phone-placeholder")
   /// Введите новый пароль
   static let changePasswordPhoneTitle = L10n.tr("Localizable", "changePassword-phone-title")
   /// Смена пароля
   static let changePasswordTitleText = L10n.tr("Localizable", "changePassword-title-text")
-  /// Вам был отправлен код
-  static let confirmPasswordCodeSent = L10n.tr("Localizable", "confirmPassword-code-sent")
-  /// Введите 6-значный код, который был отправлен на номер %@.
-  static func confirmPasswordEnterCodeHint(_ p1: String) -> String {
-    return L10n.tr("Localizable", "confirmPassword-enter-code-hint", p1)
-  }
-  /// Введите код подтверждения
-  static let confirmPasswordEnterCodePlaceholder = L10n.tr("Localizable", "confirmPassword-enter-code-placeholder")
-  /// Далее
-  static let confirmPasswordNextButton = L10n.tr("Localizable", "confirmPassword-next-button")
   /// Последний шаг регистрации
   static let enterUserInfoLastStep = L10n.tr("Localizable", "enterUserInfo-last-step")
   /// Имя и фамилия
@@ -57,8 +51,12 @@ enum L10n {
   static let helpMailButtonSend = L10n.tr("Localizable", "helpMail-button-send")
   /// Введите эл.адрес
   static let helpMailEmailPlaceholder = L10n.tr("Localizable", "helpMail-email-placeholder")
+  /// Войдите
+  static let helpMailEnterAccount = L10n.tr("Localizable", "helpMail-enter-account")
   /// Введите свой e-mail
   static let helpMailEnterEmail = L10n.tr("Localizable", "helpMail-enter-email")
+  /// Уже есть аккаунт?
+  static let helpMailHaveAccount = L10n.tr("Localizable", "helpMail-have-account")
   /// *На данный адрес будет выслана ссылка для смены пароля
   static let helpMailHelpText = L10n.tr("Localizable", "helpMail-help-text")
   /// Отправить e-mail
@@ -69,10 +67,14 @@ enum L10n {
   static let helpPhoneButtonSendCode = L10n.tr("Localizable", "helpPhone-button-send-code")
   /// Подтвердить
   static let helpPhoneConfirmCode = L10n.tr("Localizable", "helpPhone-confirm-code")
+  /// Войдите
+  static let helpPhoneEnterAccount = L10n.tr("Localizable", "helpPhone-enter-account")
   /// Введите код подтверждения
   static let helpPhoneEnterCode = L10n.tr("Localizable", "helpPhone-enter-code")
   /// Код подтверждения
   static let helpPhoneEnterCodePlaceholser = L10n.tr("Localizable", "helpPhone-enter-code-placeholser")
+  /// Уже есть аккаунт?
+  static let helpPhoneHaveAccount = L10n.tr("Localizable", "helpPhone-have-account")
   /// +7
   static let helpPhonePhoneCountryCode = L10n.tr("Localizable", "helpPhone-phone-country-code")
   /// *Сюда будет выслан код подтверждения

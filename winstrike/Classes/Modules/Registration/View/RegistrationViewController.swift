@@ -54,6 +54,7 @@ class RegistrationViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapOutsideToHideKeyboard()
         output.viewIsReady()
 
         addMainView()
