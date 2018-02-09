@@ -18,6 +18,6 @@ extension ConfirmPasswordRouter: ConfirmPasswordRouterInput {
     }
 
     func openNext() {
-        print("router open next")
+        appRouter.transition(to: .enterUserInfo)
     }
 }

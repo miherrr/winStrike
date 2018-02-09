@@ -16,15 +16,6 @@ class HomeViewController: ParentViewController {
         return table
     }()
 
-    func imageWithImage (image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
-        // swiftlint:disable:next force_unwrapping
-        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return newImage
-    }
-
     var stackContainer: UIView! = {
         let view = UIView()
         return view
