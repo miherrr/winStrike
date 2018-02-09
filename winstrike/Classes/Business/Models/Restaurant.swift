@@ -46,3 +46,5 @@ class Restaurant: ImmutableMappable {
         distance >>> map[distanceKey]
     }
 }
+
+

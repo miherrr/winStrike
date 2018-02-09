@@ -21,6 +21,7 @@ enum AppRouterDestination {
     case helpPhone
     case helpEmail
     case changePassword(phoneNumber: String)
+    case home
 
     var isPresent: Bool {
         switch self {
@@ -56,6 +57,8 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: HelpEmailConfigurator.tag)
             case let .changePassword(phoneNumber):
                 return try factory.resolve(tag: ChangePasswordConfigurator.tag, arguments: phoneNumber)
+            case .home:
+                return try factory.resolve(tag: HomeConfigurator.tag)
             }
         } catch {
             fatalError("can't resolve module from factory")

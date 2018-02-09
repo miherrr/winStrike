@@ -51,6 +51,11 @@ enum Asset {
     static let mail = ImageAsset(name: "mail")
     static let phone = ImageAsset(name: "phone")
   }
+  static let clubOneExample = ImageAsset(name: "clubOneExample")
+  enum HomeScreen {
+    static let homeMessage = ImageAsset(name: "homeMessage")
+    static let moneyHand = ImageAsset(name: "moneyHand")
+  }
   enum Winstrike {
     static let backChevron = ImageAsset(name: "back-chevron")
     static let buttonDown = ImageAsset(name: "buttonDown")
@@ -59,11 +64,13 @@ enum Asset {
     static let england = ImageAsset(name: "england")
     static let facebook = ImageAsset(name: "facebook")
     static let handshake = ImageAsset(name: "handshake")
+    static let homeMenu = ImageAsset(name: "homeMenu")
     static let instagram = ImageAsset(name: "instagram")
     static let label = ImageAsset(name: "label")
     static let like = ImageAsset(name: "like")
     static let logout = ImageAsset(name: "logout")
     static let maps = ImageAsset(name: "maps")
+    static let profileDumb = ImageAsset(name: "profileDumb")
     static let rectangle = ImageAsset(name: "rectangle")
     static let russia = ImageAsset(name: "russia")
     static let steam = ImageAsset(name: "steam")
@@ -79,6 +86,9 @@ enum Asset {
     Help.book,
     Help.mail,
     Help.phone,
+    clubOneExample,
+    HomeScreen.homeMessage,
+    HomeScreen.moneyHand,
     Winstrike.backChevron,
     Winstrike.buttonDown,
     Winstrike.buttonUp,
@@ -86,11 +96,13 @@ enum Asset {
     Winstrike.england,
     Winstrike.facebook,
     Winstrike.handshake,
+    Winstrike.homeMenu,
     Winstrike.instagram,
     Winstrike.label,
     Winstrike.like,
     Winstrike.logout,
     Winstrike.maps,
+    Winstrike.profileDumb,
     Winstrike.rectangle,
     Winstrike.russia,
     Winstrike.steam,
