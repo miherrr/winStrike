@@ -21,6 +21,20 @@ enum L10n {
   static let changePasswordPhoneTitle = L10n.tr("Localizable", "changePassword-phone-title")
   /// Смена пароля
   static let changePasswordTitleText = L10n.tr("Localizable", "changePassword-title-text")
+  /// Последний шаг регистрации
+  static let enterUserInfoLastStep = L10n.tr("Localizable", "enterUserInfo-last-step")
+  /// Имя и фамилия
+  static let enterUserInfoNamePlaceholder = L10n.tr("Localizable", "enterUserInfo-name-placeholder")
+  /// Поехали!
+  static let enterUserInfoNextBtn = L10n.tr("Localizable", "enterUserInfo-next-btn")
+  /// Регистрируясь, вы соглашаетесь с нашими\n
+  static let enterUserInfoRules1 = L10n.tr("Localizable", "enterUserInfo-rules1")
+  /// Условиями
+  static let enterUserInfoRules2 = L10n.tr("Localizable", "enterUserInfo-rules2")
+  /// и
+  static let enterUserInfoRules3 = L10n.tr("Localizable", "enterUserInfo-rules3")
+  /// Политикой конфиденциальности
+  static let enterUserInfoRules4 = L10n.tr("Localizable", "enterUserInfo-rules4")
   /// Доступ к вашему аккаунту
   static let helperAccessAccount = L10n.tr("Localizable", "helper-access-account")
   /// Справочный центер
