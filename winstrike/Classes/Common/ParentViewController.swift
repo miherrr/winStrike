@@ -5,8 +5,6 @@
 import UIKit
 
 class ParentViewController: UIViewController {
-    var keyboardHeight: CGFloat = 0
-
     let titleViewLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 44))
         label.textColor = .white
@@ -33,7 +31,9 @@ class ParentViewController: UIViewController {
         //activityVC.color = UIColor.cnmGreyDark
 
         activityVC.isHidden = true
+    }
 
+    func addTapOutsideToHideKeyboard() {
         let tapOutsideGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOutside))
         view.addGestureRecognizer(tapOutsideGesture)
     }
@@ -110,7 +110,7 @@ class ParentViewController: UIViewController {
     }
 
     // MARK: - Actions
-    @objc func tapOutside() {
+    @objc private func tapOutside() {
         view.endEditing(true)
     }
 }

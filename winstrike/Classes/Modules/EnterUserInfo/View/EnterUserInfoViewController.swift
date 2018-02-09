@@ -32,6 +32,7 @@ class EnterUserInfoViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapOutsideToHideKeyboard()
         output.viewIsReady()
 
         // swiftlint:disable:next force_unwrapping

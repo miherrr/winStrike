@@ -34,6 +34,7 @@ class HelpPhoneViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapOutsideToHideKeyboard()
         output.viewIsReady()
 
         titleViewLabel.text = L10n.helpPhoneTitleText
@@ -134,7 +135,6 @@ class HelpPhoneViewController: ParentViewController {
 // MARK: - UITextFieldDelegate
 
 extension HelpPhoneViewController: UITextFieldDelegate {
-
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == codeTextField {
             view.layoutSubviews()
@@ -160,6 +160,7 @@ extension HelpPhoneViewController: UITextFieldDelegate {
             })
         }
     }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == codeTextField {
             topViewConstraint?.constant = 0
@@ -167,6 +168,11 @@ extension HelpPhoneViewController: UITextFieldDelegate {
                 self.view.layoutIfNeeded()
             })
         }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
 

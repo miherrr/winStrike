@@ -29,6 +29,7 @@ class HelpEmailViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapOutsideToHideKeyboard()
         output.viewIsReady()
 
         titleViewLabel.text = L10n.helpMailTitleText
