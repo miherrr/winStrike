@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 import Dip
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as? UIView {
             statusBar.backgroundColor = UIColor.white
         }
+        Fabric.with([Crashlytics.self])
 
         return true
     }

@@ -21,8 +21,8 @@ class ParentViewController: UIViewController {
 
         view.backgroundColor = .white
         navigationItem.titleView = titleViewLabel
-        UIApplication.shared.statusBarStyle = .lightContent
-        UIApplication.shared.statusBarView?.backgroundColor = .black
+//        UIApplication.shared.statusBarStyle = .lightContent
+//        UIApplication.shared.statusBarView?.backgroundColor = .black
         UIApplication.shared.statusBarView?.isHidden = true
 
         view.addSubview(activityVC.prepareForAutoLayout())
@@ -32,6 +32,8 @@ class ParentViewController: UIViewController {
         //activityVC.color = UIColor.cnmGreyDark
 
         activityVC.isHidden = true
+
+        //UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
 
     }
 
@@ -49,10 +51,6 @@ class ParentViewController: UIViewController {
 
         let statusBarAlertManager = StatusBarAlertManager.sharedInstance
         statusBarAlertManager.registrate(viewController: self)
-    }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
 
     func showAlert(message: String) {
@@ -81,9 +79,12 @@ class ParentViewController: UIViewController {
         UIApplication.shared.statusBarView?.backgroundColor = isWhite ? .white : .black
         UIApplication.shared.statusBarStyle = isWhite ? .default : .lightContent
         UIApplication.shared.statusBarView?.isHidden = false
+        UIApplication.shared.statusBarView?.tintColor = .white
         UINavigationBar.appearance().backgroundColor = isWhite ? .white : .black
-        navigationController?.navigationBar.isTranslucent = isWhite
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.isHidden = isWhite
+        navigationController?.view.layoutIfNeeded()
+
         //UINavigationBar.appearance().barStyle = .black
     }
 

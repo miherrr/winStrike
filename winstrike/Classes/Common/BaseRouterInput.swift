@@ -21,7 +21,7 @@ extension BaseRouterInput {
     }
 
     func performTransitionToSystemAlert(title: String?, message: String?, actions: [UIAlertAction]) {
-        var newActions = actions
+        let newActions = actions
         if actions.isEmpty {
            // newActions.append(UIAlertAction(title: L10n.alertButtonCancel, style: .cancel, handler: nil))
         }
