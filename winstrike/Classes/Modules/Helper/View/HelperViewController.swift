@@ -53,7 +53,6 @@ class HelperViewController: ParentViewController {
         frame.size = CGSize(width: 30, height: 100)
         backButton.frame = frame
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-
         addSubviews()
     }
 

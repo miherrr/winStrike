@@ -20,4 +20,8 @@ extension RegistrationRouter: RegistrationRouterInput {
     func openRegUser() {
         appRouter.startModule(from: .changePassword(phoneNumber: "+7 (919) 235-11-12"))
     }
+
+    func openHome() {
+        appRouter.startModule(from: .home)
+    }
 }
