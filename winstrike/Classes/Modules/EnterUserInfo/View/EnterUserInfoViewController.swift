@@ -34,6 +34,7 @@ class EnterUserInfoViewController: ParentViewController {
         super.viewDidLoad()
         output.viewIsReady()
 
+        // swiftlint:disable:next force_unwrapping
         screenSize = ((UIApplication.shared.delegate as? AppDelegate)?.sizeOfScreen)!
 
         changeStatusBar(isWhite: true)

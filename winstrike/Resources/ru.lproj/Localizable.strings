@@ -50,8 +50,6 @@
 "helpPhone-enter-code" = "Введите код подтверждения";
 "helpPhone-enter-code-placeholser" = "Код подтверждения";
 "helpPhone-button-next" = "Далее";
-"helpPhone-have-account" = "Уже есть аккаунт?";
-"helpPhone-enter-account" = "Войдите";
 
 //HelpMail
 "helpMail-title-text" = "Отправить e-mail";
@@ -59,8 +57,6 @@
 "helpMail-email-placeholder" = "Введите эл.адрес";
 "helpMail-help-text" = "*На данный адрес будет выслана ссылка для смены пароля";
 "helpMail-button-send" = "Отправить";
-"helpMail-have-account" = "Уже есть аккаунт?";
-"helpMail-enter-account" = "Войдите";
 
 //ChangePassword
 "changePassword-title-text" = "Смена пароля";
@@ -68,8 +64,6 @@
 "changePassword-phone-title" = "Введите новый пароль";
 "changePassword-phone-placeholder" = "Новый пароль";
 "changePassword-button-apply" = "Применить";
-"changePassword-have-account" = "Уже есть аккаунт?";
-"changePassword-enter-account" = "Войдите";
 
 //EnterUserInfo
 "enterUserInfo-last-step" = "Последний шаг регистрации";
@@ -79,3 +73,9 @@
 "enterUserInfo-rules2" = "Условиями";
 "enterUserInfo-rules3" = "и";
 "enterUserInfo-rules4" = "Политикой конфиденциальности";
+
+//ConfirmPassword
+"confirmPassword-code-sent" = "Вам был отправлен код";
+"confirmPassword-enter-code-hint" = "Введите 6-значный код, который был отправлен на номер %@.";
+"confirmPassword-enter-code-placeholder" = "Введите код подтверждения";
+"confirmPassword-next-button" = "Далее";
