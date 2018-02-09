@@ -19,11 +19,10 @@ class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNeedsStatusBarAppearanceUpdate()
+
         view.backgroundColor = .white
         navigationItem.titleView = titleViewLabel
-        UIApplication.shared.statusBarStyle = .lightContent
-        UIApplication.shared.statusBarView?.backgroundColor = .black
-        UIApplication.shared.statusBarView?.isHidden = true
 
         view.addSubview(activityVC.prepareForAutoLayout())
         activityVC.centerXAnchor ~= view.centerXAnchor
@@ -108,8 +107,14 @@ class ParentViewController: UIViewController {
     }
 }
 
-private extension UIApplication {
+extension UIApplication {
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
+    }
+}
+
+extension UINavigationController {
+    override open var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.topViewController
     }
 }

@@ -19,9 +19,18 @@ class HelperViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeStatusBar(isWhite: false)
+//        setNeedsStatusBarAppearanceUpdate()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -33,6 +42,7 @@ class HelperViewController: ParentViewController {
         super.viewDidLoad()
         output.viewIsReady()
 
+        changeStatusBar(isWhite: false)
         titleViewLabel.text = L10n.helperTitleText
 
         let backButton = UIButton()
