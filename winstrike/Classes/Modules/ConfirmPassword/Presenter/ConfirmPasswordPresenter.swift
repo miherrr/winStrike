@@ -16,6 +16,13 @@ class ConfirmPasswordPresenter {
 // MARK: - ConfirmPasswordViewOutput
 
 extension ConfirmPasswordPresenter: ConfirmPasswordViewOutput {
+    func nextButtonTap() {
+        router.openNext()
+    }
+
+    func existingAccountTap() {
+        router.openExistingAccount()
+    }
 
     func viewIsReady() {
         log.verbose("ConfirmPassword is ready")

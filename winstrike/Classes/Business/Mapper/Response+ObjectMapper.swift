@@ -40,7 +40,7 @@ extension Response {
     /// Maps data received from the signal into an array of objects which implement the ImmutableMappable protocol.
     /// If the conversion fails, the signal errors.
     func mapArray<T: ImmutableMappable>(_ type: T.Type, context: MapContext? = nil) throws -> [T] {
-        guard let array = try mapJSON() as? [[String : Any]] else {
+        guard let array = try mapJSON() as? [[String: Any]] else {
             throw MoyaError.jsonMapping(self)
         }
         return try Mapper<T>(context: context).mapArray(JSONArray: array)

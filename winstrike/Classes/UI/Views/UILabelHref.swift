@@ -15,7 +15,7 @@ class UILabelHref: UILabel {
         fatalError("coder not supported")
     }
 
-    init(stringsArray: [(action: (() -> Void)?, string: String)], tapTarget: Any?, secondColor: UIColor = UIColor.wnsPink) {
+    init(stringsArray: [(action: (() -> Void)?, string: String)], secondColor: UIColor = UIColor.wnsPink) {
         super.init(frame: .zero)
 
         self.stringsArray = stringsArray
@@ -46,20 +46,12 @@ class UILabelHref: UILabel {
                 NSAttributedStringKey.font: UIFont.wnsStemRegular(size: 15),
                 NSAttributedStringKey.foregroundColor: UIColor.wnsGrey])
 
-        for subString in stringsArray {
-            //добавим розовый цвет, если у этого текста есть ссылка
-            mutableString.addAttribute(
-                NSAttributedStringKey.foregroundColor,
-                value: (subString.action != nil ? secondColor : UIColor.wnsGrey),
-                range: (text as NSString).range(of: subString.string))
-            //добавим подчеркивание, если у этого текста есть сссылка
-            if subString.action != nil {
-                mutableString.addAttribute(
-                    NSAttributedStringKey.underlineStyle,
-                    value: NSUnderlineStyle.styleSingle.rawValue,
-                    range: (text as NSString).range(of: subString.string))
+        for subString in stringsArray where subString.action != nil {
+            mutableString.addAttributes([
+                NSAttributedStringKey.foregroundColor: secondColor,
+                NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue
+                ], range: (text as NSString).range(of: subString.string))
             }
-        }
 
         attributedText = mutableString
     }

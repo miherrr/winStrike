@@ -17,6 +17,7 @@ class HomeViewCell: UITableViewCell {
     var eventLabel: UILabel!
     var watchButton: UIButton!
 
+    // swiftlint:disable:next function_body_length
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 

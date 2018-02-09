@@ -13,5 +13,11 @@ class ConfirmPasswordRouter {
 // MARK: - ConfirmPasswordRouterInput
 
 extension ConfirmPasswordRouter: ConfirmPasswordRouterInput {
+    func openExistingAccount() {
+        print("router open existing account")
+    }
 
+    func openNext() {
+        print("router open next")
+    }
 }
