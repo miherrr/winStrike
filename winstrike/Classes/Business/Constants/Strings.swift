@@ -61,6 +61,8 @@ enum L10n {
   static let helpPhoneEnterCodePlaceholser = L10n.tr("Localizable", "helpPhone-enter-code-placeholser")
   /// Уже есть аккаунт?
   static let helpPhoneHaveAccount = L10n.tr("Localizable", "helpPhone-have-account")
+  /// +7
+  static let helpPhonePhoneCountryCode = L10n.tr("Localizable", "helpPhone-phone-country-code")
   /// *Сюда будет выслан код подтверждения
   static let helpPhonePhoneHelp = L10n.tr("Localizable", "helpPhone-phone-help")
   /// RU +7

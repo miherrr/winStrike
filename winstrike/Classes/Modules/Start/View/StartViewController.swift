@@ -35,6 +35,9 @@ class StartViewController: ParentViewController {
     fileprivate var selectedCityIndex: Int?
     fileprivate var selectedLangTitle: Int?
 
+    fileprivate let logoImage = UIImageView(image: Asset.Winstrike.label.image)
+    fileprivate let nextButton = UIButton()
+
     // MARK: - Life cycle
 
     required init(coder aDecoder: NSCoder) {
@@ -76,11 +79,10 @@ class StartViewController: ParentViewController {
         let arrayItemOfCity = arrayCity.map { ChooseListItem(image: nil, title: $0, isSelect: false) }
         chooseListTableView.setData(items: arrayItemOfCity)
 
-        let button = UIButton()
-        button.heightAnchor ~= 48
-        buttonView.addSubview(button.prepareForAutoLayout())
+        nextButton.heightAnchor ~= 48
+        buttonView.addSubview(nextButton.prepareForAutoLayout())
         buttonView.isHidden = true
-        button.pinEdgesToSuperviewEdges(top: 20, left: 42, right: 42, bottom: 0)
+        nextButton.pinEdgesToSuperviewEdges(top: 20, left: 42, right: 42, bottom: 0)
 
         let stackView = createStackView(.vertical, .fill, .fill, 12, with: [
             chooseLanguage,
@@ -96,10 +98,9 @@ class StartViewController: ParentViewController {
 
         buttonView.layoutSubviews()
         buttonView.layoutIfNeeded()
-        button.configureGradientButton(title: L10n.startNextButtonTitle)
-        button.addTarget(self, action: #selector(nextButtonHandlerTap), for: .touchUpInside)
+        nextButton.configureGradientButton(title: L10n.startNextButtonTitle)
+        nextButton.addTarget(self, action: #selector(nextButtonHandlerTap), for: .touchUpInside)
 
-        let logoImage = UIImageView(image: Asset.Winstrike.label.image)
         view.addSubview(logoImage.prepareForAutoLayout())
         logoImage.centerXAnchor ~= view.centerXAnchor
         logoImage.bottomAnchor ~= stackView.topAnchor - 96

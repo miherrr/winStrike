@@ -50,6 +50,7 @@
 		5F5D4658BC135A2820B432B3 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F69E8FE6CDFEDD6547E503 /* HomeConfigurator.swift */; };
 		5F92963794ACD73C5F87EC67 /* HelpPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00D41DA9AD6CD629B40976 /* HelpPhonePresenter.swift */; };
 		6359F9917F760CEFE0986A3D /* RegUserModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B760640EAAD0C5AAD66AF10 /* RegUserModuleInputOutput.swift */; };
+		6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E1202C5040008306AC /* UIRoundedTextField.swift */; };
 		6823E2CDCFF274D5A2011313 /* RegUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91717C9631C121A4D1ECAA /* RegUserViewController.swift */; };
 		691C901FC164D5950DEE2A59 /* ConfirmPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8056F0ADB9D01FE5817CA /* ConfirmPasswordRouter.swift */; };
 		691FB92EFDB738377887319D /* RegistrationInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */; };
@@ -84,6 +85,7 @@
 		81E32AE62022FDE7004527AE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E32AE52022FDE7004527AE /* Enums.swift */; };
 		81E476EC7C69AF4DF3B60510 /* HelpEmailViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A3DA794BF1B8D6B2F0220 /* HelpEmailViewInputOutput.swift */; };
 		81E47B291AA04F74FFA66A16 /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3C95E7DD79058D26D4A25 /* StartInteractor.swift */; };
+		81EE6251202C863900BB93C2 /* HeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EE6250202C863900BB93C2 /* HeaderImageView.swift */; };
 		829D3837DABC6E5C1762E0B8 /* EnterUserInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6BA29D04F372D52F5545D1 /* EnterUserInfoRouter.swift */; };
 		83AE41977A4F06BAD15C7781 /* ConfirmPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC77D69EE39D2D3C5E8A1604 /* ConfirmPasswordPresenter.swift */; };
 		85565F8EA6DED95A45B24076 /* StartViewInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBADD61D0BDCB6E7DD7AFFC /* StartViewInputOutput.swift */; };
@@ -260,6 +262,7 @@
 		60528293CDF2EC11EE37E3A3 /* HelpPhoneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpPhoneConfigurator.swift; sourceTree = "<group>"; };
 		6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		64BA36E25A5CDE87BD3D23FC /* EnterUserInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterUserInfoRouterInput.swift; sourceTree = "<group>"; };
+		6529D0E1202C5040008306AC /* UIRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedTextField.swift; sourceTree = "<group>"; };
 		66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorInputOutput.swift; sourceTree = "<group>"; };
 		6B22618AC1399C4F604FE2C8 /* ConfirmPasswordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordConfigurator.swift; sourceTree = "<group>"; };
 		6B43000A2CA9F993BF822BE0 /* StartModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleInputOutput.swift; sourceTree = "<group>"; };
@@ -287,6 +290,7 @@
 		81E2AF702019D47C0019FC71 /* ChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
 		81E32AE32022FDBF004527AE /* SocialStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialStackView.swift; sourceTree = "<group>"; };
 		81E32AE52022FDE7004527AE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		81EE6250202C863900BB93C2 /* HeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageView.swift; sourceTree = "<group>"; };
 		82088751CB298FAD23B1B4B9 /* HelpEmailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelpEmailRouter.swift; sourceTree = "<group>"; };
 		89285934A916812F8BD670F6 /* HelperRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HelperRouter.swift; sourceTree = "<group>"; };
 		8AE29428097C92B100F819E6 /* StartRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartRouterInput.swift; sourceTree = "<group>"; };
@@ -1060,9 +1064,11 @@
 		9BB4EE01EF6F6E0126F4FAA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */,
 				8116E439201F0E08008F9E47 /* StartViews */,
+				81A8675F2024AF6B00CBE287 /* PhoneNumberView.swift */,
 				81E32AE32022FDBF004527AE /* SocialStackView.swift */,
+				6529D0E1202C5040008306AC /* UIRoundedTextField.swift */,
+				81EE6250202C863900BB93C2 /* HeaderImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1714,6 +1720,7 @@
 				07C78A4481388F1339B64CB8 /* SplashInteractorInputOutput.swift in Sources */,
 				A38174CEB232EBFB5FD4B31B /* SplashModuleInputOutput.swift in Sources */,
 				E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */,
+				6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */,
 				99241F5B793E63806B03F3B3 /* SplashRouter.swift in Sources */,
 				E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */,
 				8116E438201F0D51008F9E47 /* ChooseSubview.swift in Sources */,
@@ -1755,6 +1762,7 @@
 				D2A5D60B724F53F04AA2C14B /* HelpPhoneModuleInputOutput.swift in Sources */,
 				5F92963794ACD73C5F87EC67 /* HelpPhonePresenter.swift in Sources */,
 				A61DFEFC0462E34147D630B9 /* HelpPhoneRouter.swift in Sources */,
+				81EE6251202C863900BB93C2 /* HeaderImageView.swift in Sources */,
 				9891A05F0D863515952AB62A /* HelpPhoneRouterInput.swift in Sources */,
 				B7AA647D629BCBF95E3D0690 /* HelpPhoneViewController.swift in Sources */,
 				8BF8B59A8763A32FF87DBD24 /* HelpPhoneViewInputOutput.swift in Sources */,

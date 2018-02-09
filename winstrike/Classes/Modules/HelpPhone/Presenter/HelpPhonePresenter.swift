@@ -16,6 +16,10 @@ class HelpPhonePresenter {
 // MARK: - HelpPhoneViewOutput
 
 extension HelpPhonePresenter: HelpPhoneViewOutput {
+    func confirmCodeTap(phoneNumber: String) {
+        router.openChangePassword(phoneNumber: phoneNumber)
+    }
+
     func backTap() {
         router.back()
     }

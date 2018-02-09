@@ -51,6 +51,12 @@ enum Asset {
     static let mail = ImageAsset(name: "mail")
     static let phone = ImageAsset(name: "phone")
   }
+  enum BigIcon {
+    static let listBig = ImageAsset(name: "list_big")
+    static let lockBig = ImageAsset(name: "lock_big")
+    static let messageBig = ImageAsset(name: "message_big")
+    static let phoneBig = ImageAsset(name: "phone_big")
+  }
   static let clubOneExample = ImageAsset(name: "clubOneExample")
   enum HomeScreen {
     static let homeMessage = ImageAsset(name: "homeMessage")
@@ -86,6 +92,10 @@ enum Asset {
     Help.book,
     Help.mail,
     Help.phone,
+    BigIcon.listBig,
+    BigIcon.lockBig,
+    BigIcon.messageBig,
+    BigIcon.phoneBig,
     clubOneExample,
     HomeScreen.homeMessage,
     HomeScreen.moneyHand,

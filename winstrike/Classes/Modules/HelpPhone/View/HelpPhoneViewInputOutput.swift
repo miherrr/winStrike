@@ -15,4 +15,6 @@ protocol HelpPhoneViewOutput {
     func viewIsReady()
 
     func backTap()
+
+    func confirmCodeTap(phoneNumber: String)
 }

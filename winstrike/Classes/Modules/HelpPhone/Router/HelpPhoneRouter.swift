@@ -13,6 +13,10 @@ class HelpPhoneRouter {
 // MARK: - HelpPhoneRouterInput
 
 extension HelpPhoneRouter: HelpPhoneRouterInput {
+    func openChangePassword(phoneNumber: String) {
+        appRouter.transition(to: .changePassword(phoneNumber: phoneNumber))
+    }
+
     func back() {
         appRouter.backTransition()
     }
