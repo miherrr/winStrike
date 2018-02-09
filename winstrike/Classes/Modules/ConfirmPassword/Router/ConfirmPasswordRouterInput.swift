@@ -6,5 +6,6 @@
 import Foundation
 
 protocol ConfirmPasswordRouterInput: BaseRouterInput {
-
+    func openExistingAccount()
+    func openNext()
 }

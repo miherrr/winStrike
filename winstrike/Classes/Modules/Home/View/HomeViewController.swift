@@ -25,9 +25,10 @@ class HomeViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    func imageWithImage(image: UIImage, scaledToSize newSize:CGSize) -> UIImage {
+    func imageWithImage (image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
+        // swiftlint:disable:next force_unwrapping
         let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return newImage
@@ -80,7 +81,7 @@ class HomeViewController: ParentViewController {
         navigationItem.setLeftBarButton(UIBarButtonItem(customView: backButton), animated: true)
 
         let profileButton = UIButton()
-        let avatar = imageWithImage(image: Asset.Winstrike.profileDumb.image, scaledToSize: CGSize(width: 30, height:30))
+        let avatar = imageWithImage(image: Asset.Winstrike.profileDumb.image, scaledToSize: CGSize(width: 30, height: 30))
         profileButton.setImage(avatar, for: .normal)
         var tmpframe = profileButton.frame
         tmpframe.size = CGSize(width: 30, height: 30)

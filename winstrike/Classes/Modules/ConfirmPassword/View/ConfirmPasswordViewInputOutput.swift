@@ -11,6 +11,8 @@ protocol ConfirmPasswordViewInput: class {
 }
 
 protocol ConfirmPasswordViewOutput {
+    func nextButtonTap()
+    func existingAccountTap()
 
     func viewIsReady()
 }
