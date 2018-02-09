@@ -23,22 +23,31 @@ class HeaderImageView: UIView {
     }
 
     init() {
-        super.init(frame: .zero)
+        super.init(frame: CGRect(x: 0, y: 0, width: 87, height: 87))
 
         backgroundColor = UIColor.white
 
-        heightAnchor ~= 195
+        let contentView = UIView()
+        addSubview(contentView.prepareForAutoLayout())
 
-        addSubview(imageView.prepareForAutoLayout())
-        imageView.centerXAnchor ~= centerXAnchor
-        imageView.centerYAnchor ~= centerYAnchor
-        imageView.heightAnchor ~= 87
-        imageView.widthAnchor ~= imageView.heightAnchor
+        contentView.widthAnchor ~= 87
+        contentView.heightAnchor ~= 87
+        contentView.centerYAnchor ~= centerYAnchor
+        contentView.backgroundColor = .white
+        contentView.centerXAnchor ~= centerXAnchor
+        contentView.centerYAnchor ~= centerYAnchor
 
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowRadius = 5
-        imageView.layer.cornerRadius = 87 / 2
-        imageView.layer.masksToBounds = true
+        contentView.addSubview(imageView.prepareForAutoLayout())
+        imageView.pinEdgesToSuperviewEdges()
+
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowRadius = 10
+        contentView.layer.cornerRadius = 87 / 2
+        contentView.layer.shadowOpacity = 0.1
+        contentView.layer.shadowOffset = CGSize(width: 4, height: 3.5)
+
+        contentView.layoutIfNeeded()
+        contentView.layer.shadowPath = UIBezierPath(roundedRect: contentView.bounds, cornerRadius: 87 / 2).cgPath
 
         imageView.contentMode = .center
     }
