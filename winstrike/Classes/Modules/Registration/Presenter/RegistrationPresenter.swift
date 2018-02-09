@@ -17,7 +17,7 @@ class RegistrationPresenter {
 
 extension RegistrationPresenter: RegistrationViewOutput {
     func tapLoginButton() {
-        print("assa")
+        router.openHome()
     }
 
     func tapRegButton() {
