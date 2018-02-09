@@ -137,8 +137,14 @@ private extension UIView {
         imageView.widthAnchor ~= 25
         imageView.contentMode = .center
 
+        var inset: CGFloat = 48
+
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.sizeOfScreen == .iphone5s {
+            inset = 24
+        }
+
         addSubview(imageView.prepareForAutoLayout())
-        imageView.leadingAnchor ~= leadingAnchor + 48
+        imageView.leadingAnchor ~= leadingAnchor + inset
         imageView.centerYAnchor ~= centerYAnchor
 
         let titleLabel = UILabel()

@@ -23,6 +23,10 @@ class RegUserViewController: ParentViewController {
         super.viewDidLoad()
         output.viewIsReady()
     }
+
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
 
 // MARK: - RegUserViewInput

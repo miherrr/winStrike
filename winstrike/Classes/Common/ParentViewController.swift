@@ -33,8 +33,8 @@ class ParentViewController: UIViewController {
 
         activityVC.isHidden = true
 
-        let tapOutsideGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOutside))
-        view.addGestureRecognizer(tapOutsideGesture)
+//        let tapOutsideGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOutside))
+//        view.addGestureRecognizer(tapOutsideGesture)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,8 +46,6 @@ class ParentViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        navigationController?.setNavigationBarHidden(false, animated: animated)
 
         let statusBarAlertManager = StatusBarAlertManager.sharedInstance
         statusBarAlertManager.registrate(viewController: self)
@@ -77,15 +75,9 @@ class ParentViewController: UIViewController {
 
     func changeStatusBar(isWhite: Bool) {
         UIApplication.shared.statusBarView?.backgroundColor = isWhite ? .white : .black
-        UIApplication.shared.statusBarStyle = isWhite ? .default : .lightContent
-        UIApplication.shared.statusBarView?.isHidden = false
-        UIApplication.shared.statusBarView?.tintColor = .white
         UINavigationBar.appearance().backgroundColor = isWhite ? .white : .black
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = isWhite
         navigationController?.navigationBar.isHidden = isWhite
-        navigationController?.view.layoutIfNeeded()
-
-        //UINavigationBar.appearance().barStyle = .black
     }
 
     func addBottomView(target: Any?, action: Selector?, firstString: String, secondString: String) {
@@ -122,6 +114,10 @@ extension UIApplication {
 
 extension UINavigationController {
     override open var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.topViewController
+    }
+
+    override open var childViewControllerForStatusBarHidden: UIViewController? {
         return self.topViewController
     }
 }

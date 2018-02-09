@@ -1184,7 +1184,6 @@
 			isa = PBXGroup;
 			children = (
 				C58FC666B6A89119105545B9 /* HomeViewController.swift */,
-				58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */,
 				774963C6B3733CB61641FBDB /* HomeViewInputOutput.swift */,
 			);
 			path = View;
@@ -1319,6 +1318,7 @@
 		CE9C39371FBD696800EF8AA5 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */,
 				81BC71F2201F544800944FDE /* CityCell.swift */,
 			);
 			path = TableViewCell;

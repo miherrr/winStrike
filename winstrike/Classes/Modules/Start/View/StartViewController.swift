@@ -58,14 +58,13 @@ class StartViewController: ParentViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        changeStatusBar(isWhite: true)
+        //changeStatusBar(isWhite: true)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        setNeedsStatusBarAppearanceUpdate()
-//        changeStatusBar(isWhite: true)
+        changeStatusBar(isWhite: true)
 
         addSubView()
     }

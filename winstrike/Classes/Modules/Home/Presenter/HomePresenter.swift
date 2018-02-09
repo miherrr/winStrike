@@ -16,6 +16,9 @@ class HomePresenter {
 // MARK: - HomeViewOutput
 
 extension HomePresenter: HomeViewOutput {
+    func backTap() {
+        router.back()
+    }
 
     func viewIsReady() {
         log.verbose("Home is ready")

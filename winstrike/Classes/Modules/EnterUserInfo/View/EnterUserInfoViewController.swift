@@ -30,6 +30,10 @@ class EnterUserInfoViewController: ParentViewController {
 
     // MARK: - Views
 
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
@@ -144,6 +148,11 @@ extension EnterUserInfoViewController: UITextFieldDelegate {
         UIView.animate(withDuration: 0.4, animations: {
             self.view.layoutIfNeeded()
         })
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
 
