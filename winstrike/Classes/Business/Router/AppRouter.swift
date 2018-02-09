@@ -41,6 +41,7 @@ enum AppRouterDestination {
         return false
     }
 
+    // swiftlint:disable:next cyclomatic_complexity
     fileprivate func constructModule(in factory: DependencyContainer) -> UIViewController {
         do {
             switch self {

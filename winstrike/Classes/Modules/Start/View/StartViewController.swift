@@ -48,10 +48,22 @@ class StartViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //changeStatusBar(isWhite: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-
         changeStatusBar(isWhite: true)
 
         addSubView()

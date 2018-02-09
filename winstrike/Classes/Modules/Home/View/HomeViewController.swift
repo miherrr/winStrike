@@ -9,21 +9,12 @@ class HomeViewController: ParentViewController {
     var output: HomeViewOutput!
     var homeData: [HomeTableData] = [HomeTableData]()
 
-    var tableView: UITableView! = {
+    private var tableView: UITableView = {
         let table = UITableView()
         table.isEditing = false
         table.allowsSelection = false
         return table
     }()
-    // MARK: - Life cycle
-
-    required init(coder aDecoder: NSCoder) {
-        fatalError("NSCoding not supported")
-    }
-
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
 
     func imageWithImage (image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
@@ -36,34 +27,47 @@ class HomeViewController: ParentViewController {
 
     var stackContainer: UIView! = {
         let view = UIView()
-//        view.backgroundColor = .white
         return view
     }()
 
-    var stack: UIStackView! = {
+    private var stack: UIStackView = {
         let s = UIStackView()
         s.axis = .horizontal
         s.alignment = .fill
         return s
     }()
 
-    var homemButton: UIButton! = {
+    private var homemButton: UIButton = {
         let b = UIButton()
         b.setImage(Asset.HomeScreen.homeMessage.image, for: .normal)
         return b
     }()
 
-    var moneyButton: UIButton! = {
+    private var moneyButton: UIButton = {
         let b = UIButton()
         b.setImage(Asset.HomeScreen.moneyHand.image, for: .normal)
         return b
     }()
 
-    var listButton: UIButton! = {
+    private var listButton: UIButton = {
         let b = UIButton()
-        b.setImage(Asset.HomeScreen.moneyHand.image, for: .normal)
+        b.setImage(Asset.HomeScreen.fileIcon.image, for: .normal)
         return b
     }()
+
+    // MARK: - Life cycle
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +82,7 @@ class HomeViewController: ParentViewController {
         var frame = backButton.frame
         frame.size = CGSize(width: 30, height: 100)
         backButton.frame = frame
-        navigationItem.setLeftBarButton(UIBarButtonItem(customView: backButton), animated: true)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
 
         let profileButton = UIButton()
         let avatar = imageWithImage(image: Asset.Winstrike.profileDumb.image, scaledToSize: CGSize(width: 30, height: 30))
@@ -88,7 +92,7 @@ class HomeViewController: ParentViewController {
         profileButton.frame = tmpframe
         profileButton.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
         let profileItem = UIBarButtonItem(customView: profileButton)
-        self.navigationItem.setRightBarButton(profileItem, animated: true)
+        navigationItem.setRightBarButton(profileItem, animated: true)
         tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
 
         view.addSubview(stackContainer.prepareForAutoLayout())
@@ -113,6 +117,16 @@ class HomeViewController: ParentViewController {
         output.viewIsReady()
     }
 
+    private func imageWithImage(image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return UIImage()
+        }
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeStatusBar(isWhite: false)
@@ -124,9 +138,8 @@ class HomeViewController: ParentViewController {
     }
 
     @objc func homeButtonAction(_ sender: Any) {
-        print("home action")
+        output.backTap()
     }
-
 }
 
 // MARK: - HomeViewInput
@@ -137,6 +150,8 @@ extension HomeViewController: HomeViewInput {
 
     }
 }
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 

@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Stem-Bold.otf</string>
-        <string>Stem-Light.otf</string>
-        <string>Stem-Medium.otf</string>
-        <string>Stem-Regular.otf</string>
-    </array>
 	<key>AccountKitClientToken</key>
 	<string>5489ec4fdd6b224ecc6cd6220dbc3418</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -51,7 +44,7 @@
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>5dfcbbc9af8cd0e1abdd5e9a3773a7cee6f9bd92</string>
+		<string>29e7cdff9ff71afca0a18ede7fc250af40712a7d</string>
 		<key>Kits</key>
 		<array>
 			<dict>
@@ -105,6 +98,13 @@
 	<string>$(PRODUCT_NAME) location in use on</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) photo use</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Stem-Bold.otf</string>
+		<string>Stem-Light.otf</string>
+		<string>Stem-Medium.otf</string>
+		<string>Stem-Regular.otf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -114,6 +114,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 </dict>
 </plist>

@@ -13,4 +13,6 @@ protocol HomeViewInput: class {
 protocol HomeViewOutput {
 
     func viewIsReady()
+
+    func backTap()
 }

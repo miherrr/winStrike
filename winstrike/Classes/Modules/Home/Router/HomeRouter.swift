@@ -13,5 +13,7 @@ class HomeRouter {
 // MARK: - HomeRouterInput
 
 extension HomeRouter: HomeRouterInput {
-
+    func back() {
+        appRouter.startModule(from: .registration)
+    }
 }

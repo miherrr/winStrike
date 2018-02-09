@@ -18,11 +18,10 @@ class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNeedsStatusBarAppearanceUpdate()
+
         view.backgroundColor = .white
         navigationItem.titleView = titleViewLabel
-//        UIApplication.shared.statusBarStyle = .lightContent
-//        UIApplication.shared.statusBarView?.backgroundColor = .black
-        UIApplication.shared.statusBarView?.isHidden = true
 
         view.addSubview(activityVC.prepareForAutoLayout())
         activityVC.centerXAnchor ~= view.centerXAnchor
@@ -47,8 +46,6 @@ class ParentViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        navigationController?.setNavigationBarHidden(false, animated: animated)
 
         let statusBarAlertManager = StatusBarAlertManager.sharedInstance
         statusBarAlertManager.registrate(viewController: self)
@@ -78,15 +75,9 @@ class ParentViewController: UIViewController {
 
     func changeStatusBar(isWhite: Bool) {
         UIApplication.shared.statusBarView?.backgroundColor = isWhite ? .white : .black
-        UIApplication.shared.statusBarStyle = isWhite ? .default : .lightContent
-        UIApplication.shared.statusBarView?.isHidden = false
-        UIApplication.shared.statusBarView?.tintColor = .white
         UINavigationBar.appearance().backgroundColor = isWhite ? .white : .black
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = isWhite
         navigationController?.navigationBar.isHidden = isWhite
-        navigationController?.view.layoutIfNeeded()
-
-        //UINavigationBar.appearance().barStyle = .black
     }
 
     func addBottomView(target: Any?, action: Selector?, firstString: String, secondString: String) {
@@ -115,8 +106,18 @@ class ParentViewController: UIViewController {
     }
 }
 
-private extension UIApplication {
+extension UIApplication {
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
+    }
+}
+
+extension UINavigationController {
+    override open var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.topViewController
+    }
+
+    override open var childViewControllerForStatusBarHidden: UIViewController? {
+        return self.topViewController
     }
 }

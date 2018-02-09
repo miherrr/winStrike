@@ -19,9 +19,18 @@ class HelperViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeStatusBar(isWhite: false)
+//        setNeedsStatusBarAppearanceUpdate()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -33,6 +42,7 @@ class HelperViewController: ParentViewController {
         super.viewDidLoad()
         output.viewIsReady()
 
+        changeStatusBar(isWhite: false)
         titleViewLabel.text = L10n.helperTitleText
 
         let backButton = UIButton()
@@ -127,8 +137,14 @@ private extension UIView {
         imageView.widthAnchor ~= 25
         imageView.contentMode = .center
 
+        var inset: CGFloat = 48
+
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.sizeOfScreen == .iphone5s {
+            inset = 24
+        }
+
         addSubview(imageView.prepareForAutoLayout())
-        imageView.leadingAnchor ~= leadingAnchor + 48
+        imageView.leadingAnchor ~= leadingAnchor + inset
         imageView.centerYAnchor ~= centerYAnchor
 
         let titleLabel = UILabel()
