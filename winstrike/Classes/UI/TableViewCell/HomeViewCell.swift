@@ -18,7 +18,6 @@ class HomeViewCell: UITableViewCell {
     private let watchButton = UIButton()
     private let container = UIView()
 
-    // swiftlint:disable:next function_body_length
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 

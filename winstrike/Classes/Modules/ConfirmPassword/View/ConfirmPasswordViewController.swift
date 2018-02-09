@@ -28,13 +28,10 @@ class ConfirmPasswordViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-//    init() {
-//        super.init(nibName: nil, bundle: nil)
-//    }
-
     override var prefersStatusBarHidden: Bool {
         return false
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapOutsideToHideKeyboard()
@@ -126,7 +123,7 @@ class ConfirmPasswordViewController: ParentViewController {
     }
 
     @objc func nextButtonTap() {
-        print("next button tap")
+        output.nextButtonTap()
     }
 }
 
