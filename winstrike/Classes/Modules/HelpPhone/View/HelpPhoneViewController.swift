@@ -22,9 +22,6 @@ class HelpPhoneViewController: ParentViewController {
     private let contentView = UIView()
     private var topViewConstraint: NSLayoutConstraint?
 
-    //в эту переменную запишем высоту клавиатуры сразу после первого ее появления
-    var keyboardHeight: CGFloat = 0
-
     // MARK: - Life cycle
 
     required init(coder aDecoder: NSCoder) {
@@ -38,11 +35,6 @@ class HelpPhoneViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-
-        let tapOutsideGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOutside))
-        view.addGestureRecognizer(tapOutsideGesture)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
 
         titleViewLabel.text = L10n.helpPhoneTitleText
 
@@ -65,7 +57,7 @@ class HelpPhoneViewController: ParentViewController {
     // swiftlint:disable:next function_body_length
     func addSubview() {
         view.addSubview(contentView.prepareForAutoLayout())
-        contentView.pinEdgesToSuperviewEdges()
+        contentView.pinEdgesToSuperviewEdges(excluding: .top)
         topViewConstraint = contentView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
         topViewConstraint?.isActive = true
 
@@ -80,7 +72,7 @@ class HelpPhoneViewController: ParentViewController {
         phoneNumberView.widthAnchor ~= 288
         phoneNumberView.heightAnchor ~= 48
 
-        phoneInputHint.configureLabel(font: UIFont.wnsStemLight(size: 13), textColor: UIColor.wnsGrey, text: L10n.helpPhonePhoneHelp)
+        phoneInputHint.configureLabel(font: UIFont.wnsStemLight(size: 13), textColor: UIColor.wnsBlackFont, text: L10n.helpPhonePhoneHelp)
         contentView.addSubview(phoneInputHint.prepareForAutoLayout())
         phoneInputHint.centerXAnchor ~= view.centerXAnchor
         phoneInputHint.topAnchor ~= phoneNumberView.bottomAnchor + 8
@@ -90,17 +82,17 @@ class HelpPhoneViewController: ParentViewController {
         sendCodeBtn.centerXAnchor ~= view.centerXAnchor
         sendCodeBtn.widthAnchor ~= 160
         sendCodeBtn.heightAnchor ~= 48
+        sendCodeBtn.layoutIfNeeded()
+        sendCodeBtn.configureGradientButton(title: L10n.helpPhoneButtonSendCode)
 
         contentView.addSubview(sendCodeHint.prepareForAutoLayout())
+        sendCodeHint.centerXAnchor ~= view.centerXAnchor
+        sendCodeHint.topAnchor ~= sendCodeBtn.bottomAnchor + 19
         sendCodeHint.configureLabel(
             font: UIFont.wnsStemLight(size: 13),
             textColor: UIColor.wnsGrey,
             text: L10n.helpPhonePhoneSendCodeHint(String(30))
         )
-        sendCodeBtn.layoutIfNeeded()
-        sendCodeBtn.configureGradientButton(title: L10n.helpPhoneButtonSendCode)
-        sendCodeHint.centerXAnchor ~= view.centerXAnchor
-        sendCodeHint.topAnchor ~= sendCodeBtn.bottomAnchor + 19
 
         enterCodeCaption.configureLabel(font: UIFont.wnsStemMedium(size: 17), textColor: UIColor.wnsHelperColor, text: L10n.helpPhoneEnterCode)
         contentView.addSubview(enterCodeCaption.prepareForAutoLayout())
@@ -115,13 +107,13 @@ class HelpPhoneViewController: ParentViewController {
         codeTextField.delegate = self
 
         contentView.addSubview(confirmCodeBtn.prepareForAutoLayout())
-        confirmCodeBtn.layoutIfNeeded()
-        confirmCodeBtn.configureGradientButton(title: L10n.helpPhoneConfirmCode)
         confirmCodeBtn.addTarget(self, action: #selector(confirmCodeTap), for: .touchUpInside)
         confirmCodeBtn.widthAnchor ~= 160
         confirmCodeBtn.heightAnchor ~= 48
         confirmCodeBtn.topAnchor ~= codeTextField.bottomAnchor + 32
         confirmCodeBtn.centerXAnchor ~= view.centerXAnchor
+        confirmCodeBtn.layoutIfNeeded()
+        confirmCodeBtn.configureGradientButton(title: L10n.helpPhoneConfirmCode)
     }
 
     // MARK: - Actions
@@ -130,18 +122,8 @@ class HelpPhoneViewController: ParentViewController {
         output.backTap()
     }
 
-    @objc func tapOutside() {
-        view.endEditing(true)
-    }
-
     @objc func confirmCodeTap() {
         output?.confirmCodeTap(phoneNumber: phoneNumberView.phoneNumber)
-    }
-
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            keyboardHeight = keyboardSize.height
-        }
     }
 
     deinit {
@@ -168,7 +150,8 @@ extension HelpPhoneViewController: UITextFieldDelegate {
                 //считаем расстояние от низа кнопки "подтвердить код" до низа вьюшки
                 let distBetweenConfirmBtnAndBottom = view.frame.size.height - confirmCodeBtn.frame.origin.y - confirmCodeBtn.frame.size.height
 
-                offset = -(20 - (distBetweenConfirmBtnAndBottom - keyboardHeight))
+                //здесь 233 - фиксированная высота клавиатуры
+                offset = -(20 - (distBetweenConfirmBtnAndBottom - 233))
             }
 
             topViewConstraint?.constant = offset

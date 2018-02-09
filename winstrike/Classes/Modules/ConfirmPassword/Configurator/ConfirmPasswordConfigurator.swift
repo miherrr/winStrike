@@ -14,6 +14,12 @@ class ConfirmPasswordConfigurator {
 
     var appRouter: AppRouterProtocol!
 
+    let phoneNumber: String
+
+    init(phoneNumber: String) {
+        self.phoneNumber = phoneNumber
+    }
+
     func configureModule() -> UIViewController {
         let router = ConfirmPasswordRouter()
         router.appRouter = appRouter
@@ -24,7 +30,7 @@ class ConfirmPasswordConfigurator {
         let interactor = ConfirmPasswordInteractor()
         interactor.output = presenter
 
-        let viewController = ConfirmPasswordViewController()
+        let viewController = ConfirmPasswordViewController(phoneNumber: phoneNumber)
         viewController.output = presenter
 
         presenter.interactor = interactor
