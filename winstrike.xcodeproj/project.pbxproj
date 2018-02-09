@@ -53,6 +53,8 @@
 		5F92963794ACD73C5F87EC67 /* HelpPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00D41DA9AD6CD629B40976 /* HelpPhonePresenter.swift */; };
 		6359F9917F760CEFE0986A3D /* RegUserModuleInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B760640EAAD0C5AAD66AF10 /* RegUserModuleInputOutput.swift */; };
 		6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E1202C5040008306AC /* UIRoundedTextField.swift */; };
+		6529D0E4202D8258008306AC /* UITapGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */; };
+		6529D0E6202D8AC0008306AC /* UILabelHref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E5202D8AC0008306AC /* UILabelHref.swift */; };
 		6823E2CDCFF274D5A2011313 /* RegUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91717C9631C121A4D1ECAA /* RegUserViewController.swift */; };
 		691C901FC164D5950DEE2A59 /* ConfirmPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8056F0ADB9D01FE5817CA /* ConfirmPasswordRouter.swift */; };
 		691FB92EFDB738377887319D /* RegistrationInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */; };
@@ -267,6 +269,8 @@
 		6407D7CABE7B69F5D1E79D8D /* SplashConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		64BA36E25A5CDE87BD3D23FC /* EnterUserInfoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterUserInfoRouterInput.swift; sourceTree = "<group>"; };
 		6529D0E1202C5040008306AC /* UIRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedTextField.swift; sourceTree = "<group>"; };
+		6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		6529D0E5202D8AC0008306AC /* UILabelHref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelHref.swift; sourceTree = "<group>"; };
 		66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorInputOutput.swift; sourceTree = "<group>"; };
 		6B22618AC1399C4F604FE2C8 /* ConfirmPasswordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordConfigurator.swift; sourceTree = "<group>"; };
 		6B43000A2CA9F993BF822BE0 /* StartModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleInputOutput.swift; sourceTree = "<group>"; };
@@ -837,6 +841,7 @@
 			isa = PBXGroup;
 			children = (
 				819A36F520206BE30048144B /* Extensions.swift */,
+				6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */,
 			);
 			path = UIViewExtensions;
 			sourceTree = "<group>";
@@ -1075,6 +1080,7 @@
 				81E32AE32022FDBF004527AE /* SocialStackView.swift */,
 				6529D0E1202C5040008306AC /* UIRoundedTextField.swift */,
 				81EE6250202C863900BB93C2 /* HeaderImageView.swift */,
+				6529D0E5202D8AC0008306AC /* UILabelHref.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1184,7 +1190,6 @@
 			isa = PBXGroup;
 			children = (
 				C58FC666B6A89119105545B9 /* HomeViewController.swift */,
-				58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */,
 				774963C6B3733CB61641FBDB /* HomeViewInputOutput.swift */,
 			);
 			path = View;
@@ -1220,6 +1225,8 @@
 		C04B61DE1F20E9050042AC92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58FE8A62202DCC9400EE4551 /* Crashlytics.framework */,
+				58FE8A63202DCC9500EE4551 /* Fabric.framework */,
 				8159D0D220065508006CF82B /* Bolts.framework */,
 				C0826DB21F4324B60002DD65 /* Kingfisher.framework */,
 				C0EF8CA71F41914A00AA4236 /* CoreMedia.framework */,
@@ -1266,8 +1273,6 @@
 		C0B9D4581F1F8207009A77DD = {
 			isa = PBXGroup;
 			children = (
-				58FE8A62202DCC9400EE4551 /* Crashlytics.framework */,
-				58FE8A63202DCC9500EE4551 /* Fabric.framework */,
 				C0B9D4631F1F8207009A77DD /* winstrike */,
 				C04B61E51F20EF050042AC92 /* winstrikeTests */,
 				C0B9D4621F1F8207009A77DD /* Products */,
@@ -1321,6 +1326,7 @@
 		CE9C39371FBD696800EF8AA5 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				58FE8A5E202CAA6600EE4551 /* HomeViewCell.swift */,
 				81BC71F2201F544800944FDE /* CityCell.swift */,
 			);
 			path = TableViewCell;
@@ -1533,7 +1539,7 @@
 					};
 					C0B9D4601F1F8207009A77DD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2866T47S7N;
+						DevelopmentTeam = R82X32X6B7;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
@@ -1744,6 +1750,7 @@
 				E926E5EB594C1BB71810447D /* SplashPresenter.swift in Sources */,
 				6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */,
 				99241F5B793E63806B03F3B3 /* SplashRouter.swift in Sources */,
+				6529D0E4202D8258008306AC /* UITapGestureRecognizer+Extensions.swift in Sources */,
 				E6ED717462B8C4B94E25A83E /* SplashRouterInput.swift in Sources */,
 				8116E438201F0D51008F9E47 /* ChooseSubview.swift in Sources */,
 				E17F85E542736C0D28993858 /* SplashViewController.swift in Sources */,
@@ -1801,6 +1808,7 @@
 				6B9D79853284349D8C6463B8 /* ChangePasswordInteractor.swift in Sources */,
 				EAED45BA82258AC490789294 /* ChangePasswordInteractorInputOutput.swift in Sources */,
 				B10D64E8A71831F4F1B66F21 /* ChangePasswordModuleInputOutput.swift in Sources */,
+				6529D0E6202D8AC0008306AC /* UILabelHref.swift in Sources */,
 				6E58947FBCC493884034B219 /* ChangePasswordPresenter.swift in Sources */,
 				51A30C1BE4D711019D877BD3 /* ChangePasswordRouter.swift in Sources */,
 				DDB97345DF135AF96F62818D /* ChangePasswordRouterInput.swift in Sources */,
@@ -1938,7 +1946,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2866T47S7N;
+				DEVELOPMENT_TEAM = R82X32X6B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1948,7 +1956,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.pr-solution.winstrike";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
 				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2020,7 +2028,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2866T47S7N;
+				DEVELOPMENT_TEAM = R82X32X6B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2030,7 +2038,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.pr-solution.winstrike";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
 				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2250,7 +2258,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2866T47S7N;
+				DEVELOPMENT_TEAM = R82X32X6B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2261,7 +2269,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.pr-solution.winstrike";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
 				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2278,7 +2286,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2866T47S7N;
+				DEVELOPMENT_TEAM = R82X32X6B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2288,7 +2296,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/winstrike/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.pr-solution.winstrike";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.prsolution.winstrike;
 				PRODUCT_NAME = winstrike;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -11,6 +11,9 @@ protocol EnterUserInfoViewInput: class {
 }
 
 protocol EnterUserInfoViewOutput {
+    func nextButtonTap()
+    func conditionsButtonTap()
+    func privacyButtonTap()
 
     func viewIsReady()
 }

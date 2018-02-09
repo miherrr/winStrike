@@ -6,5 +6,7 @@
 import Foundation
 
 protocol EnterUserInfoRouterInput: BaseRouterInput {
-
+    func openPrivacy()
+    func openConditions()
+    func openMain()
 }

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 struct HomeTableData {
     var picture: UIImage!
     var headerLabel: UILabel!

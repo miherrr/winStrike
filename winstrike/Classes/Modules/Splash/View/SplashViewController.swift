@@ -20,6 +20,14 @@ class SplashViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()

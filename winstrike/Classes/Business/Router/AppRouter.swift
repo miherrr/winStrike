@@ -23,7 +23,7 @@ enum AppRouterDestination {
     case changePassword(phoneNumber: String)
     case home
     case regUser
-    case confirmPassword
+    case confirmPassword(phoneNumber: String)
     case enterUserInfo
 
     var isPresent: Bool {
@@ -41,6 +41,7 @@ enum AppRouterDestination {
         return false
     }
 
+    // swiftlint:disable:next cyclomatic_complexity
     fileprivate func constructModule(in factory: DependencyContainer) -> UIViewController {
         do {
             switch self {
@@ -64,8 +65,8 @@ enum AppRouterDestination {
                 return try factory.resolve(tag: HomeConfigurator.tag)
             case .regUser:
                 return try factory.resolve(tag: HelpEmailConfigurator.tag)
-            case .confirmPassword:
-                return try factory.resolve(tag: RegUserConfigurator.tag)
+            case let .confirmPassword(phoneNumber):
+                return try factory.resolve(tag: ConfirmPasswordConfigurator.tag, arguments: phoneNumber)
             case .enterUserInfo:
                 return try factory.resolve(tag: EnterUserInfoConfigurator.tag)
             }

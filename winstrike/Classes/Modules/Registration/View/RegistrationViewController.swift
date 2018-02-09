@@ -35,6 +35,14 @@ class RegistrationViewController: ParentViewController {
         fatalError("NSCoding not supported")
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+
     init() {
         super.init(nibName: nil, bundle: nil)
     }
