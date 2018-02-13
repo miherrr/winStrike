@@ -27,6 +27,10 @@ extension HelpPhonePresenter: HelpPhoneViewOutput {
     func viewIsReady() {
         log.verbose("HelpPhone is ready")
     }
+
+    func haveAccountTap() {
+        router.openLoginPage()
+    }
 }
 
 // MARK: - HelpPhoneInteractorOutput

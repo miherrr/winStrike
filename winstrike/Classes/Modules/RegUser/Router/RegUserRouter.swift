@@ -14,14 +14,16 @@ class RegUserRouter {
 
 extension RegUserRouter: RegUserRouterInput {
     func openEnterAccount() {
-        print("router open enter existing account")
+        appRouter.startModule(from: .registration)
     }
 
-    func openPhoneRegistrate() {
+    func openPhoneRegistrate(phoneNumber: String) {
+        appRouter.transition(to: .confirmPassword(phoneNumber: phoneNumber))
         print("open phone registrate")
     }
 
     func openEmailRegistrate() {
         print("open email registrate")
+        appRouter.transition(to: .enterUserInfo)
     }
 }

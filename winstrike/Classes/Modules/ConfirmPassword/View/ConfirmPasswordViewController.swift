@@ -119,7 +119,7 @@ class ConfirmPasswordViewController: ParentViewController {
     // MARK: - Actions
 
     func haveAccountTap() {
-        print("have account tap")
+        output.existingAccountTap()
     }
 
     @objc func nextButtonTap() {

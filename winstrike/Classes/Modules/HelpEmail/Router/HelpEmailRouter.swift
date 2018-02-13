@@ -16,4 +16,8 @@ extension HelpEmailRouter: HelpEmailRouterInput {
     func back() {
         appRouter.backTransition()
     }
+
+    func openLoginPage() {
+        appRouter.startModule(from: .registration)
+    }
 }

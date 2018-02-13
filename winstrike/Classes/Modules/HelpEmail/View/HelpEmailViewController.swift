@@ -63,7 +63,7 @@ class HelpEmailViewController: ParentViewController {
         enterMailTitle.leadingAnchor ~= view.leadingAnchor + 40
         enterMailTitle.topAnchor ~= view.topAnchor + 24
 
-        enterMail.configure(placeholder: L10n.helpMailEmailPlaceholder, cornerRadius: 24)
+        enterMail.configure(placeholder: L10n.helpMailEmailPlaceholder, cornerRadius: 24, keyboardType: .emailAddress)
         enterMail.delegate = self
         view.addSubview(enterMail.prepareForAutoLayout())
         enterMail.leadingAnchor ~= view.leadingAnchor + 40
@@ -82,6 +82,7 @@ class HelpEmailViewController: ParentViewController {
         sendButton.topAnchor ~= helpLabel.bottomAnchor + 32
         sendButton.heightAnchor ~= 48
         sendButton.widthAnchor ~= 160
+        sendButton.alpha = 0.5
 
         sendButton.layoutSubviews()
         sendButton.layoutIfNeeded()
@@ -94,13 +95,16 @@ class HelpEmailViewController: ParentViewController {
         output.backTap()
     }
 
-    @objc func loginButtonHandleTap() {
+    @objc func sendCodeToEmailTap() {
         if enterMail.validateEmail() {
             print("email is valid")
         } else {
             print("email is invalid")
         }
-        // output?.tapLoginButton()
+    }
+
+    @objc func loginButtonHandleTap() {
+        output?.loginPageTap()
     }
 }
 
@@ -118,6 +122,11 @@ extension HelpEmailViewController: HelpEmailViewInput {
 extension HelpEmailViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+        return true
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        sendButton.alpha = enterMail.validateEmail() ? 1.0 : 0.5
         return true
     }
 }

@@ -17,6 +17,10 @@ extension HelpPhoneRouter: HelpPhoneRouterInput {
         appRouter.transition(to: .changePassword(phoneNumber: phoneNumber))
     }
 
+    func openLoginPage() {
+        appRouter.startModule(from: .registration)
+    }
+
     func back() {
         appRouter.backTransition()
     }

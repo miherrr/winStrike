@@ -11,7 +11,7 @@ protocol RegUserViewInput: class {
 }
 
 protocol RegUserViewOutput {
-    func phoneNextButtonTap()
+    func phoneNextButtonTap(phoneNumber: String)
     func emailNextButtonTap()
     func existingAccountTap()
 

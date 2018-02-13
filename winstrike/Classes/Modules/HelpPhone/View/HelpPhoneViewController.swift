@@ -59,7 +59,7 @@ class HelpPhoneViewController: ParentViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         addSubview()
         addBottomView(target: self,
-                      action: #selector(confirmCodeTap),
+                      action: #selector(haveAccountTap),
                       firstString: L10n.parentHaveAccount,
                       secondString: L10n.parentEnterAccount)
     }
@@ -95,6 +95,7 @@ class HelpPhoneViewController: ParentViewController {
         sendCodeBtn.centerXAnchor ~= view.centerXAnchor
         sendCodeBtn.widthAnchor ~= 160
         sendCodeBtn.heightAnchor ~= 48
+        sendCodeBtn.alpha = 0.5
         sendCodeBtn.layoutIfNeeded()
         sendCodeBtn.configureGradientButton(title: L10n.helpPhoneButtonSendCode)
 
@@ -164,6 +165,10 @@ class HelpPhoneViewController: ParentViewController {
         output?.confirmCodeTap(phoneNumber: phoneNumberView.phoneNumber)
     }
 
+    @objc func haveAccountTap() {
+        output?.haveAccountTap()
+    }
+
     @objc func sendCodeTap() {
         if phoneNumberView.validate() {
             print("phone number is valid")
@@ -221,6 +226,15 @@ extension HelpPhoneViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+        return true
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if phoneNumberView.validate() {
+            sendCodeBtn.alpha = 1.0
+        } else {
+            sendCodeBtn.alpha = 0.5
+        }
         return true
     }
 }

@@ -7,4 +7,5 @@ import Foundation
 
 protocol HelpEmailRouterInput: BaseRouterInput {
     func back()
+    func openLoginPage()
 }

@@ -105,6 +105,7 @@ class RegUserViewController: ParentViewController {
         phoneNextButton.centerXAnchor ~= content.view.centerXAnchor
         phoneNextButton.widthAnchor ~= 160
         phoneNextButton.heightAnchor ~= 48
+        phoneNextButton.alpha = 0.5
         phoneNextButton.layoutIfNeeded()
         phoneNextButton.configureGradientButton(title: L10n.regUserNextButton)
         phoneNextButton.addTarget(self, action: #selector(phoneNextButtonTap), for: .touchUpInside)
@@ -134,6 +135,7 @@ class RegUserViewController: ParentViewController {
         emailNextButton.centerXAnchor ~= content.view.centerXAnchor
         emailNextButton.widthAnchor ~= 160
         emailNextButton.heightAnchor ~= 48
+        emailNextButton.alpha = 0.5
         emailNextButton.layoutIfNeeded()
         emailNextButton.configureGradientButton(title: L10n.regUserNextButton)
         emailNextButton.addTarget(self, action: #selector(emailNextButtonTap), for: .touchUpInside)
@@ -161,20 +163,20 @@ class RegUserViewController: ParentViewController {
     func phoneNextButtonTap() {
         if phoneTextField.validate() {
             print("phone number is valid")
+            output?.phoneNextButtonTap(phoneNumber: phoneTextField.phoneNumber)
         } else {
             print ("phone number is invalid")
         }
-        output?.phoneNextButtonTap()
     }
 
     @objc
     func emailNextButtonTap() {
         if phoneTextField.validate() {
             print("phone number is valid")
+            output?.emailNextButtonTap()
         } else {
             print ("phone number is invalid")
         }
-        output?.emailNextButtonTap()
     }
 
     @objc
@@ -279,6 +281,15 @@ extension RegUserViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+        return true
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == emailTextField {
+            emailNextButton.alpha = emailTextField.validateEmail() ? 1.0 : 0.5
+        } else {
+            phoneNextButton.alpha = phoneTextField.validate() ? 1.0 : 0.5
+        }
         return true
     }
 }

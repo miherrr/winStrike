@@ -14,7 +14,7 @@ class ConfirmPasswordRouter {
 
 extension ConfirmPasswordRouter: ConfirmPasswordRouterInput {
     func openExistingAccount() {
-        print("router open existing account")
+        appRouter.startModule(from: .registration)
     }
 
     func openNext() {

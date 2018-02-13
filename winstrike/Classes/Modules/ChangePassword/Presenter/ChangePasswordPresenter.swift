@@ -16,6 +16,10 @@ class ChangePasswordPresenter {
 // MARK: - ChangePasswordViewOutput
 
 extension ChangePasswordPresenter: ChangePasswordViewOutput {
+    func tapLoginButton() {
+        router.openLoginPage()
+    }
+
     func backTap() {
         router.back()
     }

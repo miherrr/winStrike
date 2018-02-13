@@ -26,12 +26,13 @@ class PhoneNumberView: UIView {
     fileprivate let separatorView = UIView()
 
     private let maskFormat = "([000]) [000]-[00]-[00]"
-    //получить номер телефона форматированный (со скабками, пробелами и т.д.)
+    /** получить номер телефона форматированный (со скабками, пробелами и т.д.) */
     var phoneNumber: String {
         // swiftlint:disable:next force_unwrapping
         return "\(L10n.helpPhonePhoneCountryCode) \(phoneInputView.text!)"
     }
-    //получить только цифры номера телефона (+7)
+
+    /** получить только цифры номера телефона (+7) */
     var phone: String {
         let digits = phoneInputView.text?.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         return "\(L10n.helpPhonePhoneCountryCode)\(digits ?? "")"
@@ -96,5 +97,8 @@ extension PhoneNumberView: MaskedTextFieldDelegateListener {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         innerDelegate?.textFieldDidEndEditing?(textField)
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return innerDelegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) ?? true
     }
 }

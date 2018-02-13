@@ -102,7 +102,7 @@ class ChangePasswordViewController: ParentViewController {
     // MARK: - Actions
 
     @objc func loginButtonHandleTap() {
-//        output?.tapLoginButton()
+        output?.tapLoginButton()
     }
 
     @objc func backHandlerTap() {

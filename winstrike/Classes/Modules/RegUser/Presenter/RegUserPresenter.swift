@@ -16,8 +16,8 @@ class RegUserPresenter {
 // MARK: - RegUserViewOutput
 
 extension RegUserPresenter: RegUserViewOutput {
-    func phoneNextButtonTap() {
-        router.openPhoneRegistrate()
+    func phoneNextButtonTap(phoneNumber: String) {
+        router.openPhoneRegistrate(phoneNumber: phoneNumber)
     }
 
     func emailNextButtonTap() {

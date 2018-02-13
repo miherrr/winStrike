@@ -24,6 +24,10 @@ extension HelpEmailPresenter: HelpEmailViewOutput {
     func backTap() {
         router.back()
     }
+
+    func loginPageTap() {
+        
+    }
 }
 
 // MARK: - HelpEmailInteractorOutput

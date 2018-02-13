@@ -15,4 +15,6 @@ protocol HelpEmailViewOutput {
     func viewIsReady()
 
     func backTap()
+
+    func loginPageTap()
 }

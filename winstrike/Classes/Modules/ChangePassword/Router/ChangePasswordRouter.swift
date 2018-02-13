@@ -13,6 +13,10 @@ class ChangePasswordRouter {
 // MARK: - ChangePasswordRouterInput
 
 extension ChangePasswordRouter: ChangePasswordRouterInput {
+    func openLoginPage() {
+        appRouter.startModule(from: .registration)
+    }
+
     func back() {
         appRouter.backTransition()
     }
