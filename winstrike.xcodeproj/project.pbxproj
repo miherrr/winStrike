@@ -55,6 +55,7 @@
 		6529D0E2202C5040008306AC /* UIRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E1202C5040008306AC /* UIRoundedTextField.swift */; };
 		6529D0E4202D8258008306AC /* UITapGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */; };
 		6529D0E6202D8AC0008306AC /* UILabelHref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D0E5202D8AC0008306AC /* UILabelHref.swift */; };
+		652D25892032E25B003657E9 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D25882032E25B003657E9 /* UITextField+Extensions.swift */; };
 		6823E2CDCFF274D5A2011313 /* RegUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91717C9631C121A4D1ECAA /* RegUserViewController.swift */; };
 		691C901FC164D5950DEE2A59 /* ConfirmPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8056F0ADB9D01FE5817CA /* ConfirmPasswordRouter.swift */; };
 		691FB92EFDB738377887319D /* RegistrationInteractorInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */; };
@@ -271,6 +272,7 @@
 		6529D0E1202C5040008306AC /* UIRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedTextField.swift; sourceTree = "<group>"; };
 		6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		6529D0E5202D8AC0008306AC /* UILabelHref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelHref.swift; sourceTree = "<group>"; };
+		652D25882032E25B003657E9 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		66ECCE8AA533D0296A12D6F9 /* RegistrationInteractorInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorInputOutput.swift; sourceTree = "<group>"; };
 		6B22618AC1399C4F604FE2C8 /* ConfirmPasswordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordConfigurator.swift; sourceTree = "<group>"; };
 		6B43000A2CA9F993BF822BE0 /* StartModuleInputOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleInputOutput.swift; sourceTree = "<group>"; };
@@ -842,6 +844,7 @@
 			children = (
 				819A36F520206BE30048144B /* Extensions.swift */,
 				6529D0E3202D8258008306AC /* UITapGestureRecognizer+Extensions.swift */,
+				652D25882032E25B003657E9 /* UITextField+Extensions.swift */,
 			);
 			path = UIViewExtensions;
 			sourceTree = "<group>";
@@ -1629,6 +1632,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/InputMask.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwipeMenuViewController.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -1647,6 +1651,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/InputMask.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwipeMenuViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1721,6 +1726,7 @@
 				9BB4EAC177088AA22DB9C31F /* FoodleTarget.swift in Sources */,
 				9BB4E330C29F6CB1435CA47E /* Observable+ObjectMapper.swift in Sources */,
 				9BB4E16B5EFDB6CBC8454850 /* Response+ObjectMapper.swift in Sources */,
+				652D25892032E25B003657E9 /* UITextField+Extensions.swift in Sources */,
 				8154C740201B253100E34C96 /* ChooseListView.swift in Sources */,
 				9BB4E87CA6162F664B0FAE21 /* ProviderError.swift in Sources */,
 				8107F7EE1FD7F1C90067DFD2 /* Constants.swift in Sources */,

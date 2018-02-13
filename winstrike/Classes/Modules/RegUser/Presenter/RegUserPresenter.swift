@@ -16,6 +16,17 @@ class RegUserPresenter {
 // MARK: - RegUserViewOutput
 
 extension RegUserPresenter: RegUserViewOutput {
+    func phoneNextButtonTap() {
+        router.openPhoneRegistrate()
+    }
+
+    func emailNextButtonTap() {
+        router.openEmailRegistrate()
+    }
+
+    func existingAccountTap() {
+        router.openEnterAccount()
+    }
 
     func viewIsReady() {
         log.verbose("RegUser is ready")

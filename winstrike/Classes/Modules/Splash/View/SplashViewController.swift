@@ -40,6 +40,14 @@ class SplashViewController: ParentViewController {
         animationView.play { _ in
             self.output.finishAnimation()
         }
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(screenTap))
+        view.addGestureRecognizer(tap)
+    }
+
+    // MARK: - Actions
+    @objc func screenTap() {
+        output.finishAnimation()
     }
 }
 

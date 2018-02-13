@@ -6,5 +6,7 @@
 import Foundation
 
 protocol RegUserRouterInput: BaseRouterInput {
-
+    func openEnterAccount()
+    func openPhoneRegistrate()
+    func openEmailRegistrate()
 }

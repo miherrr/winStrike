@@ -6,12 +6,14 @@
 import UIKit
 
 class HelpPhoneViewController: ParentViewController {
+    var timer: Timer!
+    var isTimerRunning = false
+    var seconds = 30
 
     var output: HelpPhoneViewOutput!
     let phoneNumberView = PhoneNumberView()
     let codeTextField = UIRoundedTextField()
     let confirmCodeBtn = UIButton()
-
     fileprivate let realPhone = UILabel()
     fileprivate let phoneInputHint = UILabel()
     fileprivate let sendCodeBtn = UIButton()
@@ -34,6 +36,10 @@ class HelpPhoneViewController: ParentViewController {
 
     override var prefersStatusBarHidden: Bool {
         return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     override func viewDidLoad() {
@@ -76,13 +82,15 @@ class HelpPhoneViewController: ParentViewController {
         phoneNumberView.centerXAnchor ~= view.centerXAnchor
         phoneNumberView.widthAnchor ~= 288
         phoneNumberView.heightAnchor ~= 48
+        phoneNumberView.delegate = self
 
-        phoneInputHint.configureLabel(font: UIFont.wnsStemLight(size: 13), textColor: UIColor.wnsBlackFont, text: L10n.helpPhonePhoneHelp)
+        phoneInputHint.configureLabel(font: UIFont.wnsStemLight(size: 13), textColor: UIColor.wnsGrey, text: L10n.helpPhonePhoneHelp)
         contentView.addSubview(phoneInputHint.prepareForAutoLayout())
         phoneInputHint.centerXAnchor ~= view.centerXAnchor
         phoneInputHint.topAnchor ~= phoneNumberView.bottomAnchor + 8
 
         contentView.addSubview(sendCodeBtn.prepareForAutoLayout())
+        sendCodeBtn.addTarget(self, action: #selector(sendCodeTap), for: .touchUpInside)
         sendCodeBtn.topAnchor ~= phoneInputHint.bottomAnchor + 32
         sendCodeBtn.centerXAnchor ~= view.centerXAnchor
         sendCodeBtn.widthAnchor ~= 160
@@ -92,15 +100,17 @@ class HelpPhoneViewController: ParentViewController {
 
         contentView.addSubview(sendCodeHint.prepareForAutoLayout())
         sendCodeHint.centerXAnchor ~= view.centerXAnchor
+        sendCodeHint.isHidden = true
         sendCodeHint.topAnchor ~= sendCodeBtn.bottomAnchor + 19
         sendCodeHint.configureLabel(
             font: UIFont.wnsStemLight(size: 13),
             textColor: UIColor.wnsGrey,
-            text: L10n.helpPhonePhoneSendCodeHint(String(30))
+            text: L10n.helpPhonePhoneSendCodeHint(String(seconds))
         )
 
         enterCodeCaption.configureLabel(font: UIFont.wnsStemMedium(size: 17), textColor: UIColor.wnsHelperColor, text: L10n.helpPhoneEnterCode)
         contentView.addSubview(enterCodeCaption.prepareForAutoLayout())
+        enterCodeCaption.isHidden = true
         enterCodeCaption.leadingAnchor ~= view.leadingAnchor + 40
         enterCodeCaption.topAnchor ~= sendCodeHint.bottomAnchor + 32
 
@@ -109,16 +119,39 @@ class HelpPhoneViewController: ParentViewController {
         codeTextField.centerXAnchor ~= contentView.centerXAnchor
         codeTextField.topAnchor ~= enterCodeCaption.bottomAnchor + 16
         codeTextField.keyboardType = .numberPad
+        codeTextField.isHidden = true
         codeTextField.delegate = self
 
         contentView.addSubview(confirmCodeBtn.prepareForAutoLayout())
         confirmCodeBtn.addTarget(self, action: #selector(confirmCodeTap), for: .touchUpInside)
         confirmCodeBtn.widthAnchor ~= 160
         confirmCodeBtn.heightAnchor ~= 48
+        confirmCodeBtn.isHidden = true
         confirmCodeBtn.topAnchor ~= codeTextField.bottomAnchor + 32
         confirmCodeBtn.centerXAnchor ~= view.centerXAnchor
         confirmCodeBtn.layoutIfNeeded()
         confirmCodeBtn.configureGradientButton(title: L10n.helpPhoneConfirmCode)
+    }
+
+    // MARK: - Methods
+    private func displayConfirmCodeSubView() {
+        sendCodeHint.isHidden = false
+        enterCodeCaption.isHidden = false
+        codeTextField.isHidden = false
+        confirmCodeBtn.isHidden = false
+    }
+
+    private func runSendCodeTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateSendCodeTimer), userInfo: nil, repeats: true)
+    }
+
+    @objc func updateSendCodeTimer() {
+        seconds -= 1
+        sendCodeHint.text = L10n.helpPhonePhoneSendCodeHint(String(seconds))
+        if seconds == 0 {
+            timer.invalidate()
+            sendCodeBtn.isEnabled = true
+        }
     }
 
     // MARK: - Actions
@@ -129,6 +162,18 @@ class HelpPhoneViewController: ParentViewController {
 
     @objc func confirmCodeTap() {
         output?.confirmCodeTap(phoneNumber: phoneNumberView.phoneNumber)
+    }
+
+    @objc func sendCodeTap() {
+        if phoneNumberView.validate() {
+            print("phone number is valid")
+            seconds = 30
+            displayConfirmCodeSubView()
+            runSendCodeTimer()
+            sendCodeBtn.isEnabled = false
+        } else {
+            print("phone number is invalid")
+        }
     }
 
     deinit {

@@ -22,6 +22,11 @@ class HeaderImageView: UIView {
         fatalError("NSCoding not supported")
     }
 
+//    override func layoutIfNeeded() {
+//        super.layoutIfNeeded()
+//        imageView.image = type.image()
+//    }
+
     init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 87, height: 87))
 

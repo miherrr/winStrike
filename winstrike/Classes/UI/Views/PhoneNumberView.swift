@@ -10,13 +10,32 @@ import UIKit
 import InputMask
 
 class PhoneNumberView: UIView {
+    private weak var innerDelegate: UITextFieldDelegate?
     // swiftlint:disable:next weak_delegate
     private var maskedDelegate: MaskedTextFieldDelegate!
+    var delegate: UITextFieldDelegate? {
+        get {
+            return innerDelegate
+        }
+        set (value) {
+            innerDelegate = value
+        }
+    }
 
-    fileprivate let phoneInputView = UITextField()
+    private let phoneInputView = UITextField()
     fileprivate let separatorView = UIView()
 
     private let maskFormat = "([000]) [000]-[00]-[00]"
+    //получить номер телефона форматированный (со скабками, пробелами и т.д.)
+    var phoneNumber: String {
+        // swiftlint:disable:next force_unwrapping
+        return "\(L10n.helpPhonePhoneCountryCode) \(phoneInputView.text!)"
+    }
+    //получить только цифры номера телефона (+7)
+    var phone: String {
+        let digits = phoneInputView.text?.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        return "\(L10n.helpPhonePhoneCountryCode)\(digits ?? "")"
+    }
 
     required init(coder _: NSCoder) {
         fatalError("NSCoding not supported")
@@ -59,20 +78,23 @@ class PhoneNumberView: UIView {
         phoneInputView.tintColor = UIColor.wnsHelperColor
         phoneInputView.font = UIFont.wnsStemRegular(size: 15)
         phoneInputView.keyboardType = .phonePad
+        phoneInputView.delegate = innerDelegate
 
         maskedDelegate = MaskedTextFieldDelegate(format: maskFormat)
         maskedDelegate?.listener = self
         phoneInputView.delegate = maskedDelegate
     }
 
-    var phoneNumber: String {
-        // swiftlint:disable:next force_unwrapping
-        return "\(L10n.helpPhonePhoneCountryCode) \(phoneInputView.text!)"
+    func validate() -> Bool {
+        return phone.count == 12
     }
 }
 
 extension PhoneNumberView: MaskedTextFieldDelegateListener {
-    func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
-        print(value)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        innerDelegate?.textFieldDidBeginEditing?(textField)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        innerDelegate?.textFieldDidEndEditing?(textField)
     }
 }

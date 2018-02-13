@@ -31,6 +31,10 @@ class HelpEmailViewController: ParentViewController {
         return false
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapOutsideToHideKeyboard()
@@ -91,7 +95,12 @@ class HelpEmailViewController: ParentViewController {
     }
 
     @objc func loginButtonHandleTap() {
-        //        output?.tapLoginButton()
+        if enterMail.validateEmail() {
+            print("email is valid")
+        } else {
+            print("email is invalid")
+        }
+        // output?.tapLoginButton()
     }
 }
 

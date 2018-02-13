@@ -79,3 +79,12 @@
 "confirmPassword-enter-code-hint" = "Введите 6-значный код, который был отправлен на номер %@.";
 "confirmPassword-enter-code-placeholder" = "Введите код подтверждения";
 "confirmPassword-next-button" = "Далее";
+
+//RegUser
+"regUser-tab-phone" = "Телефон";
+"regUser-tab-email" = "Эл. адрес";
+"regUser-phone-hint" = "Введите номер своего телефона";
+"regUser-email-hint" = "Введите свой email";
+"regUser-phone_placeholder" = "Введите телефон";
+"regUser-email-placeholder" = "Введите эл.адрес";
+"regUser-nextButton" = "Далее";

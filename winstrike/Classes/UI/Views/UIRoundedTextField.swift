@@ -31,6 +31,7 @@ class UIRoundedTextField: UITextField {
         backgroundColor = UIColor.wnsLightGrey
         layer.cornerRadius = cornerRadius
         isSecureTextEntry = isSecurity
+        self.keyboardType = keyboardType
         font = UIFont.wnsStemRegular(size: 15)
     }
 

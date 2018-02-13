@@ -64,7 +64,7 @@ enum AppRouterDestination {
             case .home:
                 return try factory.resolve(tag: HomeConfigurator.tag)
             case .regUser:
-                return try factory.resolve(tag: HelpEmailConfigurator.tag)
+                return try factory.resolve(tag: RegUserConfigurator.tag)
             case let .confirmPassword(phoneNumber):
                 return try factory.resolve(tag: ConfirmPasswordConfigurator.tag, arguments: phoneNumber)
             case .enterUserInfo:

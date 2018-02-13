@@ -18,8 +18,9 @@ extension RegistrationRouter: RegistrationRouterInput {
     }
 
     func openRegUser() {
-        //non-breaking spaces
-        appRouter.startModule(from: .confirmPassword(phoneNumber: "+7\u{00a0}(917)\u{00a0}994-52-15"))
+        appRouter.transition(to: .regUser)
+//        //non-breaking spaces
+//        appRouter.startModule(from: .confirmPassword(phoneNumber: "+7\u{00a0}(917)\u{00a0}994-52-15"))
     }
 
     func openHome() {

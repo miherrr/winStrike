@@ -6,3 +6,4 @@ github "onevcat/Kingfisher"
 github "RedMadRobot/input-mask-ios.git" ~> 2.2.6
 github "airbnb/lottie-ios" "master"
 github "DaveWoodCom/XCGLogger" ~> 6.0.2
+github "yysskk/SwipeMenuViewController"
